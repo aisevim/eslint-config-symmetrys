@@ -8,6 +8,9 @@ dependencies:
   eslint:
     specifier: ^8.54.0
     version: 8.54.0
+  eslint-plugin-promise:
+    specifier: ^6.1.1
+    version: 6.1.1(eslint@8.54.0)
   globals:
     specifier: ^13.23.0
     version: 13.23.0
@@ -1568,6 +1571,15 @@ packages:
     optionalDependencies:
       source-map: 0.6.1
     dev: true
+
+  /eslint-plugin-promise@6.1.1(eslint@8.54.0):
+    resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: 8.54.0
+    dev: false
 
   /eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
