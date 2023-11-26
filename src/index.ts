@@ -1,10 +1,13 @@
-import { ignore, javascript } from "./configs"
+import { ignore, javascript, node, promise, stylistic } from "./configs"
 
-const config = []
+const config: Promise<any>[] = []
 
 config.push(
 	ignore(),
-	javascript()
+	javascript(),
+	node(),
+	promise(),
+	stylistic(),
 )
 
 export default () => config

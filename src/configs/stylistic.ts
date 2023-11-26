@@ -1,11 +1,11 @@
-import stylistic from '@stylistic/eslint-plugin'
+import styl from '@stylistic/eslint-plugin'
 
-export async function node() {
+export async function stylistic() {
 	return [
 		{
 			files: ["**/*.?([cm])[jt]s?(x)"],
 			plugins: {
-				stylistic
+				stylistic: styl
 			},
 			rules: {
 				'stylistic/array-bracket-newline': ["error", { "multiline": true }],
@@ -135,6 +135,67 @@ export async function node() {
 				'stylistic/object-curly-newline': ["error", { "consistent": true }],
 				'stylistic/object-curly-spacing': ["error", "always"],
 				'stylistic/operator-linebreak': ["error", "after"],
+				'stylistic/padded-blocks': [
+					"error",
+					{
+						blocks: "never",
+						classes: "never",
+						switches: "never"
+					}
+				],
+				'stylistic/quote-props': ["error", "consistent-as-needed"],
+				'stylistic/quotes': [
+					"error",
+					"single",
+					{
+						"allowTemplateLiterals": true
+					}
+				],
+				'stylistic/rest-spread-spacing': ["error", "never"],
+				'stylistic/semi': ["error", "never"],
+				'stylistic/space-before-blocks': ["error", "always"],
+				'stylistic/space-before-function-paren': [
+					"error",
+					{
+						"anonymous": "always",
+						"named": "never",
+						"asyncArrow": "always"
+					}
+				],
+				'stylistic/space-in-parens': ['error', 'never'],
+				'stylistic/space-infix-ops': ["error"],
+				'stylistic/space-unary-ops': ['error', { nonwords: false, words: true }],
+				'stylistic/spaced-comment': ['error', 'always', {
+					block: {
+						balanced: true,
+						exceptions: ['*'],
+						markers: ['!'],
+					},
+					line: {
+						exceptions: ['/', '#'],
+						markers: ['/'],
+					},
+				}],
+				'stylistic/switch-colon-spacing': ["error"],
+				'stylistic/template-curly-spacing': ["error", "always"],
+				'stylistic/template-tag-spacing': ['error', 'never'],
+				'stylistic/wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
+				'stylistic/member-delimiter-style': ['error', {
+					multiline: {
+						delimiter: 'none',
+					},
+					multilineDetection: 'brackets',
+					overrides: {
+						interface: {
+							multiline: {
+								delimiter: 'none',
+							},
+						},
+					},
+					singleline: {
+						delimiter: 'comma',
+					},
+				}],
 			}
 		},
 		{
