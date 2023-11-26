@@ -11,6 +11,9 @@ dependencies:
   eslint-plugin-n:
     specifier: ^16.3.1
     version: 16.3.1(eslint@8.54.0)
+  eslint-plugin-perfectionist:
+    specifier: ^2.4.2
+    version: 2.4.2(eslint@8.54.0)(typescript@5.3.2)
   eslint-plugin-promise:
     specifier: ^6.1.1
     version: 6.1.1(eslint@8.54.0)
@@ -999,6 +1002,12 @@ packages:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
+  /brace-expansion@2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: false
+
   /braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
     engines: {node: '>=8'}
@@ -1728,6 +1737,33 @@ packages:
       minimatch: 3.1.2
       resolve: 1.22.8
       semver: 7.5.4
+    dev: false
+
+  /eslint-plugin-perfectionist@2.4.2(eslint@8.54.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-PaNwDCH+VYvG9uACKF4Vb3jBM8SjCPJXBpiFvTKUuJI07aqKWp+Q4NEa1hD4dj+ZVE0oYqAKX7DviEidiBlqIg==}
+    peerDependencies:
+      astro-eslint-parser: ^0.16.0
+      eslint: '>=8.0.0'
+      svelte: '>=3.0.0'
+      svelte-eslint-parser: ^0.33.0
+      vue-eslint-parser: '>=9.0.0'
+    peerDependenciesMeta:
+      astro-eslint-parser:
+        optional: true
+      svelte:
+        optional: true
+      svelte-eslint-parser:
+        optional: true
+      vue-eslint-parser:
+        optional: true
+    dependencies:
+      '@typescript-eslint/utils': 6.12.0(eslint@8.54.0)(typescript@5.3.2)
+      eslint: 8.54.0
+      minimatch: 9.0.3
+      natural-compare-lite: 1.4.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: false
 
   /eslint-plugin-promise@6.1.1(eslint@8.54.0):
@@ -2934,6 +2970,13 @@ packages:
     dependencies:
       brace-expansion: 1.1.11
 
+  /minimatch@9.0.3:
+    resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: false
+
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
@@ -2953,6 +2996,10 @@ packages:
       object-assign: 4.1.1
       thenify-all: 1.6.0
     dev: true
+
+  /natural-compare-lite@1.4.0:
+    resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}
+    dev: false
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
