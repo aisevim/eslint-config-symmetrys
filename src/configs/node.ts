@@ -4,16 +4,16 @@ export async function node() {
 	return {
 		files: ["**/*.?([cm])[jt]s?(x)"],
 		plugins: {
-			n: node
+			node
 		},
 		rules: {
-			'n/handle-callback-err': ['error', '^(err|error)$'],
-			'n/no-deprecated-api': 'error',
-			'n/no-exports-assign': 'error',
-			'n/no-new-require': 'error',
-			'n/no-path-concat': 'error',
-			'n/prefer-promises/fs': 'error',
-			'n/process-exit-as-throw': 'error',
+			'node/handle-callback-err': ['error', '^(err|error)$'],
+			'node/no-deprecated-api': 'error',
+			'node/no-exports-assign': 'error',
+			'node/no-new-require': 'error',
+			'node/no-path-concat': 'error',
+			'node/prefer-promises/fs': 'error',
+			'node/process-exit-as-throw': 'error',
 		}
 	}
 }
