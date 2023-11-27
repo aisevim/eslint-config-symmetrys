@@ -10,7 +10,7 @@ import {
 	exactPackageJson
 } from "./configs"
 
-const config: Promise<any>[] = []
+const config = []
 
 config.push(
 	ignore(),

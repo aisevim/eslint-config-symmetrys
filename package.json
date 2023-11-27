@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsup src/index.ts --watch --format esm,cjs"
+    "dev": "tsup src/index.js --watch --format esm,cjs"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.4.1",
