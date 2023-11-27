@@ -1,6 +1,6 @@
 import jsoncPlugin from 'eslint-plugin-jsonc'
 
-export async function exactPackageJson() {
+export async function specialPackageJson() {
 	return {
 		files: ["**/package.json"],
 		plugins: {

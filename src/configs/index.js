@@ -7,4 +7,4 @@ export * from "./perfectionist"
 export * from "./unicorn"
 export * from "./jsonc"
 
-export * from "./exact/packagejson"
+export * from "./special/packagejson"

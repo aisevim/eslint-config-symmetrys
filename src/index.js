@@ -7,7 +7,7 @@ import {
 	perfectionist,
 	unicorn,
 	jsonc,
-	exactPackageJson
+	specialPackageJson
 } from "./configs"
 
 const config = []
@@ -21,7 +21,7 @@ config.push(
 	perfectionist(),
 	unicorn(),
 	jsonc(),
-	exactPackageJson()
+	specialPackageJson()
 )
 
 export default () => config
