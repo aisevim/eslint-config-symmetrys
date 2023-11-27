@@ -7,6 +7,7 @@ import {
 	perfectionist,
 	unicorn,
 	jsonc,
+	vitest,
 	specialPackageJson,
 	specialReleaseIt,
 	specialTsConfig
@@ -23,6 +24,7 @@ config.push(
 	perfectionist(),
 	unicorn(),
 	jsonc(),
+	vitest(),
 	specialPackageJson(),
 	specialReleaseIt(),
 	specialTsConfig()
