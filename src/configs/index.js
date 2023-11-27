@@ -8,3 +8,4 @@ export * from "./unicorn"
 export * from "./jsonc"
 
 export * from "./special/packagejson"
+export * from "./special/releaseit"
