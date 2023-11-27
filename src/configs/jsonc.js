@@ -2,7 +2,7 @@ import jsoncPlugin from 'eslint-plugin-jsonc'
 
 export async function jsonc() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: ['**/*.json', '**/*.json5', '**/*.jsonc'],
 		plugins: {
 			jsonc: jsoncPlugin
 		},
