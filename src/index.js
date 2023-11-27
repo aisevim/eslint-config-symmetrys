@@ -8,7 +8,8 @@ import {
 	unicorn,
 	jsonc,
 	specialPackageJson,
-	specialReleaseIt
+	specialReleaseIt,
+	specialTsConfig
 } from "./configs"
 
 const config = []
@@ -23,7 +24,8 @@ config.push(
 	unicorn(),
 	jsonc(),
 	specialPackageJson(),
-	specialReleaseIt()
+	specialReleaseIt(),
+	specialTsConfig()
 )
 
 export default () => config

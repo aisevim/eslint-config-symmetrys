@@ -9,3 +9,4 @@ export * from "./jsonc"
 
 export * from "./special/packagejson"
 export * from "./special/releaseit"
+export * from "./special/tsconfig"
