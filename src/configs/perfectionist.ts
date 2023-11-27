@@ -1,10 +1,10 @@
-import perfect from 'eslint-plugin-perfectionist'
+import perfectionistPlugin from 'eslint-plugin-perfectionist'
 
 export async function perfectionist() {
 	return {
 		files: ["**/*.?([cm])[jt]s?(x)"],
 		plugins: {
-			perfectionist: perfect,
+			perfectionist: perfectionistPlugin,
 		},
 		rules: {
 			'perfectionist/sort-classes': [

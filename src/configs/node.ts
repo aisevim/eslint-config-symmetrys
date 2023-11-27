@@ -1,10 +1,10 @@
-import node from 'eslint-plugin-n'
+import nodePlugin from 'eslint-plugin-n'
 
 export async function node() {
 	return {
 		files: ["**/*.?([cm])[jt]s?(x)"],
 		plugins: {
-			node
+			node: nodePlugin
 		},
 		rules: {
 			'node/handle-callback-err': ['error', '^(err|error)$'],

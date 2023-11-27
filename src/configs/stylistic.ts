@@ -1,11 +1,11 @@
-import styl from '@stylistic/eslint-plugin'
+import stylisticPlugin from '@stylistic/eslint-plugin'
 
 export async function stylistic() {
 	return [
 		{
 			files: ["**/*.?([cm])[jt]s?(x)"],
 			plugins: {
-				stylistic: styl
+				stylistic: stylisticPlugin
 			},
 			rules: {
 				'stylistic/array-bracket-newline': ["error", { "multiline": true }],
@@ -204,6 +204,9 @@ export async function stylistic() {
 				"**/*.consts.?([cm])[jt]s?(x)",
 				"**/types/*.?([cm])[jt]s?(x)"
 			],
+			plugins: {
+				stylistic: stylisticPlugin
+			},
 			rules: {
 				'stylistic/key-spacing': [
 					"error",

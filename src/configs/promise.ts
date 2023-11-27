@@ -1,10 +1,10 @@
-import promise from 'eslint-plugin-promise'
+import promisePlugin from 'eslint-plugin-promise'
 
 export async function promise() {
 	return {
 		files: ["**/*.?([cm])[jt]s?(x)"],
 		plugins: {
-			promise
+			promise: promisePlugin
 		},
 		rules: {
 			'promise/no-callback-in-promise': 'error',
