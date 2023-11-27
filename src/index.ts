@@ -1,4 +1,4 @@
-import { ignore, javascript, node, promise, stylistic, perfectionist, unicorn } from "./configs"
+import { ignore, javascript, node, promise, stylistic, perfectionist, unicorn, jsonc } from "./configs"
 
 const config: Promise<any>[] = []
 
@@ -9,7 +9,8 @@ config.push(
 	promise(),
 	stylistic(),
 	perfectionist(),
-	unicorn()
+	unicorn(),
+	jsonc(),
 )
 
 export default () => config
