@@ -8,6 +8,7 @@ import {
 	unicorn,
 	jsonc,
 	vitest,
+	yml,
 	specialPackageJson,
 	specialReleaseIt,
 	specialTsConfig
@@ -25,6 +26,7 @@ config.push(
 	unicorn(),
 	jsonc(),
 	vitest(),
+	yml(),
 	specialPackageJson(),
 	specialReleaseIt(),
 	specialTsConfig()

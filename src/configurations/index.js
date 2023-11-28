@@ -7,6 +7,7 @@ export * from "./perfectionist"
 export * from "./unicorn"
 export * from "./jsonc"
 export * from "./vitest"
+export * from "./yml"
 
 export * from "./special/packagejson"
 export * from "./special/releaseit"
