@@ -10,6 +10,7 @@ export * from "./vitest"
 export * from "./yml"
 export * from "./jsDoc"
 export * from "./vue"
+export * from "./comments"
 
 export * from "./special/packagejson"
 export * from "./special/releaseit"

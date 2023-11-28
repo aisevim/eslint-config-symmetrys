@@ -11,6 +11,7 @@ import {
 	yml,
 	jsDoc,
 	vue,
+	comments,
 	specialPackageJson,
 	specialReleaseIt,
 	specialTsConfig
@@ -31,6 +32,7 @@ config.push(
 	yml(),
 	jsDoc(),
 	vue(),
+	comments(),
 	specialPackageJson(),
 	specialReleaseIt(),
 	specialTsConfig()
