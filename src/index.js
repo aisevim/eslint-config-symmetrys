@@ -10,6 +10,7 @@ import {
 	vitest,
 	yml,
 	jsDoc,
+	vue,
 	specialPackageJson,
 	specialReleaseIt,
 	specialTsConfig
@@ -29,6 +30,7 @@ config.push(
 	vitest(),
 	yml(),
 	jsDoc(),
+	vue(),
 	specialPackageJson(),
 	specialReleaseIt(),
 	specialTsConfig()

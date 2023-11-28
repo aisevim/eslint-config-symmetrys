@@ -9,6 +9,7 @@ export * from "./jsonc"
 export * from "./vitest"
 export * from "./yml"
 export * from "./jsDoc"
+export * from "./vue"
 
 export * from "./special/packagejson"
 export * from "./special/releaseit"

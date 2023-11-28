@@ -8,5 +8,6 @@
 	"jsonc",
 	"json5",
 	"yaml",
-	"github-actions-workflow"
+	"github-actions-workflow",
+	"vue"
 ]
