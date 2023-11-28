@@ -8,6 +8,7 @@ export * from "./unicorn"
 export * from "./jsonc"
 export * from "./vitest"
 export * from "./yml"
+export * from "./jsDoc"
 
 export * from "./special/packagejson"
 export * from "./special/releaseit"

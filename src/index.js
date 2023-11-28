@@ -9,6 +9,7 @@ import {
 	jsonc,
 	vitest,
 	yml,
+	jsDoc,
 	specialPackageJson,
 	specialReleaseIt,
 	specialTsConfig
@@ -27,6 +28,7 @@ config.push(
 	jsonc(),
 	vitest(),
 	yml(),
+	jsDoc(),
 	specialPackageJson(),
 	specialReleaseIt(),
 	specialTsConfig()
