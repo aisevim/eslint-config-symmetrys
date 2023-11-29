@@ -1,8 +1,10 @@
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
 
+import { JS_GLOB } from '../constants'
+
 export async function perfectionist() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: [JS_GLOB],
 		plugins: {
 			perfectionist: perfectionistPlugin,
 		},

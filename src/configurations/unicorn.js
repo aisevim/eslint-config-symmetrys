@@ -1,8 +1,10 @@
 import unicornPlugin from 'eslint-plugin-n'
 
+import { JS_GLOB } from '../constants'
+
 export async function unicorn() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: [JS_GLOB],
 		plugins: {
 			unicorn: unicornPlugin
 		},

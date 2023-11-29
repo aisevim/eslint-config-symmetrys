@@ -1,9 +1,11 @@
 import vuePlugin from 'eslint-plugin-vue'
 import vueParser from 'vue-eslint-parser'
 
+import { VUE_GLOB } from '../constants'
+
 export async function vue() {
 	return {
-		files: ['**/*.vue'],
+		files: [VUE_GLOB],
 		plugins: {
 			vue: vuePlugin
 		},

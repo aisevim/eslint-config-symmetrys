@@ -1,8 +1,10 @@
 import { browser, node, es2021 } from "globals";
 
+import { JS_GLOB } from "../constants";
+
 export async function javascript() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: [JS_GLOB],
 		languageOptions: {
 			globals: {
 				...browser,
@@ -16,6 +18,9 @@ export async function javascript() {
 					jsx: true,
 				}
 			}
+		},
+		linterOptions: {
+			reportUnusedDisableDirectives: true
 		},
 		rules: {
 			'array-callback-return': 'error',
@@ -169,9 +174,6 @@ export async function javascript() {
 			'symbol-description': 'error',
 			'vars-on-top': 'error',
 			'yoda': ['error', 'never'],
-		},
-		linterOptions: {
-			reportUnusedDisableDirectives: true
 		},
 	}
 }

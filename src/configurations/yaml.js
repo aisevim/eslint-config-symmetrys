@@ -1,8 +1,10 @@
 import ymlPlugin from 'eslint-plugin-yml'
 
+import { YAML_GLOB } from '../constants'
+
 export async function yml() {
 	return {
-		files: ["**/*.yaml", "**/*.yml"],
+		files: [YAML_GLOB],
 		plugins: {
 			yml: ymlPlugin
 		},

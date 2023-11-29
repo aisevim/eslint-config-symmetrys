@@ -1,8 +1,10 @@
 import promisePlugin from 'eslint-plugin-promise'
 
+import { JS_GLOB } from '../constants'
+
 export async function promise() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: [JS_GLOB],
 		plugins: {
 			promise: promisePlugin
 		},

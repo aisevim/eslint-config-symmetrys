@@ -1,8 +1,10 @@
 import vitest from "eslint-plugin-vitest";
 
+import { TESTS_GLOB } from "../constants";
+
 export default [
   {
-    files: ["tests/**", "**/__tests__/**"],
+    files: [TESTS_GLOB],
     plugins: {
       vitest,
     },

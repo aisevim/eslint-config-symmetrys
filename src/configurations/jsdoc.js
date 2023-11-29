@@ -1,8 +1,10 @@
 import jsDocPlugin from 'eslint-plugin-jsdoc'
 
+import { JS_GLOB } from '../constants'
+
 export async function jsDoc() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: [JS_GLOB],
 		plugins: {
 			jsdoc: jsDocPlugin
 		},

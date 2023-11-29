@@ -1,7 +1,10 @@
 import commentsPlugin from 'eslint-plugin-eslint-comments'
 
+import { JS_GLOB } from '../constants'
+
 export async function comments() {
 	return {
+		files: [JS_GLOB],
 		plugins: {
 			node: commentsPlugin
 		},

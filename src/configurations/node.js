@@ -1,8 +1,10 @@
 import nodePlugin from 'eslint-plugin-n'
 
+import { JS_GLOB } from '../constants'
+
 export async function node() {
 	return {
-		files: ["**/*.?([cm])[jt]s?(x)"],
+		files: [JS_GLOB],
 		plugins: {
 			node: nodePlugin
 		},

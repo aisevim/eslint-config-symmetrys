@@ -1,8 +1,10 @@
 import jsoncPlugin from 'eslint-plugin-jsonc'
 
+import { JSON5_GLOB, JSONC_GLOB, JSON_GLOB } from '../constants'
+
 export async function jsonc() {
 	return {
-		files: ['**/*.json', '**/*.json5', '**/*.jsonc'],
+		files: [JSON_GLOB, JSON5_GLOB, JSONC_GLOB],
 		plugins: {
 			jsonc: jsoncPlugin
 		},

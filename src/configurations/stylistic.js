@@ -1,9 +1,11 @@
 import stylisticPlugin from '@stylistic/eslint-plugin'
 
+import { JS_GLOB } from '../constants'
+
 export async function stylistic() {
 	return [
 		{
-			files: ["**/*.?([cm])[jt]s?(x)"],
+			files: [JS_GLOB],
 			plugins: {
 				stylistic: stylisticPlugin
 			},
