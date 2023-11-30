@@ -7,37 +7,61 @@ import {
   promise,
   unicorn,
   jsonc,
-  vitest,
   yaml,
   jsDoc,
-  vue,
   comments,
   imports,
+  typescript,
+  vitest as vitestConfig,
+  vue as vueConfig,
   specialPackageJson,
   specialReleaseIt,
   specialTsConfig,
 } from './configs/index.js'
+import { VUE_GLOB } from './constants.js'
 
-const config = []
+function config(options = {}) {
+  const {
+    vue = false,
+    vitest = false,
+    ts = false,
+  } = options
+  const extensions = []
 
-config.push(
-  ignore(),
-  javascript(),
-  node(),
-  promise(),
-  stylistic(),
-  perfectionist(),
-  unicorn(),
-  jsonc(),
-  vitest(),
-  yaml(),
-  jsDoc(),
-  vue(),
-  comments(),
-  imports(),
-  specialPackageJson(),
-  specialReleaseIt(),
-  specialTsConfig(),
-)
+  const configs = [
+    ignore(),
+    javascript(),
+    node(),
+    promise(),
+    stylistic(),
+    perfectionist(),
+    unicorn(),
+    jsonc(),
+    yaml(),
+    jsDoc(),
+    comments(),
+    imports(),
+    specialPackageJson(),
+    specialReleaseIt(),
+    specialTsConfig(),
+  ]
 
-export default () => config
+  if (vue) {
+    configs.push(vueConfig())
+    extensions.push(VUE_GLOB)
+  }
+
+  if (vitest) {
+    configs.push(vitestConfig())
+  }
+
+  if (ts) {
+    configs.push(typescript({
+      extensions,
+    }))
+  }
+
+  return configs
+}
+
+export default config
