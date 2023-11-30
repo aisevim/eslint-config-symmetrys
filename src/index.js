@@ -1,4 +1,7 @@
-import {
+import * as Configs from './configs/index.js'
+import { VUE_GLOB } from './constants.js'
+
+const {
   ignore,
   javascript,
   stylistic,
@@ -11,14 +14,13 @@ import {
   jsDoc,
   comments,
   imports,
-  typescript,
-  vitest as vitestConfig,
-  vue as vueConfig,
   specialPackageJson,
   specialReleaseIt,
   specialTsConfig,
-} from './configs/index.js'
-import { VUE_GLOB } from './constants.js'
+  typescript: tsConfig,
+  vitest: vitestConfig,
+  vue: vueConfig,
+} = Configs
 
 function config(options = {}) {
   const {
@@ -56,9 +58,7 @@ function config(options = {}) {
   }
 
   if (ts) {
-    configs.push(typescript({
-      extensions,
-    }))
+    configs.push(tsConfig({ extensions }))
   }
 
   return configs
