@@ -11,13 +11,7 @@ export async function stylistic() {
     rules: {
       'stylistic/array-bracket-newline': ['error', { multiline: true }],
       'stylistic/array-bracket-spacing': ['error', 'never'],
-      'stylistic/array-element-newline': [
-        'error',
-        {
-          ArrayExpression: 'consistent',
-          ArrayPattern: { minItems: 0 },
-        },
-      ],
+      'stylistic/array-element-newline': ['error', 'consistent'],
       'stylistic/arrow-parens': ['error', 'as-needed'],
       'stylistic/arrow-spacing': ['error'],
       'stylistic/block-spacing': ['error'],
