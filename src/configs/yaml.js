@@ -1,41 +1,42 @@
 import ymlPlugin from 'eslint-plugin-yml'
+import parserYaml from 'yaml-eslint-parser'
 
-import { YAML_GLOB } from '../constants'
+import { YAML_GLOB } from '../constants.js'
 
-export async function yml() {
-	return {
-		files: [YAML_GLOB],
-		plugins: {
-			yml: ymlPlugin
-		},
-		languageOptions: {
-			parser: parserYaml,
-		},
-		rules: {
-			'yml/block-sequence-hyphen-indicator-newline': 'error',
-			'yml/block-sequence': ['error', 'always'],
-			'yml/indent': [
-				'error',
-				2,
-				{
-					indentBlockSequences: true,
-					indicatorValueIndent: 1,
-				}
-			],
-			'yml/no-empty-key': 'error',
-			'yml/no-empty-sequence-entry': 'error',
-			'yml/no-tab-indent': 'error',
-			'yaml/quotes': ['error', { avoidEscape: false, prefer: 'double' }],
-			'yml/flow-sequence-bracket-newline': 'error',
-			'yml/key-spacing': 'error',
-			'yml/no-multiple-empty-lines': [
-				'error',
-				{
-					max: 2,
-					maxBOF: 0,
-					maxEOF: 1
-				}
-			],
-		}
-	}
+export async function yaml() {
+  return {
+    files: [YAML_GLOB],
+    plugins: {
+      yaml: ymlPlugin,
+    },
+    languageOptions: {
+      parser: parserYaml,
+    },
+    rules: {
+      'yaml/block-sequence-hyphen-indicator-newline': 'error',
+      'yaml/block-sequence': ['error', 'always'],
+      'yaml/indent': [
+        'error',
+        2,
+        {
+          indentBlockSequences: true,
+          indicatorValueIndent: 2,
+        },
+      ],
+      'yaml/no-empty-key': 'error',
+      'yaml/no-empty-sequence-entry': 'error',
+      'yaml/no-tab-indent': 'error',
+      'yaml/quotes': ['error', { avoidEscape: false, prefer: 'double' }],
+      'yaml/flow-sequence-bracket-newline': 'error',
+      'yaml/key-spacing': 'error',
+      'yaml/no-multiple-empty-lines': [
+        'error',
+        {
+          max: 2,
+          maxBOF: 0,
+          maxEOF: 1,
+        },
+      ],
+    },
+  }
 }

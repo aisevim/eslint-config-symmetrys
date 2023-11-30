@@ -2,31 +2,34 @@
   "name": "rotero-eslint-config",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
-  "packageManager": "pnpm@8.10.5",
+  "license": "MIT",
+  "author": "aisevim <a.aydnlp.pro@gmail.com>",
   "volta": {
     "node": "20.10.0"
   },
-  "author": "aisevim <a.aydnlp.pro@gmail.com>",
-  "license": "MIT",
+  "packageManager": "pnpm@8.10.5",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsup src/index.js --watch --format esm,cjs",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint . --ignore-pattern 'fixtures/'",
+    "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint . --fix --ignore-pattern 'fixtures/'"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.4.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jsdoc": "^46.9.0",
     "eslint-plugin-jsonc": "^2.10.0",
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-perfectionist": "^2.4.2",
     "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^49.0.0",
     "eslint-plugin-vitest": "^0.3.10",
     "eslint-plugin-vue": "^9.18.1",
     "eslint-plugin-yml": "^1.10.0",
     "globals": "^13.23.0",
+    "jsonc-eslint-parser": "^2.4.0",
     "vue-eslint-parser": "^9.3.2",
     "yaml-eslint-parser": "^1.2.2"
   },
