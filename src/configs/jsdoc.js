@@ -1,10 +1,16 @@
 import jsDocPlugin from 'eslint-plugin-jsdoc'
 
-import { JS_GLOB } from '../constants.js'
+import { JS_GLOB, TS_GLOB } from '../constants.js'
 
-export async function jsDoc() {
+export async function jsDoc({ ts }) {
+  const files = [JS_GLOB]
+
+  if (ts) {
+    files.push(TS_GLOB)
+  }
+
   return {
-    files: [JS_GLOB],
+    files,
     plugins: {
       jsdoc: jsDocPlugin,
     },

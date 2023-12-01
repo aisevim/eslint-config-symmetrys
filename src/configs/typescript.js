@@ -7,7 +7,7 @@ export async function typescript({ extensions }) {
   return {
     files: [TS_GLOB],
     plugins: {
-      ts: typescriptPlugin,
+      '@typescript-eslint': typescriptPlugin,
     },
     languageOptions: {
       parser: typescriptParser,
@@ -19,8 +19,6 @@ export async function typescript({ extensions }) {
     rules: {
       ...typescriptPlugin.configs['eslint-recommended'].rules,
       ...typescriptPlugin.configs.strict.rules,
-
-      'ts/array-type': ['error', { default: 'generic' }],
     },
   }
 }

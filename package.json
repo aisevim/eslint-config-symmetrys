@@ -14,7 +14,7 @@
     "dev": "tsup src/index.js --watch --format esm,cjs",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint . --ignore-pattern 'fixtures/'",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint . --fix --ignore-pattern 'fixtures/'",
-    "lint:test": "ESLINT_USE_FLAT_CONFIG=true eslint fixtures/javascript/index.js --fix",
+    "lint:test": "ESLINT_USE_FLAT_CONFIG=true eslint './fixtures/index.ts' --fix",
     "test": "vitest"
   },
   "dependencies": {
