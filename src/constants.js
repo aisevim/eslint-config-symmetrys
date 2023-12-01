@@ -3,8 +3,8 @@ export const DEFAULT_IGNORES = [
   '.vscode/',
   '.idea/',
 
-  'dist/',
-  'build/',
+  '**/dist/',
+  '**/build/',
 
   '**/__snapshots__',
   '**/.cache',
