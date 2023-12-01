@@ -30,7 +30,8 @@ export async function perfectionist() {
         {
           'type': 'natural',
           'groups': [
-            ['builtin', 'external'],
+            'builtin',
+            'external',
             ['internal', 'parent', 'sibling', 'index'],
             'style',
             ['side-effect', 'side-effect-style'],
