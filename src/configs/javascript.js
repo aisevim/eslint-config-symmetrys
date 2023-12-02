@@ -91,7 +91,6 @@ export async function javascript() {
       'no-alert': 'error',
       'no-caller': 'error',
       'no-case-declarations': 'error',
-      'no-console': ['error', { allow: ['warn', 'error'] }],
       'no-delete-var': 'error',
       'no-empty': ['error', { allowEmptyCatch: true }],
       'no-eq-null': 'error',
