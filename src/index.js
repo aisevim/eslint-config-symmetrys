@@ -1,5 +1,6 @@
 import * as Configs from './configs/index.js'
 import { VUE_GLOB } from './constants.js'
+import { moduleExists } from './utils.js'
 
 const {
   ignore,
@@ -24,9 +25,9 @@ const {
 
 function config(options = {}) {
   const {
-    vue = false,
-    vitest = false,
-    ts = false,
+    vue = moduleExists('vue'),
+    vitest = moduleExists('vitest'),
+    ts = moduleExists('typescript'),
   } = options
   const extensions = []
 
