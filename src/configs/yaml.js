@@ -25,7 +25,6 @@ export async function yaml() {
       ],
       'yaml/no-empty-key': 'error',
       'yaml/no-empty-sequence-entry': 'error',
-      'yaml/no-tab-indent': 'error',
       'yaml/quotes': ['error', { avoidEscape: false, prefer: 'double' }],
       'yaml/flow-sequence-bracket-newline': 'error',
       'yaml/key-spacing': 'error',
