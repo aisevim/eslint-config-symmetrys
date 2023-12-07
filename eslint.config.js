@@ -1,3 +1,3 @@
-import config from './src/index.js'
+import symmertry from './src/index.js'
 
-export default config()
+export default symmertry()
