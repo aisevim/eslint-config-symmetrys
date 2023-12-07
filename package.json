@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-symmetry",
   "version": "0.0.0",
-  "description": "",
+  "description": "Eslint Config",
   "license": "MIT",
   "author": "aisevim <a.aydnlp.pro@gmail.com>",
   "volta": {
@@ -20,6 +20,7 @@
       "require": "./dist/index.cjs"
     }
   },
+  "files": ["dist"],
   "scripts": {
     "dev": "tsup src/index.js --watch --format esm,cjs",
     "build": "tsup src/index.js --format esm,cjs --minify --sourcemap --clean",
