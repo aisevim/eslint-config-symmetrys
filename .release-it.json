@@ -1,4 +1,8 @@
 {
+  "hooks": {
+    "after:bump": "pnpm run build",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  },
   "git": {
     "commitMessage": "chore: release v${version}",
     "requireBranch": "master",

@@ -8,9 +8,21 @@
     "node": "20.10.0"
   },
   "packageManager": "pnpm@8.10.5",
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
   "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "dev": "tsup src/index.js --watch --format esm,cjs",
+    "build": "tsup src/index.js --format esm,cjs --minify --sourcemap --clean",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint . --ignore-pattern 'fixtures/'",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint . --fix --ignore-pattern 'fixtures/'",
     "lint:test": "ESLINT_USE_FLAT_CONFIG=true eslint './fixtures/index.ts' --fix",
