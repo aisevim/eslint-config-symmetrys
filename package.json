@@ -30,7 +30,8 @@
     "lint:test": "ESLINT_USE_FLAT_CONFIG=true eslint './fixtures/index.ts' --fix",
     "test": "vitest",
     "release": "release-it",
-    "release:ci": "release-it --ci"
+    "release:ci": "release-it --ci",
+    "release:ci:test": "release-it --ci --dry-run"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.4.1",
