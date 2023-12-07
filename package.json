@@ -15,12 +15,8 @@
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint . --fix --ignore-pattern 'fixtures/'",
     "lint:test": "ESLINT_USE_FLAT_CONFIG=true eslint './fixtures/index.ts' --fix",
     "test": "vitest",
-    "release": "standard-version",
-    "release:pre": "standard-version --prerelease",
-    "release:alpha": "standard-version --prerelease alpha",
-    "release:patch": "standard-version --release-as patch",
-    "release:minor": "standard-version --release-as minor",
-    "release:major": "standard-version --release-as major"
+    "release": "release-it",
+    "release:ci": "release-it --ci"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.4.1",
@@ -44,9 +40,10 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/eslint": "^8.44.7",
     "eslint": "^8.54.0",
-    "standard-version": "^9.5.0",
+    "release-it": "^17.0.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.2",
     "vitest": "^0.34.6"
