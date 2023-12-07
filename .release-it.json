@@ -1,7 +1,7 @@
 {
   "hooks": {
     "before:init": ["pnpm run release:ci:test"],
-    "after:bump": "pnpm run build",
+    "after:bump": ["pnpm run build", "pnpm run lint:fix"],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
@@ -12,14 +12,50 @@
     "tagName": "v${version}"
   },
   "github": {
-    "autoGenerate": true,
     "release": true,
-    "releaseName": "Release v${version} :rocket:"
+    "releaseName": "Release Symmetry v${version}"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
-      "preset": "angular"
+      "header": "# Symmetry Changelog",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          },
+          {
+            "type": "chore",
+            "section": "Chore"
+          },
+          {
+            "type": "docs",
+            "section": "Docs"
+          },
+          {
+            "type": "style",
+            "hidden": true
+          },
+          {
+            "type": "refactor",
+            "hidden": true
+          },
+          {
+            "type": "perf",
+            "hidden": true
+          },
+          {
+            "type": "test",
+            "hidden": true
+          }
+        ]
+      }
     }
   },
   "npm": {
