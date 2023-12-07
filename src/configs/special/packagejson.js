@@ -34,6 +34,7 @@ export async function specialPackageJson() {
             'repository',
             'keywords',
 
+            'type',
             'man',
             'bin',
             'main',
