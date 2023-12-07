@@ -15,14 +15,17 @@ jobs:
         with:
           node-version: "20.10.x"
           registry-url: https://registry.npmjs.org/
-
-      - name: Install dependencies
-        run: pnpm install
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.10.x
 
       - name: Init Git user
         run: |
           git config --global user.name "aisevim"
           git config --global user.email "a.aydnlp.pro@gmail.com"
+
+      - name: Install dependencies
+        run: pnpm install
       
       - name: Init Npm config
         run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
