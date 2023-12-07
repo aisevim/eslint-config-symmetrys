@@ -10,7 +10,8 @@
   "packageManager": "pnpm@8.10.5",
   "keywords": [
     "eslint",
-    "eslint-config"
+    "eslint-config",
+    "eslint-config-symmetry"
   ],
   "type": "module",
   "main": "./dist/index.js",
