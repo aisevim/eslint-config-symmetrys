@@ -1,9 +1,6 @@
 name: CI/CD with Manual Deployment
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   build:
@@ -30,18 +27,18 @@ jobs:
           pnpm run lint
           pnpm run test
 
-  deploy-npm:
-    runs-on: ubuntu-latest
-    needs: build
-    strategy:
-      matrix:
-        sementic: 
-          - patch
-          - minor
-          - major
-    environment:
-      name: ${{ matrix.sementic }}
+  # deploy-npm:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   strategy:
+  #     matrix:
+  #       sementic: 
+  #         - patch
+  #         - minor
+  #         - major
+  #   environment:
+  #     name: ${{ matrix.sementic }}
 
-    steps:
-      - name: Echo
-        run: echo "${{ matrix.sementic }}"
+  #   steps:
+  #     - name: Echo
+  #       run: echo "${{ matrix.sementic }}"
