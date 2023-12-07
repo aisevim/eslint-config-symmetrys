@@ -1,4 +1,4 @@
-name: CI/CD with Manual Deployment
+name: Tests
 
 on: push
 
