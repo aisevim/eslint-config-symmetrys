@@ -1,4 +1,4 @@
-# eslint-config-symmetry
+# eslint-config-symmetry (in working progress)
 
 ## Usage
 ```js
@@ -22,7 +22,6 @@ export default symmetry()
 		"typescriptreact",
 		"vue",
 		"html",
-		"markdown",
 		"json",
 		"jsonc",
 		"json5",
