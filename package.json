@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-symmetry",
+  "name": "eslint-config-symmetrys",
   "version": "0.0.0",
   "description": "Eslint Config",
   "license": "MIT",
@@ -9,16 +9,18 @@
   },
   "packageManager": "pnpm@8.10.5",
   "bugs": {
-    "url": "https://github.com/aisevim/eslint-config-symmetry/issues"
+    "url": "https://github.com/aisevim/eslint-config-symmetrys/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aisevim/eslint-config-symmetry.git"
+    "url": "git+https://github.com/aisevim/eslint-config-symmetrys.git"
   },
   "keywords": [
     "eslint",
     "eslint-config",
-    "eslint-config-symmetry"
+    "eslint-config-symmetry",
+    "eslint-config-symmetrys",
+    "symmetrys"
   ],
   "type": "module",
   "main": "./dist/index.js",

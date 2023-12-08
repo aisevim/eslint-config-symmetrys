@@ -13,12 +13,12 @@
   },
   "github": {
     "release": true,
-    "releaseName": "Release Symmetry v${version}"
+    "releaseName": "Release Symmetrys v${version}"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
-      "header": "# Symmetry Changelog",
+      "header": "# Symmetrys Changelog",
       "preset": {
         "name": "conventionalcommits",
         "types": [

@@ -1,11 +1,11 @@
-# eslint-config-symmetry (in working progress)
+# eslint-config-symmetrys (in working progress)
 
 ## Usage
 ```js
 // eslint.config.js
-import symmetry from 'eslint-config-symmetry'
+import symmetrys from 'eslint-config-symmetrys'
 
-export default symmetry()
+export default symmetrys()
 ```
 
 ## Vscode Config
