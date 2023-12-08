@@ -10,7 +10,7 @@ export async function unicorn({ ts }) {
   }
 
   return {
-    files: [JS_GLOB],
+    files,
     plugins: {
       unicorn: unicornPlugin,
     },
