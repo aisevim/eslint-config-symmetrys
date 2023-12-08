@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aisevim/eslint-config-symmetry.git"
+    "url": "git+https://github.com/aisevim/eslint-config-symmetry.git"
   },
   "keywords": [
     "eslint",
