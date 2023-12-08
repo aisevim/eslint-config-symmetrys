@@ -1,6 +1,6 @@
 import * as Configs from './configs/index.js'
 import { VUE_GLOB } from './constants.js'
-import { moduleExists } from './utils.js'
+import { moduleExists, toFlatConfigs } from './utils.js'
 
 const {
   ignore,
@@ -15,9 +15,7 @@ const {
   jsDoc,
   comments,
   imports,
-  specialPackageJson,
-  specialReleaseIt,
-  specialTsConfig,
+  specific,
   typescript: tsConfig,
   vitest: vitestConfig,
   vue: vueConfig,
@@ -44,9 +42,7 @@ function config(options = {}) {
     jsDoc({ ts }),
     comments({ ts }),
     imports({ ts }),
-    specialPackageJson(),
-    specialReleaseIt(),
-    specialTsConfig(),
+    specific(),
   ]
 
   if (vue) {
@@ -62,7 +58,7 @@ function config(options = {}) {
     configs.push(tsConfig({ extensions }))
   }
 
-  return configs
+  return toFlatConfigs(configs)
 }
 
 export default config

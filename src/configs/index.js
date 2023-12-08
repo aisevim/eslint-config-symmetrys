@@ -13,7 +13,4 @@ export * from './vue.js'
 export * from './comments.js'
 export * from './imports.js'
 export * from './typescript.js'
-
-export * from './special/packagejson.js'
-export * from './special/releaseitjson.js'
-export * from './special/tsconfigjson.js'
+export * from './specific.js'
