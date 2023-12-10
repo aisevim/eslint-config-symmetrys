@@ -1,3 +1,6 @@
+// Unicorn Plugin
+// Import Plugin
+// Perfectionist Plugin
 import express from 'express'
 import fromPairs from 'lodash/fromPairs'
 import dotenv from 'dotenv'
@@ -11,20 +14,17 @@ import './set-production-env.js'
 import {conf} from './config.js'
 import defaultsDeep from 'lodash/defaultsDeep'
 import fs from 'fs'
+import Default, {} from 'mod'
 
-const comment = 'This is a comment' //eslint-disable-line
-
+// Eslint Plugin
+// JSdoc Plugin
 /**
- * @typedef {SomeType} SomeTypedef
- * @property foo
+ * @private {someType}
  */
+export const foo = () => {
+    return 0;
+};
 
-                   function foo (){return 'foo'}
-
-function callback(err, data) {
-  throw new Error('My error')
-}
-
-Promise.resolve()
-  .then(() => callback(null, 'data'))
-  .catch(err => callback(err.message, null))
+// Promise Plugin
+// Stylistic Plugin
+new Promise.resolve()

@@ -1,0 +1,10 @@
+{
+  "github": {
+    "releaseName": "Release Symmetrys v${version}",
+    "release": true
+  },
+  "git": {
+    "tagAnnotation": "Release v${version}",
+    "commitMessage": "chore: release v${version}"
+  }
+}
