@@ -4,9 +4,17 @@ import { JS_GLOB, TS_GLOB } from '../constants.js'
 
 export async function imports({ ts }) {
   const files = [JS_GLOB]
+  let tsConfig = {}
 
   if (ts) {
     files.push(TS_GLOB)
+    tsConfig = {
+      settings: {
+        'import/resolver': {
+          typescript: {},
+        },
+      },
+    }
   }
 
   return {
@@ -29,6 +37,8 @@ export async function imports({ ts }) {
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
       'import/no-named-default': 'error',
+      'import/no-unresolved': 'error',
     },
+    ...tsConfig,
   }
 }
