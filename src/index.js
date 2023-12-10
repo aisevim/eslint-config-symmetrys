@@ -32,7 +32,7 @@ function config(options = {}) {
   const configs = [
     ignore(),
     javascript(),
-    node({ ts }),
+    node(),
     promise({ ts }),
     stylistic({ ts }),
     perfectionist({ ts }),
