@@ -1,0 +1,18 @@
+{
+  "name": "auto-detect-packages",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-config-symmetrys": "file:../..",
+    "vitest": "^1.0.4"
+  }
+}

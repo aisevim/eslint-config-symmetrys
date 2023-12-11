@@ -28,7 +28,7 @@ describe('Rules', () => {
       /fixtures/default/index.js
          3:1   error    Module imports itself                                              import/no-self-import
          3:8   error    'file' is defined but never used                                   no-unused-vars
-         7:1   warning  Expected @param names to be \\"foo\\". Got \\"fooo\\"                      jsdoc/check-param-names
+         7:1   warning  Expected @param names to be "foo". Got "fooo"                      jsdoc/check-param-names
         14:21  error    Use path.join() or path.resolve() instead of string concatenation  node/no-path-concat
         17:1   error    Promise.resolve() requires 0 or 1 arguments, but received 2        promise/valid-params
         21:5   error    Prefer \`.textContent\` over \`.innerText\`                            unicorn/prefer-dom-node-text-content
@@ -59,7 +59,7 @@ describe('Rules', () => {
       /fixtures/vue-ts/index.ts
          3:1  error    Module imports itself                                        import/no-self-import
          3:8  error    'file' is defined but never used                             @typescript-eslint/no-unused-vars
-         7:1  warning  @param \\"fooo\\" does not match an existing function parameter  jsdoc/check-param-names
+         7:1  warning  @param "fooo" does not match an existing function parameter  jsdoc/check-param-names
         14:1  error    Promise.resolve() requires 0 or 1 arguments, but received 2  promise/valid-params
         18:5  error    Prefer \`.textContent\` over \`.innerText\`                      unicorn/prefer-dom-node-text-content
 
