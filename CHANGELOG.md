@@ -1,5 +1,19 @@
 # Symmetrys Changelog
 
+## [0.2.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.1.0...v0.2.0) (2023-12-12)
+
+
+### Features
+
+* **import:** add rule no-unresolved with ts support ([eb4ae29](https://github.com/aisevim/eslint-config-symmetrys/commit/eb4ae2942a1db9b0b9874017cd03c564cb89bc48))
+* **ts:** add ts-type support for vue file ([452b3c2](https://github.com/aisevim/eslint-config-symmetrys/commit/452b3c2b40f433f90b1ed6dc836c497360695091))
+* **ts:** support ts type infomration rules ([a6bf51c](https://github.com/aisevim/eslint-config-symmetrys/commit/a6bf51ca4319315f5e32103dc84c700a43e2b631))
+
+
+### Bug Fixes
+
+* use differnt package for detect module exist ([33967ba](https://github.com/aisevim/eslint-config-symmetrys/commit/33967ba98f2dd349b068e3da5419c219e81fb7e4))
+
 ## 0.1.0 (2023-12-08)
 
 
