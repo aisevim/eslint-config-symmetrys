@@ -9,7 +9,7 @@ it('generate an error when tsconfig and eslint not syncronised + generate type-t
   let output
 
   try {
-    output = execSync(`eslint . --ignore-pattern 'tests/'`, { encoding: 'utf-8', cwd: dir })
+    output = execSync(`eslint .`, { encoding: 'utf-8', cwd: dir })
   } catch (error) {
     output = error.stdout.replaceAll(dir, '')
   }

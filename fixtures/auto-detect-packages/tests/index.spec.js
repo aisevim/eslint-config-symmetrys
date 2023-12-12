@@ -11,10 +11,7 @@ it('run lint on vue and typescript files', ({ expect }) => {
   try {
     execSync(`eslint .`, { encoding: 'utf-8', cwd: dir })
   } catch (error) {
-    output = error.stdout
-      .replaceAll(dir, '')
-      // output only in test/workspace
-      .replace('{}\n', '')
+    output = error.stdout.replaceAll(dir, '')
   }
 
   expect(output).toMatchInlineSnapshot(`

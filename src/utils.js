@@ -1,8 +1,8 @@
-import { resolve } from 'import-meta-resolve'
+import { isPackageExists } from 'local-pkg'
 
 export function moduleExists(importPath) {
   try {
-    const isExist = resolve(importPath, import.meta.url)
+    const isExist = isPackageExists(importPath)
 
     return !!isExist
   } catch (e) {

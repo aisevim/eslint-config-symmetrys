@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "eslint": "^8.55.0",
-    "eslint-config-symmetrys": "file:../..",
+    "eslint-config-symmetrys": "link:../..",
     "vitest": "^1.0.4"
   }
 }
