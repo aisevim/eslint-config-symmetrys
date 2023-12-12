@@ -1,5 +1,4 @@
 import * as Configs from './configs/index.js'
-import { VUE_GLOB } from './constants.js'
 import { moduleExists, toFlatConfigs } from './utils.js'
 
 const {
@@ -27,7 +26,6 @@ function config(options = {}) {
     vitest = moduleExists('vitest'),
     ts = moduleExists('typescript'),
   } = options
-  const extensions = []
 
   const configs = [
     ignore(),
@@ -46,8 +44,7 @@ function config(options = {}) {
   ]
 
   if (vue) {
-    configs.push(vueConfig())
-    extensions.push(VUE_GLOB)
+    configs.push(vueConfig({ options: ts }))
   }
 
   if (vitest) {
@@ -55,7 +52,7 @@ function config(options = {}) {
   }
 
   if (ts) {
-    configs.push(tsConfig({ options: ts, extensions }))
+    configs.push(tsConfig({ options: ts }))
   }
 
   return toFlatConfigs(configs)

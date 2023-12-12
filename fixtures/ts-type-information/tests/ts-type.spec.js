@@ -9,7 +9,7 @@ it('generate an error when tsconfig and eslint not syncronised + generate type-t
   let output
 
   try {
-    output = execSync(`eslint .`, { encoding: 'utf-8', cwd: dir })
+    output = execSync(`eslint src/*.ts`, { encoding: 'utf-8', cwd: dir })
   } catch (error) {
     output = error.stdout.replaceAll(dir, '')
   }
@@ -29,6 +29,27 @@ it('generate an error when tsconfig and eslint not syncronised + generate type-t
     If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  @typescript-eslint/unbound-method
 
     ✖ 2 problems (2 errors, 0 warnings)
+
+    "
+  `)
+})
+
+it('support Vue file for ts-type', ({ expect }) => {
+  let output
+
+  try {
+    output = execSync(`eslint src/*.vue`, { encoding: 'utf-8', cwd: dir })
+  } catch (error) {
+    output = error.stdout.replaceAll(dir, '')
+  }
+
+  expect(output).toMatchInlineSnapshot(`
+    "
+    /src/App.vue
+      9:15  error  Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
+    If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  @typescript-eslint/unbound-method
+
+    ✖ 1 problem (1 error, 0 warnings)
 
     "
   `)

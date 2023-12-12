@@ -11,7 +11,7 @@ const tsConfigExist = !!globSync(
   { ignore: ['node_modules/**', '**/node_modules/**'], dot: true },
 )?.length
 
-export async function typescript({ options, extensions }) {
+export async function typescript({ options }) {
   const {
     project = tsConfigExist,
   } = options
@@ -39,7 +39,6 @@ export async function typescript({ options, extensions }) {
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
-        extraFileExtensions: extensions,
         sourceType: 'module',
         ...typesInformationOptions?.parserOptions,
       },
