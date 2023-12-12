@@ -15,4 +15,11 @@ export default defineWorkspace([
       environment: 'node',
     },
   },
+  {
+    test: {
+      name: 'Typescript type information activated',
+      include: ['fixtures/ts-type-information/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
 ])

@@ -55,7 +55,7 @@ function config(options = {}) {
   }
 
   if (ts) {
-    configs.push(tsConfig({ extensions }))
+    configs.push(tsConfig({ options: ts, extensions }))
   }
 
   return toFlatConfigs(configs)

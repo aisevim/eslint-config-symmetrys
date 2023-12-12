@@ -116,6 +116,22 @@ importers:
         specifier: ^1.0.4
         version: 1.0.4
 
+  fixtures/ts-type-information:
+    dependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+    devDependencies:
+      eslint:
+        specifier: ^8.55.0
+        version: 8.55.0
+      eslint-config-symmetrys:
+        specifier: file:../..
+        version: file:(eslint-plugin-import@2.29.0)(eslint@8.55.0)(typescript@5.3.3)(vitest@1.0.4)
+      vitest:
+        specifier: ^1.0.4
+        version: 1.0.4
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
