@@ -1,3 +1,5 @@
+import gitignore from 'eslint-config-flat-gitignore'
+
 import * as Configs from './configs/index.js'
 import { moduleExists, toFlatConfigs } from './utils.js'
 
@@ -28,6 +30,9 @@ function config(options = {}) {
   } = options
 
   const configs = [
+    gitignore({
+      strict: false,
+    }),
     ignore(),
     javascript(),
     node(),
