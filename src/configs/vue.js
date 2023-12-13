@@ -8,13 +8,14 @@ import { getTsConfigOptions } from './typescript.js'
 
 
 export async function vue({ options }) {
-  const tsConfigFileOptions = getTsConfigOptions(options?.project)
+  const isTs = options?.ts
+  const tsConfigFileOptions = isTs ? getTsConfigOptions(options?.ts?.project) : {}
 
   return {
     files: [VUE_GLOB],
     plugins: {
       vue: vuePlugin,
-      ts: tsPlugin,
+      ...(isTs ? { ts: tsPlugin } : {}),
     },
     processor: vuePlugin.processors['.vue'],
     languageOptions: {

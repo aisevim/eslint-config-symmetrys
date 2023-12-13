@@ -49,7 +49,7 @@ function config(options = {}) {
   ]
 
   if (vue) {
-    configs.push(vueConfig({ options: ts }))
+    configs.push(vueConfig({ options: { ts } }))
   }
 
   if (vitest) {
