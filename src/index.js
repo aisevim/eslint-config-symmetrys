@@ -17,6 +17,7 @@ const {
   comments,
   imports,
   specific,
+  security,
   typescript: tsConfig,
   vitest: vitestConfig,
   vue: vueConfig,
@@ -46,6 +47,7 @@ function config(options = {}) {
     comments({ ts }),
     imports({ ts }),
     specific(),
+    security({ ts }),
   ]
 
   if (vue) {

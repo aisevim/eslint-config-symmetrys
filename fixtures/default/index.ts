@@ -18,3 +18,9 @@ Promise.resolve((new Promise), (new Promise))
 // Unicorn Plugin
 const dom = document.querySelector('body')
 dom.innerText = 'foo'
+
+// Security Plugin
+const accessLevel = 'user'
+if (accessLevel !== 'user‮') {
+  console.log('You are an admin.')
+}
