@@ -2,35 +2,32 @@ import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
-import { TS_GLOB } from '../constants.js'
+import { DEFAULT_IGNORES, TS_GLOB } from '../constants.js'
 import { renameRules } from '../utils.js'
 
-const dirname = process.cwd()
+export function getTsConfigOptions(project) {
+  const dirname = process.cwd()
+  const tsConfigExist = !!globSync(
+    ['tsconfig.json', 'tsconfig.*.json'],
+    { ignore: DEFAULT_IGNORES, dot: true },
+  )?.length
+  const hasProject = project ?? tsConfigExist
 
-const tsConfigExist = !!globSync(
-  ['tsconfig.json', 'tsconfig.*.json'],
-  { ignore: ['node_modules/**', '**/node_modules/**'], dot: true },
-)?.length
-
-export async function typescript({ options }) {
-  const {
-    project = tsConfigExist,
-  } = options
-  let typesInformationOptions = {}
-
-  if (project) {
-    typesInformationOptions = {
+  return hasProject ?
+    {
       parserOptions: {
-        project,
+        project: hasProject,
         tsConfigRootDir: dirname,
       },
       rules: typescriptPlugin.configs['strict-type-checked'].rules,
-    }
-  } else {
-    typesInformationOptions = {
+    } :
+    {
       rules: typescriptPlugin.configs.strict.rules,
     }
-  }
+}
+
+export async function typescript({ options }) {
+  const tsConfigFileOptions = getTsConfigOptions(options?.project)
 
   return {
     files: [TS_GLOB],
@@ -41,7 +38,7 @@ export async function typescript({ options }) {
       parser: typescriptParser,
       parserOptions: {
         sourceType: 'module',
-        ...typesInformationOptions?.parserOptions,
+        ...tsConfigFileOptions?.parserOptions,
       },
     },
     rules: {
@@ -51,7 +48,7 @@ export async function typescript({ options }) {
         'ts/',
       ),
       ...renameRules(
-        typesInformationOptions?.rules,
+        tsConfigFileOptions.rules,
         '@typescript-eslint/',
         'ts/',
       ),

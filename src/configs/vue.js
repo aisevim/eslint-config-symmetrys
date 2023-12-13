@@ -1,38 +1,15 @@
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import vuePlugin from 'eslint-plugin-vue'
-import { globSync } from 'glob'
 import vueParser from 'vue-eslint-parser'
 
 import { VUE_GLOB } from '../constants.js'
 import { renameRules } from '../utils.js'
+import { getTsConfigOptions } from './typescript.js'
 
-const dirname = process.cwd()
-
-const tsConfigExist = !!globSync(
-  ['tsconfig.json', 'tsconfig.*.json'],
-  { ignore: ['node_modules/**', '**/node_modules/**'], dot: true },
-)?.length
 
 export async function vue({ options }) {
-  const {
-    project = tsConfigExist,
-  } = options
-  let typesInformationOptions = {}
-
-  if (project) {
-    typesInformationOptions = {
-      parserOptions: {
-        project,
-        tsConfigRootDir: dirname,
-      },
-      rules: tsPlugin.configs['strict-type-checked'].rules,
-    }
-  } else {
-    typesInformationOptions = {
-      rules: tsPlugin.configs.strict.rules,
-    }
-  }
+  const tsConfigFileOptions = getTsConfigOptions(options?.project)
 
   return {
     files: [VUE_GLOB],
@@ -46,12 +23,12 @@ export async function vue({ options }) {
       parserOptions: {
         parser: tsParser,
         extraFileExtensions: ['.vue'],
-        ...typesInformationOptions?.parserOptions,
         ecmaVersion: 2022,
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
+        ...tsConfigFileOptions?.parserOptions,
       },
     },
     rules: {
@@ -65,7 +42,7 @@ export async function vue({ options }) {
         'ts/',
       ),
       ...renameRules(
-        typesInformationOptions?.rules,
+        tsConfigFileOptions?.rules,
         '@typescript-eslint/',
         'ts/',
       ),
