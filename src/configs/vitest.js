@@ -1,3 +1,4 @@
+import noOnlyTestsPlugin from 'eslint-plugin-no-only-tests'
 import vitestPlugin from 'eslint-plugin-vitest'
 
 import { TESTS_GLOB } from '../constants.js'
@@ -6,7 +7,8 @@ export async function vitest() {
   return {
     files: [TESTS_GLOB],
     plugins: {
-      vitest: vitestPlugin,
+      'vitest': vitestPlugin,
+      'no-only-tests': noOnlyTestsPlugin,
     },
     languageOptions: {
       globals: {
@@ -32,6 +34,8 @@ export async function vitest() {
       'vitest/prefer-to-contain': 'error',
       'vitest/prefer-to-have-length': 'error',
       'vitest/valid-describe-callback': 'error',
+
+      'no-only-tests/no-only-tests': 'error',
     },
   }
 }
