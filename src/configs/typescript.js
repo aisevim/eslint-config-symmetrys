@@ -3,6 +3,7 @@ import typescriptParser from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
 import { TS_GLOB } from '../constants.js'
+import { renameRules } from '../utils.js'
 
 const dirname = process.cwd()
 
@@ -34,7 +35,7 @@ export async function typescript({ options }) {
   return {
     files: [TS_GLOB],
     plugins: {
-      '@typescript-eslint': typescriptPlugin,
+      ts: typescriptPlugin,
     },
     languageOptions: {
       parser: typescriptParser,
@@ -44,8 +45,16 @@ export async function typescript({ options }) {
       },
     },
     rules: {
-      ...typescriptPlugin.configs['eslint-recommended'].rules,
-      ...typesInformationOptions?.rules,
+      ...renameRules(
+        typescriptPlugin.configs['eslint-recommended'].rules,
+        '@typescript-eslint/',
+        'ts/',
+      ),
+      ...renameRules(
+        typesInformationOptions?.rules,
+        '@typescript-eslint/',
+        'ts/',
+      ),
     },
   }
 }

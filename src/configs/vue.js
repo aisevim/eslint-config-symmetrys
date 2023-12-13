@@ -5,6 +5,7 @@ import { globSync } from 'glob'
 import vueParser from 'vue-eslint-parser'
 
 import { VUE_GLOB } from '../constants.js'
+import { renameRules } from '../utils.js'
 
 const dirname = process.cwd()
 
@@ -36,8 +37,8 @@ export async function vue({ options }) {
   return {
     files: [VUE_GLOB],
     plugins: {
-      'vue': vuePlugin,
-      '@typescript-eslint': tsPlugin,
+      vue: vuePlugin,
+      ts: tsPlugin,
     },
     processor: vuePlugin.processors['.vue'],
     languageOptions: {
@@ -58,8 +59,16 @@ export async function vue({ options }) {
       ...vuePlugin.configs['vue3-strongly-recommended'].rules,
       ...vuePlugin.configs['vue3-recommended'].rules,
 
-      ...tsPlugin.configs['eslint-recommended'].rules,
-      ...typesInformationOptions?.rules,
+      ...renameRules(
+        tsPlugin.configs['eslint-recommended'].rules,
+        '@typescript-eslint/',
+        'ts/',
+      ),
+      ...renameRules(
+        typesInformationOptions?.rules,
+        '@typescript-eslint/',
+        'ts/',
+      ),
     },
   }
 }

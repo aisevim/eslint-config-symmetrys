@@ -26,7 +26,7 @@ it('generate an error when tsconfig and eslint not syncronised + generate type-t
 
     /src/index.ts
       8:15  error  Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
-    If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  @typescript-eslint/unbound-method
+    If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  ts/unbound-method
 
     ✖ 2 problems (2 errors, 0 warnings)
 
@@ -47,7 +47,7 @@ it('support Vue file for ts-type', ({ expect }) => {
     "
     /src/App.vue
       9:15  error  Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
-    If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  @typescript-eslint/unbound-method
+    If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  ts/unbound-method
 
     ✖ 1 problem (1 error, 0 warnings)
 
