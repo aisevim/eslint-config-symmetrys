@@ -46,3 +46,5 @@ export const TESTS_GLOB = [
   `**/*.spec.${ JSX_TSX_GLOB }`,
   `**/*.test.${ JSX_TSX_GLOB }`,
 ]
+
+export const ROOT_TS_CONFIG_GLOB = ['tsconfig.json', 'tsconfig.*.json']

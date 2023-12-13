@@ -4,7 +4,6 @@ import vuePlugin from 'eslint-plugin-vue'
 import vueParser from 'vue-eslint-parser'
 
 import { VUE_GLOB } from '../constants.js'
-import { renameRules } from '../utils.js'
 import { getTsConfigOptions } from './typescript.js'
 
 
@@ -36,16 +35,7 @@ export async function vue({ options }) {
       ...vuePlugin.configs['vue3-strongly-recommended'].rules,
       ...vuePlugin.configs['vue3-recommended'].rules,
 
-      ...renameRules(
-        tsPlugin.configs['eslint-recommended'].rules,
-        '@typescript-eslint/',
-        'ts/',
-      ),
-      ...renameRules(
-        tsConfigFileOptions?.rules,
-        '@typescript-eslint/',
-        'ts/',
-      ),
+      ...tsConfigFileOptions?.rules,
     },
   }
 }
