@@ -1,5 +1,21 @@
 # Symmetrys Changelog
 
+## [0.3.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.2.0...v0.3.0) (2023-12-14)
+
+
+### Features
+
+* **config:** create ignore config ([d5ff6a1](https://github.com/aisevim/eslint-config-symmetrys/commit/d5ff6a12865e268506ccd941c8ccf47d50b6f377))
+* **config:** create security config ([075e4c8](https://github.com/aisevim/eslint-config-symmetrys/commit/075e4c829f82dc9d0fdd13bd0ed9e70a63459392))
+* rename [@typescript-eslint](https://github.com/typescript-eslint) to ts ([d68f3bf](https://github.com/aisevim/eslint-config-symmetrys/commit/d68f3bfe1b6815f9b70f83039f76ec4f9d85e81d))
+* **vitest:** add eslint-plugin-no-only-tests to vitest config ([a44e38c](https://github.com/aisevim/eslint-config-symmetrys/commit/a44e38c05af34e975b0f5ee120a730a6f20c8ed6))
+
+
+### Bug Fixes
+
+* delete ts-support on vue file (mistake) ([9451868](https://github.com/aisevim/eslint-config-symmetrys/commit/94518688f764356b67ece7b5c7734d39780bc04f))
+* **vue:** delete ts in vue config when not used ([8cfa9ef](https://github.com/aisevim/eslint-config-symmetrys/commit/8cfa9ef6eceff2490e16db2a057c56f97de0ced2))
+
 ## [0.2.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.1.0...v0.2.0) (2023-12-12)
 
 
