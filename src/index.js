@@ -29,6 +29,7 @@ function config(options = {}) {
     vitest = moduleExists('vitest'),
     ts = moduleExists('typescript'),
   } = options
+  const extensions = []
 
   const configs = [
     gitignore({
@@ -37,29 +38,31 @@ function config(options = {}) {
     ignore(),
     javascript(),
     node(),
-    promise({ ts }),
-    stylistic({ ts }),
-    perfectionist({ ts }),
-    unicorn({ ts }),
+    promise(),
+    perfectionist(),
+    unicorn(),
     jsonc(),
     yaml(),
-    jsDoc({ ts }),
-    comments({ ts }),
-    imports({ ts }),
+    jsDoc(),
+    comments(),
+    imports(),
     specific(),
-    security({ ts }),
+    security(),
+    stylistic(),
   ]
 
-  if (vue) {
-    configs.push(vueConfig({ options: { ts } }))
+
+  if (ts) {
+    configs.push(tsConfig({ options: ts, extensions }))
   }
 
   if (vitest) {
     configs.push(vitestConfig())
   }
 
-  if (ts) {
-    configs.push(tsConfig({ options: ts }))
+  if (vue) {
+    configs.push(vueConfig({ ts }))
+    extensions.push('.vue')
   }
 
   return toFlatConfigs(configs)

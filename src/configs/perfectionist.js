@@ -1,16 +1,7 @@
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
 
-import { JS_GLOB, TS_GLOB } from '../constants.js'
-
-export async function perfectionist({ ts }) {
-  const files = [JS_GLOB]
-
-  if (ts) {
-    files.push(TS_GLOB)
-  }
-
+export async function perfectionist() {
   return {
-    files,
     plugins: {
       perfectionist: perfectionistPlugin,
     },

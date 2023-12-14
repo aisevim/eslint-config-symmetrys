@@ -1,16 +1,7 @@
 import stylisticPlugin from '@stylistic/eslint-plugin'
 
-import { JS_GLOB, TS_GLOB } from '../constants.js'
-
-export async function stylistic({ ts }) {
-  const files = [JS_GLOB]
-
-  if (ts) {
-    files.push(TS_GLOB)
-  }
-
+export async function stylistic() {
   return {
-    files,
     plugins: {
       stylistic: stylisticPlugin,
     },

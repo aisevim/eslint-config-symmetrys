@@ -1,10 +1,7 @@
 import globals from 'globals'
 
-import { JS_GLOB } from '../constants.js'
-
 export async function javascript() {
   return {
-    files: [JS_GLOB],
     languageOptions: {
       globals: {
         ...globals.browser,

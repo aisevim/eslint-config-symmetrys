@@ -3,16 +3,16 @@
   <template key="foo" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 // Eslint Plugin
 // Import Plugin
-import App from './App.vue'
+import AppTs from './App-ts.vue'
 
 // JSDoc Plugin
 /**
  * @param fooo
  */
-export function emptyFn() {
+export function emptyFn(): any {
 
 }
 

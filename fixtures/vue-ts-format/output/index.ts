@@ -1,10 +1,11 @@
 // Unicorn Plugin
 // Import Plugin
 // Perfectionist Plugin
+// TS Plugin
+
 import fs from 'node:fs'
 
 import dotenv from 'dotenv'
-// TS Plugin
 import express from 'express'
 import defaultsDeep from 'lodash/defaultsDeep'
 import fromPairs from 'lodash/fromPairs'
@@ -24,9 +25,7 @@ import './styles.scss'
 /**
  * @private
  */
-export const foo = () => {
-  return 0
-}
+export const foo = () => 0
 
 // Promise Plugin
 // Stylistic Plugin

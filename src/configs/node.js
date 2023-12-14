@@ -1,10 +1,7 @@
 import nodePlugin from 'eslint-plugin-n'
 
-import { JS_GLOB } from '../constants.js'
-
 export async function node() {
   return {
-    files: [JS_GLOB],
     plugins: {
       node: nodePlugin,
     },

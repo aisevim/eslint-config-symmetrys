@@ -2,7 +2,7 @@ name: Commit Checker
 
 on:
   pull_request:
-    types: 
+    types:
       - edited
       - opened
       - synchronize

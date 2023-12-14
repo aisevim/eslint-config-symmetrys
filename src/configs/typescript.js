@@ -31,30 +31,35 @@ export function getTsConfigOptions(project) {
     }
 
   baseConfig.rules = {
-    ...getRenamedRules(typescriptPlugin.configs['eslint-recommended'].rules),
+    ...getRenamedRules(typescriptPlugin.configs['eslint-recommended'].overrides[0].rules),
     ...baseConfig.rules,
   }
 
   return baseConfig
 }
 
-export async function typescript({ options }) {
+export async function typescript({ options, extensions }) {
   const tsConfigFileOptions = getTsConfigOptions(options?.project)
 
-  return {
-    files: [TS_GLOB],
-    plugins: {
-      ts: typescriptPlugin,
-    },
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        sourceType: 'module',
-        ...tsConfigFileOptions?.parserOptions,
+  return [
+    {
+      plugins: {
+        ts: typescriptPlugin,
       },
     },
-    rules: {
-      ...tsConfigFileOptions.rules,
+    {
+      files: [TS_GLOB],
+      languageOptions: {
+        parser: typescriptParser,
+        parserOptions: {
+          extraFileExtensions: extensions,
+          sourceType: 'module',
+          ...tsConfigFileOptions?.parserOptions,
+        },
+      },
+      rules: {
+        ...tsConfigFileOptions.rules,
+      },
     },
-  }
+  ]
 }

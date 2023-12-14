@@ -1,16 +1,7 @@
 import securityPlugin from 'eslint-plugin-security'
 
-import { JS_GLOB, TS_GLOB } from '../constants.js'
-
-export async function security({ ts }) {
-  const files = [JS_GLOB]
-
-  if (ts) {
-    files.push(TS_GLOB)
-  }
-
+export async function security() {
   return {
-    files,
     plugins: {
       security: securityPlugin,
     },

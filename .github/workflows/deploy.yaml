@@ -26,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-      
+
       - name: Init Npm config
         run: npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
         env:
