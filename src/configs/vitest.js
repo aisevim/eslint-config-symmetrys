@@ -1,22 +1,22 @@
-import noOnlyTestsPlugin from 'eslint-plugin-no-only-tests'
-import vitestPlugin from 'eslint-plugin-vitest'
+import pluginNoOnlyTests from 'eslint-plugin-no-only-tests'
+import pluginVitest from 'eslint-plugin-vitest'
 
-import { TESTS_GLOB } from '../constants.js'
+import { GLOBS_TESTS } from '../globs.js'
 
 export async function vitest() {
   return {
-    files: [TESTS_GLOB],
+    files: [GLOBS_TESTS],
     plugins: {
-      'vitest': vitestPlugin,
-      'no-only-tests': noOnlyTestsPlugin,
+      'vitest': pluginVitest,
+      'no-only-tests': pluginNoOnlyTests,
     },
     languageOptions: {
       globals: {
-        ...vitestPlugin.environments.env.globals,
+        ...pluginVitest.environments.env.globals,
       },
     },
     rules: {
-      ...vitestPlugin.configs.recommended.rules,
+      ...pluginVitest.configs.recommended.rules,
       'vitest/consistent-test-it': 'error',
       'vitest/no-done-callback': 'error',
       'vitest/no-duplicate-hooks': 'error',

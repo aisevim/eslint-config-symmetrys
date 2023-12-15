@@ -1,8 +1,8 @@
-import typescriptPlugin from '@typescript-eslint/eslint-plugin'
-import typescriptParser from '@typescript-eslint/parser'
+import pluginTS from '@typescript-eslint/eslint-plugin'
+import parserTS from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
-import { DEFAULT_IGNORES, ROOT_TS_CONFIG_GLOB, TSX_GLOB, TS_GLOB } from '../constants.js'
+import { GLOBS_DEFAULT_IGNORES, GLOBS_TS_CONFIGS_ROOT, GLOB_TSX, GLOB_TS } from '../globs.js'
 import { renameRules } from '../utils.js'
 
 function getRenamedRules(rules) {
@@ -10,7 +10,7 @@ function getRenamedRules(rules) {
 }
 
 function checkTsConfigPresence() {
-  return !!globSync(ROOT_TS_CONFIG_GLOB, { ignore: DEFAULT_IGNORES, dot: true })?.length
+  return !!globSync(GLOBS_TS_CONFIGS_ROOT, { ignore: GLOBS_DEFAULT_IGNORES, dot: true })?.length
 }
 
 export function getTsConfigOptions(project) {
@@ -24,14 +24,14 @@ export function getTsConfigOptions(project) {
         project: hasProject,
         tsConfigRootDir: dirname,
       },
-      rules: getRenamedRules(typescriptPlugin.configs['strict-type-checked'].rules),
+      rules: getRenamedRules(pluginTS.configs['strict-type-checked'].rules),
     } :
     {
-      rules: getRenamedRules(typescriptPlugin.configs.strict.rules),
+      rules: getRenamedRules(pluginTS.configs.strict.rules),
     }
 
   baseConfig.rules = {
-    ...getRenamedRules(typescriptPlugin.configs['eslint-recommended'].overrides[0].rules),
+    ...getRenamedRules(pluginTS.configs['eslint-recommended'].overrides[0].rules),
     ...baseConfig.rules,
   }
 
@@ -44,13 +44,13 @@ export async function typescript({ options, extensions }) {
   return [
     {
       plugins: {
-        ts: typescriptPlugin,
+        ts: pluginTS,
       },
     },
     {
-      files: [TS_GLOB, TSX_GLOB],
+      files: [GLOB_TS, GLOB_TSX],
       languageOptions: {
-        parser: typescriptParser,
+        parser: parserTS,
         parserOptions: {
           extraFileExtensions: extensions,
           sourceType: 'module',

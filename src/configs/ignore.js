@@ -1,7 +1,7 @@
-import { DEFAULT_IGNORES } from '../constants.js'
+import { GLOBS_DEFAULT_IGNORES } from '../globs.js'
 
 export async function ignore() {
   return {
-    ignores: DEFAULT_IGNORES,
+    ignores: GLOBS_DEFAULT_IGNORES,
   }
 }

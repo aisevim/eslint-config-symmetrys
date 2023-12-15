@@ -1,20 +1,20 @@
-import typescriptPlugin from '@typescript-eslint/eslint-plugin'
+import pluginTS from '@typescript-eslint/eslint-plugin'
 import md from 'eslint-plugin-markdown'
 
-import { LANGS_IN_MARKDOWN_GLOB, MARKDOWN_GLOB } from '../constants.js'
+import { GLOB_LANGS_IN_MARKDOWN, GLOB_MARKDOWN } from '../globs.js'
 import { renameRules } from '../utils.js'
 
 export async function markdown() {
   return [
     {
-      files: [MARKDOWN_GLOB],
+      files: [GLOB_MARKDOWN],
       plugins: {
         markdown: md,
       },
       processor: md.processors.markdown,
     },
     {
-      files: [LANGS_IN_MARKDOWN_GLOB],
+      files: [GLOB_LANGS_IN_MARKDOWN],
       languageOptions: {
         parserOptions: {
           ecmaFeatures: {
@@ -24,7 +24,7 @@ export async function markdown() {
       },
       rules: {
         ...md.configs.recommended.overrides[1].rules,
-        ...renameRules(typescriptPlugin.configs['disable-type-checked'].rules, '@typescript-eslint/', 'ts/'),
+        ...renameRules(pluginTS.configs['disable-type-checked'].rules, '@typescript-eslint/', 'ts/'),
 
         'ts/comma-dangle': 'off',
         'ts/consistent-type-imports': 'off',

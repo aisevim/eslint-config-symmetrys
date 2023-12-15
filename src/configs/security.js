@@ -1,9 +1,9 @@
-import securityPlugin from 'eslint-plugin-security'
+import pluginSecurity from 'eslint-plugin-security'
 
 export async function security() {
   return {
     plugins: {
-      security: securityPlugin,
+      security: pluginSecurity,
     },
     rules: {
       'security/detect-bidi-characters': 'error',

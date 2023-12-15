@@ -1,9 +1,9 @@
-import promisePlugin from 'eslint-plugin-promise'
+import pluginPromise from 'eslint-plugin-promise'
 
 export async function promise() {
   return {
     plugins: {
-      promise: promisePlugin,
+      promise: pluginPromise,
     },
     rules: {
       'promise/no-callback-in-promise': 'error',

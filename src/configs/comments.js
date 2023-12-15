@@ -1,9 +1,9 @@
-import commentsPlugin from 'eslint-plugin-eslint-comments'
+import pluginComments from 'eslint-plugin-eslint-comments'
 
 export async function comments() {
   return {
     plugins: {
-      comments: commentsPlugin,
+      comments: pluginComments,
     },
     rules: {
       'comments/no-duplicate-disable': 'error',

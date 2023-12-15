@@ -1,9 +1,9 @@
-import unicornPlugin from 'eslint-plugin-unicorn'
+import pluginUnicorn from 'eslint-plugin-unicorn'
 
 export async function unicorn() {
   return {
     plugins: {
-      unicorn: unicornPlugin,
+      unicorn: pluginUnicorn,
     },
     rules: {
       'unicorn/no-await-expression-member': ['error'],

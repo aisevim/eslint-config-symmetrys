@@ -1,9 +1,9 @@
-import importsPlugin from 'eslint-plugin-i'
+import pluginImports from 'eslint-plugin-i'
 
 export async function imports() {
   return {
     plugins: {
-      import: importsPlugin,
+      import: pluginImports,
     },
     rules: {
       'import/no-empty-named-blocks': 'error',

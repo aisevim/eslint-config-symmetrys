@@ -1,13 +1,13 @@
-import ymlPlugin from 'eslint-plugin-yml'
+import pluginYaml from 'eslint-plugin-yml'
 import parserYaml from 'yaml-eslint-parser'
 
-import { YAML_GLOB } from '../constants.js'
+import { GLOB_YAML } from '../globs.js'
 
 export async function yaml() {
   return {
-    files: [YAML_GLOB],
+    files: [GLOB_YAML],
     plugins: {
-      yaml: ymlPlugin,
+      yaml: pluginYaml,
     },
     languageOptions: {
       parser: parserYaml,

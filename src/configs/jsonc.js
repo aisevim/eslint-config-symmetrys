@@ -1,19 +1,19 @@
-import jsoncPlugin from 'eslint-plugin-jsonc'
-import jsoncParser from 'jsonc-eslint-parser'
+import pluginJSONC from 'eslint-plugin-jsonc'
+import parserJSONC from 'jsonc-eslint-parser'
 
-import { JSON5_GLOB, JSONC_GLOB, JSON_GLOB } from '../constants.js'
+import { GLOB_JSON5, GLOB_JSONC, GLOB_JSON } from '../globs.js'
 
 export async function jsonc() {
   return [
     {
       plugins: {
-        jsonc: jsoncPlugin,
+        jsonc: pluginJSONC,
       },
     },
     {
-      files: [JSON_GLOB, JSON5_GLOB, JSONC_GLOB],
+      files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
       languageOptions: {
-        parser: jsoncParser,
+        parser: parserJSONC,
       },
       rules: {
         'jsonc/no-bigint-literals': 'error',

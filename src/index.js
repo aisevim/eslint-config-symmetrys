@@ -1,9 +1,6 @@
 import gitignore from 'eslint-config-flat-gitignore'
 
-import * as Configs from './configs/index.js'
-import { moduleExists, toFlatConfigs } from './utils.js'
-
-const {
+import {
   ignore,
   javascript,
   stylistic,
@@ -19,10 +16,11 @@ const {
   specific,
   security,
   markdown,
-  typescript: tsConfig,
-  vitest: vitestConfig,
-  vue: vueConfig,
-} = Configs
+  typescript as tsConfig,
+  vitest as vitestConfig,
+  vue as vueConfig,
+} from './configs/index.js'
+import { moduleExists, toFlatConfigs } from './utils.js'
 
 function config(options = {}) {
   const {

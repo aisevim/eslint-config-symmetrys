@@ -1,9 +1,9 @@
-import perfectionistPlugin from 'eslint-plugin-perfectionist'
+import pluginPerfectionist from 'eslint-plugin-perfectionist'
 
 export async function perfectionist() {
   return {
     plugins: {
-      perfectionist: perfectionistPlugin,
+      perfectionist: pluginPerfectionist,
     },
     rules: {
       'perfectionist/sort-classes': [

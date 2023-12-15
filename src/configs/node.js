@@ -1,9 +1,9 @@
-import nodePlugin from 'eslint-plugin-n'
+import pluginNode from 'eslint-plugin-n'
 
 export async function node() {
   return {
     plugins: {
-      node: nodePlugin,
+      node: pluginNode,
     },
     rules: {
       'node/handle-callback-err': ['error', '^(err|error)$'],

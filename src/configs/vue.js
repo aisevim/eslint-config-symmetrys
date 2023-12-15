@@ -1,31 +1,31 @@
-import tsParser from '@typescript-eslint/parser'
-import vuePlugin from 'eslint-plugin-vue'
-import vueParser from 'vue-eslint-parser'
+import parserTS from '@typescript-eslint/parser'
+import pluginVue from 'eslint-plugin-vue'
+import parserVue from 'vue-eslint-parser'
 
-import { VUE_GLOB } from '../constants.js'
+import { GLOB_VUE } from '../globs.js'
 import { getTsConfigOptions } from './typescript.js'
 
 export async function vue({ ts }) {
   const tsConfigFileOptions = getTsConfigOptions(ts?.project)
-  const inParserPlugins = ts ? tsParser : 'espree'
+  const inParserPlugins = ts ? parserTS : 'espree'
 
   return [
     {
       plugins: {
-        vue: vuePlugin,
+        vue: pluginVue,
       },
     },
     {
-      files: [VUE_GLOB],
-      processor: vuePlugin.processors['.vue'],
+      files: [GLOB_VUE],
+      processor: pluginVue.processors['.vue'],
       languageOptions: {
-        parser: vueParser,
+        parser: parserVue,
         parserOptions: {
           parser: {
             'js': inParserPlugins,
             'ts': inParserPlugins,
             '<template>': 'espree',
-            'vue': vueParser,
+            'vue': parserVue,
           },
           extraFileExtensions: ['.vue'],
           ecmaVersion: 'latest',
@@ -37,9 +37,9 @@ export async function vue({ ts }) {
         },
       },
       rules: {
-        ...vuePlugin.configs['vue3-essential'].rules,
-        ...vuePlugin.configs['vue3-strongly-recommended'].rules,
-        ...vuePlugin.configs['vue3-recommended'].rules,
+        ...pluginVue.configs['vue3-essential'].rules,
+        ...pluginVue.configs['vue3-strongly-recommended'].rules,
+        ...pluginVue.configs['vue3-recommended'].rules,
         ...tsConfigFileOptions?.rules,
 
         'vue/multi-word-component-names': 'off',

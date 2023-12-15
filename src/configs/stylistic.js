@@ -1,9 +1,9 @@
-import stylisticPlugin from '@stylistic/eslint-plugin'
+import pluginStylistic from '@stylistic/eslint-plugin'
 
 export async function stylistic() {
   return {
     plugins: {
-      stylistic: stylisticPlugin,
+      stylistic: pluginStylistic,
     },
     rules: {
       'stylistic/array-bracket-newline': ['error', { multiline: true }],

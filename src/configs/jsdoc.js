@@ -1,9 +1,9 @@
-import jsDocPlugin from 'eslint-plugin-jsdoc'
+import pluginJsDoc from 'eslint-plugin-jsdoc'
 
 export async function jsDoc() {
   return {
     plugins: {
-      jsdoc: jsDocPlugin,
+      jsdoc: pluginJsDoc,
     },
     rules: {
       'jsdoc/check-access': 'warn',

@@ -1,14 +1,16 @@
-import jsoncPlugin from 'eslint-plugin-jsonc'
+import pluginJSONC from 'eslint-plugin-jsonc'
+
+import { GLOBS_TS_CONFIGS, GLOB_PACKAGE_JSON, GLOB_RELEASE_IT_JSON } from '../globs.js'
 
 export async function specific() {
   return [
     {
       plugins: {
-        jsonc: jsoncPlugin,
+        jsonc: pluginJSONC,
       },
     },
     {
-      files: ['**/package.json'],
+      files: [GLOB_PACKAGE_JSON],
       rules: {
         'jsonc/sort-keys': [
           'error',
@@ -102,7 +104,7 @@ export async function specific() {
       },
     },
     {
-      files: ['**/.release-it.json'],
+      files: [GLOB_RELEASE_IT_JSON],
       rules: {
         'jsonc/sort-keys': [
           'error',
@@ -137,7 +139,7 @@ export async function specific() {
       },
     },
     {
-      files: ['**/tsconfig.json', '**/tsconfig.*.json'],
+      files: GLOBS_TS_CONFIGS,
       rules: {
         'jsonc/sort-keys': [
           'error',
