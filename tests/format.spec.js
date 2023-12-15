@@ -12,8 +12,8 @@ describe('Format', () => {
     rimrafSync(join(dirname, 'fixtures/**/*-tmp.*'), { glob: { dot: true } })
   })
 
-  it('format on default files, not vue, ts', async ({ expect }) => {
-    const dir = join(dirname, 'fixtures/default-format')
+  it('format files', async ({ expect }) => {
+    const dir = join(dirname, 'fixtures/format')
     const config = join(dir, 'eslint.config.js')
 
     try {
@@ -37,15 +37,6 @@ describe('Format', () => {
 
     const inMarkdown = readFileSync(join(dir, 'markdown-tmp.md'), 'utf-8')
     expect(inMarkdown).toMatchFileSnapshot(join(dir, 'output', 'markdown.md'))
-  })
-
-  it('format on vue, ts files', async ({ expect }) => {
-    const dir = join(dirname, 'fixtures/vue-ts-format')
-    const config = join(dir, 'eslint.config.js')
-
-    try {
-      execSync(`eslint ${ dir } -c ${ config } --ignore-pattern='**/output/**' --fix-dry-run --format=./tests/utils/generate-formatted-tmp.js`)
-    } catch {}
 
     const inVue = readFileSync(join(dir, 'App-tmp.vue'), 'utf-8')
     expect(inVue).toMatchFileSnapshot(join(dir, 'output', 'App.vue'))

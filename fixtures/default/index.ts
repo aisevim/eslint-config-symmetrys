@@ -1,6 +1,4 @@
-// do nothing
-
-// Eslint Plugin
+// TSlint Plugin
 // Import Plugin
 import file from './index.ts'
 
@@ -18,6 +16,7 @@ Promise.resolve((new Promise), (new Promise))
 // Unicorn Plugin
 const dom = document.querySelector('body')
 dom.innerText = 'foo'
+
 
 // Security Plugin
 const accessLevel = 'user'

@@ -1,6 +1,8 @@
+import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import md from 'eslint-plugin-markdown'
 
 import { LANGS_IN_MARKDOWN_GLOB, MARKDOWN_GLOB } from '../constants.js'
+import { renameRules } from '../utils.js'
 
 export async function markdown() {
   return [
@@ -22,23 +24,31 @@ export async function markdown() {
       },
       rules: {
         ...md.configs.recommended.overrides[1].rules,
+        ...renameRules(typescriptPlugin.configs['disable-type-checked'].rules, '@typescript-eslint/', 'ts/'),
 
-        '@typescript-eslint/comma-dangle': 'off',
-        '@typescript-eslint/consistent-type-imports': 'off',
-        '@typescript-eslint/no-extraneous-class': 'off',
-        '@typescript-eslint/no-namespace': 'off',
-        '@typescript-eslint/no-redeclare': 'off',
-        '@typescript-eslint/no-require-imports': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-use-before-define': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
+        'ts/comma-dangle': 'off',
+        'ts/consistent-type-imports': 'off',
+        'ts/no-extraneous-class': 'off',
+        'ts/no-namespace': 'off',
+        'ts/no-redeclare': 'off',
+        'ts/no-require-imports': 'off',
+        'ts/no-unused-vars': 'off',
+        'ts/no-use-before-define': 'off',
+        'ts/no-var-requires': 'off',
 
+        'style/eol-last': 'off',
+
+        'no-labels': 'off',
+        'no-lone-blocks': 'off',
+        'no-restricted-syntax': 'off',
+        'no-unused-labels': 'off',
         'no-alert': 'off',
         'no-console': 'off',
         'no-restricted-imports': 'off',
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
+        'unicode-bom': 'off',
       },
     },
   ]

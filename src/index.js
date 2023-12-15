@@ -53,18 +53,17 @@ function config(options = {}) {
     stylistic(),
   ]
 
-
-  if (ts) {
-    configs.push(tsConfig({ options: ts, extensions }))
+  if (vue) {
+    configs.push(vueConfig({ ts }))
+    extensions.push('.vue')
   }
 
   if (vitest) {
     configs.push(vitestConfig())
   }
 
-  if (vue) {
-    configs.push(vueConfig({ ts }))
-    extensions.push('.vue')
+  if (ts) {
+    configs.push(tsConfig({ options: ts, extensions }))
   }
 
   return toFlatConfigs(configs)

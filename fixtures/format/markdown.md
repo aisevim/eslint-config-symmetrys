@@ -23,7 +23,21 @@ var div =       <div className="jsx"></div>;
 
 ```json
 {
-  "b": "foo",
   "a": "foo",
+  "b":     "foo",
 }
+```
+
+```yaml
+a  : Foo
+```
+
+```vue
+<template>
+  <h1>{{foo}}</h1>
+</template>
+
+<script setup>
+const text = 'foo'
+</script>
 ```

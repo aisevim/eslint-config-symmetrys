@@ -3,7 +3,7 @@ import { defineWorkspace } from 'vitest/config'
 export default defineWorkspace([
   {
     test: {
-      name: 'default - default-format - vue-ts - vue-ts-format',
+      name: 'default - format',
       include: ['tests/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },

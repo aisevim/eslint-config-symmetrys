@@ -1,14 +1,22 @@
+<template>
+  <div>
+    <h1>Foo</h1>
+  </div>
+</template>
+
+<script setup>
 // Eslint Plugin
 // Import Plugin
-import file from './index.ts'
+import AppTs from './App-ts.vue'
 
 // JSDoc Plugin
 /**
  * @param fooo
  */
-export function emptyFn() {
+function emptyFn() {
 
 }
+emptyFn()
 
 // Promise Plugin
 Promise.resolve((new Promise), (new Promise))
@@ -23,3 +31,4 @@ const accessLevel = 'user'
 if (accessLevel !== 'user‮') {
   console.log('You are an admin.')
 }
+</script>
