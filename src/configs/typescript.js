@@ -2,7 +2,7 @@ import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
-import { DEFAULT_IGNORES, ROOT_TS_CONFIG_GLOB, TS_GLOB } from '../constants.js'
+import { DEFAULT_IGNORES, ROOT_TS_CONFIG_GLOB, TSX_GLOB, TS_GLOB } from '../constants.js'
 import { renameRules } from '../utils.js'
 
 function getRenamedRules(rules) {
@@ -48,12 +48,16 @@ export async function typescript({ options, extensions }) {
       },
     },
     {
-      files: [TS_GLOB],
+      files: [TS_GLOB, TSX_GLOB],
       languageOptions: {
         parser: typescriptParser,
         parserOptions: {
           extraFileExtensions: extensions,
           sourceType: 'module',
+          ecmaFeatures: {
+            jsx: true,
+          },
+          ecmaVersion: 'latest',
           ...tsConfigFileOptions?.parserOptions,
         },
       },
