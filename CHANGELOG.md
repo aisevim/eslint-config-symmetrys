@@ -1,5 +1,22 @@
 # Symmetrys Changelog
 
+## [0.4.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.3.0...v0.4.0) (2023-12-15)
+
+
+### Features
+
+* **md:** create markdown config ([0346e84](https://github.com/aisevim/eslint-config-symmetrys/commit/0346e849cb1400c9015bd051073aa01e5c7e3978))
+* **ts:** add jsx support to files ([b7e5e63](https://github.com/aisevim/eslint-config-symmetrys/commit/b7e5e63ebe7b8aab7d23434626e7fa331882b39f))
+* **vue:** customize vue rules ([7b6dbd9](https://github.com/aisevim/eslint-config-symmetrys/commit/7b6dbd948619330cc5f5d0e485390a94f016220d))
+* **vue:** export vue plugin for all configs ([eeaf92b](https://github.com/aisevim/eslint-config-symmetrys/commit/eeaf92b75663437a8934d1734db3d4892d3b4e54))
+
+
+### Bug Fixes
+
+* big change, delete files path for many configs ([06a9e0f](https://github.com/aisevim/eslint-config-symmetrys/commit/06a9e0fe6aaa436ee951425009de507ed5cf747a))
+* big changes on test, support vue and ts for md config ([98988ed](https://github.com/aisevim/eslint-config-symmetrys/commit/98988ed4ad47da471a7967d85c048ca4e70969cf))
+* **json:** delete sort-array-values and sort-keys rules ([690388a](https://github.com/aisevim/eslint-config-symmetrys/commit/690388a299b2acc77b1c656d5ca06941761a5c58))
+
 ## [0.3.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.2.0...v0.3.0) (2023-12-14)
 
 
