@@ -3,10 +3,12 @@ import jsoncPlugin from 'eslint-plugin-jsonc'
 export async function specific() {
   return [
     {
-      files: ['**/package.json'],
       plugins: {
         jsonc: jsoncPlugin,
       },
+    },
+    {
+      files: ['**/package.json'],
       rules: {
         'jsonc/sort-keys': [
           'error',
@@ -101,9 +103,6 @@ export async function specific() {
     },
     {
       files: ['**/.release-it.json'],
-      plugins: {
-        jsonc: jsoncPlugin,
-      },
       rules: {
         'jsonc/sort-keys': [
           'error',
@@ -139,9 +138,6 @@ export async function specific() {
     },
     {
       files: ['**/tsconfig.json', '**/tsconfig.*.json'],
-      plugins: {
-        jsonc: jsoncPlugin,
-      },
       rules: {
         'jsonc/sort-keys': [
           'error',

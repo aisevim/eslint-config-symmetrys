@@ -19,18 +19,18 @@ export default symmetrys()
   "eslint.validate": [
     "javascript",
     "javascriptreact",
+    "typescript",
+    "typescriptreact",
     "json",
     "json5",
     "jsonc",
-    "markdown",
     "md",
-    "mdown",
     "mkdn",
-    "typescript",
-    "typescriptreact",
-    "vue",
+    "mdown",
+    "markdown",
     "yaml",
-    "yml"
+    "yml",
+    "vue"
   ]
 }
 ```
