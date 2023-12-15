@@ -31,4 +31,4 @@ export const foo = () => {
 
 // Promise Plugin
 // Stylistic Plugin
-Promise.resolve()
+new Promise.resolve()
