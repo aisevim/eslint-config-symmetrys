@@ -11,10 +11,12 @@ export async function vue({ ts }) {
 
   return [
     {
-      files: [VUE_GLOB],
       plugins: {
         vue: vuePlugin,
       },
+    },
+    {
+      files: [VUE_GLOB],
       processor: vuePlugin.processors['.vue'],
       languageOptions: {
         parser: vueParser,
@@ -26,7 +28,7 @@ export async function vue({ ts }) {
             'vue': vueParser,
           },
           extraFileExtensions: ['.vue'],
-          ecmaVersion: 2022,
+          ecmaVersion: 'latest',
           sourceType: 'module',
           ecmaFeatures: {
             jsx: true,
