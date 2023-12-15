@@ -1,10 +1,3 @@
-<template>
-  <div>
-    text
-  </div>
-  <template key="foo" />
-</template>
-
 <script setup>
 // Unicorn Plugin
 // Import Plugin
@@ -39,3 +32,10 @@ export const foo = () => 0
 // Stylistic Plugin
 Promise.resolve()
 </script>
+
+<template>
+  <div>
+    text
+  </div>
+  <template key="foo" />
+</template>

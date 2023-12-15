@@ -18,8 +18,9 @@ it('run lint on vue and typescript files', ({ expect }) => {
     "
     /src/App.vue
       2:3   warning  Require self-closing on HTML elements (<div>)                         vue/html-self-closing
-      3:3   warning  \`<template>\` require directive                                        vue/no-lone-template
+      3:3   error    \`<template>\` require directive                                        vue/no-lone-template
       3:13  error    '<template>' cannot be keyed. Place the key on real elements instead  vue/no-template-key
+      6:1   error    '<script>' should be above '<template>' on line 1                     vue/block-order
 
     /src/index.ts
        3:1  error    Module imports itself                                        import/no-self-import
@@ -28,8 +29,8 @@ it('run lint on vue and typescript files', ({ expect }) => {
       14:1  error    Promise.resolve() requires 0 or 1 arguments, but received 2  promise/valid-params
       18:5  error    Prefer \`.textContent\` over \`.innerText\`                      unicorn/prefer-dom-node-text-content
 
-    ✖ 8 problems (5 errors, 3 warnings)
-      0 errors and 1 warning potentially fixable with the \`--fix\` option.
+    ✖ 9 problems (7 errors, 2 warnings)
+      1 error and 1 warning potentially fixable with the \`--fix\` option.
 
     "
   `)

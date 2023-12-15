@@ -148,7 +148,14 @@ export async function javascript() {
       'no-useless-return': 'error',
       'no-var': 'error',
       'no-with': 'error',
-      'object-shorthand': ['error', 'always', { avoidQuotes: true, ignoreConstructors: false }],
+      'object-shorthand': [
+        'error',
+        'always',
+        {
+          avoidQuotes: true,
+          ignoreConstructors: false,
+        },
+      ],
       'one-var': ['error', 'never'],
       'prefer-arrow-callback': 'error',
       'prefer-const': [
