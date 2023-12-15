@@ -18,6 +18,7 @@ const {
   imports,
   specific,
   security,
+  markdown,
   typescript: tsConfig,
   vitest: vitestConfig,
   vue: vueConfig,
@@ -48,6 +49,7 @@ function config(options = {}) {
     imports(),
     specific(),
     security(),
+    markdown(),
     stylistic(),
   ]
 

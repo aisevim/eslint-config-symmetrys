@@ -41,6 +41,8 @@ export const JSONC_GLOB = '**/*.jsonc'
 
 export const YAML_GLOB = '**/*.y?(a)ml'
 export const VUE_GLOB = '**/*.vue'
+export const MARKDOWN_GLOB = '**/*.{md,mkdn,mdown,markdown}'
+export const LANGS_IN_MARKDOWN_GLOB = `${ MARKDOWN_GLOB }/${ JSX_TSX_GLOB }`
 
 export const TESTS_GLOB = [
   `**/__tests__/**/*.${ JSX_TSX_EXT_GLOB }`,

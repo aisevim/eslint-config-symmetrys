@@ -34,6 +34,9 @@ describe('Format', () => {
 
     const inYaml = readFileSync(join(dir, 'exampl-tmp.yaml'), 'utf-8')
     expect(inYaml).toMatchFileSnapshot(join(dir, 'output', 'exampl.yaml'))
+
+    const inMarkdown = readFileSync(join(dir, 'markdown-tmp.md'), 'utf-8')
+    expect(inMarkdown).toMatchFileSnapshot(join(dir, 'output', 'markdown.md'))
   })
 
   it('format on vue, ts files', async ({ expect }) => {

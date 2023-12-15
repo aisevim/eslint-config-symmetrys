@@ -34,7 +34,15 @@ describe('Rules', () => {
         21:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
         25:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
-      ✖ 9 problems (8 errors, 1 warning)
+      /fixtures/default/markdown.md
+         7:19  error  Extra semicolon                                                                                        stylistic/semi
+        11:26  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the \`=>\`  arrow-body-style
+        12:11  error  Extra semicolon                                                                                        stylistic/semi
+        17:1   error  Unexpected var, use let or const instead                                                               no-var
+        17:38  error  Extra semicolon                                                                                        stylistic/semi
+
+      ✖ 14 problems (13 errors, 1 warning)
+        5 errors and 0 warnings potentially fixable with the \`--fix\` option.
 
       "
     `)
