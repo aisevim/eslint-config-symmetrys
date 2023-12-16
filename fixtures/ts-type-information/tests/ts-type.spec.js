@@ -16,6 +16,14 @@ it('generate an error when tsconfig and eslint not syncronised + generate type-t
 
   expect(output).toMatchInlineSnapshot(`
     "
+    /src/App-ts.vue
+      0:0  error  Parsing error: ESLint was configured to run on \`<tsconfigRootDir>/src/App-ts.vue\` using \`parserOptions.project\`: <tsconfigRootDir>/tsconfig.json
+    However, that TSConfig does not include this file. Either:
+    - Change ESLint's list of included files to not include this file
+    - Change that TSConfig to include this file
+    - Create a new TSConfig that includes this file and include it in your parserOptions.project
+    See the typescript-eslint docs for more info: https://typescript-eslint.io/linting/troubleshooting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
     /src/ignored.ts
       0:0  error  Parsing error: ESLint was configured to run on \`<tsconfigRootDir>/src/ignored.ts\` using \`parserOptions.project\`: <tsconfigRootDir>/tsconfig.json
     However, that TSConfig does not include this file. Either:
@@ -28,7 +36,7 @@ it('generate an error when tsconfig and eslint not syncronised + generate type-t
       8:15  error  Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
     If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  ts/unbound-method
 
-    ✖ 2 problems (2 errors, 0 warnings)
+    ✖ 3 problems (3 errors, 0 warnings)
 
     "
   `)

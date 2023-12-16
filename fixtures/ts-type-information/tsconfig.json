@@ -4,5 +4,6 @@
     "module": "ESNext",
     "moduleResolution": "node"
   },
-  "exclude": ["./src/ignored.ts"]
+  "include": ["src/**/*"],
+  "exclude": ["./src/ignored.ts", "./src/App-ts.vue"]
 }
