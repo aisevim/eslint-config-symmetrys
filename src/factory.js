@@ -44,13 +44,14 @@ function config(options = {}) {
     comments = {},
     imports = {},
   } = options
+  const configs = []
   const extensions = []
 
   if (gitignore) {
-    extensions.push(gitignoreConfig({ strict: false }))
+    configs.push(gitignoreConfig({ strict: false }))
   }
 
-  const configs = [
+  configs.push(
     ignoreConfig({ options: ignore }),
     javascriptConfig({ options: javascript }),
     nodeConfig({ options: node }),
