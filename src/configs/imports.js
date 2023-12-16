@@ -1,7 +1,9 @@
 import pluginImports from 'eslint-plugin-i'
 
-export async function imports() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function importsConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       import: pluginImports,
     },
@@ -21,5 +23,5 @@ export async function imports() {
       'import/no-duplicates': 'error',
       'import/no-named-default': 'error',
     },
-  }
+  })
 }

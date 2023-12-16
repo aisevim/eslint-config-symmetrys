@@ -1,4 +1,6 @@
 import { isPackageExists } from 'local-pkg'
+import _assign from 'lodash.assign'
+import _mergewith from 'lodash.mergewith'
 
 export function moduleExists(importPath) {
   try {
@@ -36,4 +38,22 @@ export function configIsEnabled(configOptions) {
   }
 
   return false
+}
+
+export function createConfig(options, config) {
+  const {
+    merge = {},
+    erase = {},
+  } = options
+
+  const mergedConfig = _mergewith({}, config, merge, customizer)
+  const erasedConfig = _assign({}, mergedConfig, erase)
+
+  return erasedConfig
+}
+
+function customizer(objValue, srcValue) {
+  if (Array.isArray(objValue)) {
+    return objValue.concat(srcValue)
+  }
 }

@@ -3,10 +3,10 @@ import pluginVue from 'eslint-plugin-vue'
 import parserVue from 'vue-eslint-parser'
 
 import { GLOB_VUE } from '../globs.js'
-import { configIsEnabled } from '../utils.js'
+import { configIsEnabled, createConfig } from '../utils.js'
 import { getTsConfigOptions } from './typescript.js'
 
-export async function vue({ ts }) {
+export async function vueConfig({ options = {}, ts }) {
   const tsConfigFileOptions = getTsConfigOptions(ts?.project)
   const inParserPlugins = ts ? parserTS : 'espree'
 
@@ -16,7 +16,7 @@ export async function vue({ ts }) {
         vue: pluginVue,
       },
     },
-    {
+    createConfig(options, {
       files: [GLOB_VUE],
       processor: pluginVue.processors['.vue'],
       languageOptions: {
@@ -136,6 +136,6 @@ export async function vue({ ts }) {
         ],
         'vue/prefer-template': 'error',
       },
-    },
+    }),
   ]
 }

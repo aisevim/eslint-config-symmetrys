@@ -1,7 +1,9 @@
 import pluginComments from 'eslint-plugin-eslint-comments'
 
-export async function comments() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function commentsConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       comments: pluginComments,
     },
@@ -12,5 +14,5 @@ export async function comments() {
       'comments/no-unused-enable': 'error',
       'comments/no-restricted-disable': 'error',
     },
-  }
+  })
 }

@@ -1,7 +1,9 @@
 import pluginSecurity from 'eslint-plugin-security'
 
-export async function security() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function securityConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       security: pluginSecurity,
     },
@@ -12,5 +14,5 @@ export async function security() {
       'security/detect-disable-mustache-escape': 'error',
       'security/detect-new-buffer': 'error',
     },
-  }
+  })
 }

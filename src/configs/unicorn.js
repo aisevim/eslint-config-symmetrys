@@ -1,7 +1,9 @@
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
-export async function unicorn() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function unicornConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       unicorn: pluginUnicorn,
     },
@@ -18,5 +20,5 @@ export async function unicorn() {
       'unicorn/prefer-node-protocol': ['error'],
       'unicorn/throw-new-error': ['error'],
     },
-  }
+  })
 }

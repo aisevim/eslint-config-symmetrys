@@ -1,7 +1,9 @@
 import pluginJsDoc from 'eslint-plugin-jsdoc'
 
-export async function jsDoc() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function jsDocConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       jsdoc: pluginJsDoc,
     },
@@ -24,5 +26,5 @@ export async function jsDoc() {
       'jsdoc/check-alignment': 'warn',
       'jsdoc/multiline-blocks': 'warn',
     },
-  }
+  })
 }

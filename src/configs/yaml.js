@@ -2,9 +2,10 @@ import pluginYaml from 'eslint-plugin-yml'
 import parserYaml from 'yaml-eslint-parser'
 
 import { GLOB_YAML } from '../globs.js'
+import { createConfig } from '../utils.js'
 
-export async function yaml() {
-  return {
+export async function yamlConfig({ options = {} }) {
+  return createConfig(options, {
     files: [GLOB_YAML],
     plugins: {
       yaml: pluginYaml,
@@ -37,5 +38,5 @@ export async function yaml() {
         },
       ],
     },
-  }
+  })
 }

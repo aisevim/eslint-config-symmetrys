@@ -1,7 +1,9 @@
 import globals from 'globals'
 
-export async function javascript() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function javascriptConfig({ options = {} }) {
+  return createConfig(options, {
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -171,17 +173,9 @@ export async function javascript() {
       'prefer-rest-params': 'error',
       'prefer-spread': 'error',
       'prefer-template': 'error',
-      // 'sort-imports': [
-      //   'error',
-      //   {
-      //     allowSeparatedGroups: true,
-      //     ignoreDeclarationSort: true,
-      //     memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      //   },
-      // ],
       'symbol-description': 'error',
       'vars-on-top': 'error',
       'yoda': ['error', 'never'],
     },
-  }
+  })
 }

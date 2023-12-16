@@ -29,4 +29,18 @@ export default defineWorkspace([
       environment: 'node',
     },
   },
+  {
+    test: {
+      name: 'Options Merge',
+      include: ['fixtures/options-merge/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
+  {
+    test: {
+      name: 'Options Erase',
+      include: ['fixtures/options-erase/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
 ])

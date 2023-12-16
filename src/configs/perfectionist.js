@@ -1,7 +1,9 @@
 import pluginPerfectionist from 'eslint-plugin-perfectionist'
 
-export async function perfectionist() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function perfectionistConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       perfectionist: pluginPerfectionist,
     },
@@ -49,5 +51,5 @@ export async function perfectionist() {
       'perfectionist/sort-interfaces': ['error'],
       'perfectionist/sort-named-exports': ['error'],
     },
-  }
+  })
 }

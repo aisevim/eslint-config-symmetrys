@@ -3,7 +3,7 @@ import parserTS from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
 import { GLOBS_DEFAULT_IGNORES, GLOBS_TS_CONFIGS_ROOT, GLOB_TSX, GLOB_TS } from '../globs.js'
-import { renameRules } from '../utils.js'
+import { renameRules, createConfig } from '../utils.js'
 
 function getRenamedRules(rules) {
   return renameRules(rules, '@typescript-eslint/', 'ts/')
@@ -38,7 +38,7 @@ export function getTsConfigOptions(project) {
   return baseConfig
 }
 
-export async function typescript({ options, extensions }) {
+export async function typescriptConfig({ options = {}, extensions }) {
   const tsConfigFileOptions = getTsConfigOptions(options?.project)
 
   return [
@@ -47,7 +47,7 @@ export async function typescript({ options, extensions }) {
         ts: pluginTS,
       },
     },
-    {
+    createConfig(options, {
       files: [GLOB_TS, GLOB_TSX],
       languageOptions: {
         parser: parserTS,
@@ -64,6 +64,6 @@ export async function typescript({ options, extensions }) {
       rules: {
         ...tsConfigFileOptions.rules,
       },
-    },
+    }),
   ]
 }

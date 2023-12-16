@@ -1,7 +1,9 @@
 import pluginNode from 'eslint-plugin-n'
 
-export async function node() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function nodeConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       node: pluginNode,
     },
@@ -14,5 +16,5 @@ export async function node() {
       'node/prefer-promises/fs': 'error',
       'node/process-exit-as-throw': 'error',
     },
-  }
+  })
 }

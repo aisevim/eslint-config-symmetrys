@@ -1,7 +1,9 @@
 import pluginPromise from 'eslint-plugin-promise'
 
-export async function promise() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function promiseConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       promise: pluginPromise,
     },
@@ -15,5 +17,5 @@ export async function promise() {
       'promise/prefer-await-to-then': 'error',
       'promise/valid-params': 'error',
     },
-  }
+  })
 }

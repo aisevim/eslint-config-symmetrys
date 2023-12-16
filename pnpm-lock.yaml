@@ -71,6 +71,12 @@ importers:
       local-pkg:
         specifier: ^0.5.0
         version: 0.5.0
+      lodash.assign:
+        specifier: ^4.2.0
+        version: 4.2.0
+      lodash.mergewith:
+        specifier: ^4.6.2
+        version: 4.6.2
       vue-eslint-parser:
         specifier: ^9.3.2
         version: 9.3.2(eslint@8.55.0)
@@ -126,6 +132,30 @@ importers:
         version: 1.0.4
 
   fixtures/not-enabled:
+    devDependencies:
+      eslint:
+        specifier: ^8.55.0
+        version: 8.55.0
+      eslint-config-symmetrys:
+        specifier: link:../..
+        version: link:../..
+      vitest:
+        specifier: ^1.0.4
+        version: 1.0.4
+
+  fixtures/options-erase:
+    devDependencies:
+      eslint:
+        specifier: ^8.55.0
+        version: 8.55.0
+      eslint-config-symmetrys:
+        specifier: link:../..
+        version: link:../..
+      vitest:
+        specifier: ^1.0.4
+        version: 1.0.4
+
+  fixtures/options-merge:
     devDependencies:
       eslint:
         specifier: ^8.55.0
@@ -3600,6 +3630,10 @@ packages:
       p-locate: 6.0.0
     dev: true
 
+  /lodash.assign@4.2.0:
+    resolution: {integrity: sha512-hFuH8TY+Yji7Eja3mGiuAxBqLagejScbG8GbG0j6o9vzn0YL14My+ktnqtZgFTosKymC9/44wP6s7xyuLfnClw==}
+    dev: false
+
   /lodash.capitalize@4.2.1:
     resolution: {integrity: sha512-kZzYOKspf8XVX5AvmQF94gQW0lejFVgb80G85bU4ZWzoJ6C03PQg3coYAUpSTpQWelrZELd3XWgHzw4Ck5kaIw==}
     dev: true
@@ -3618,6 +3652,10 @@ packages:
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+
+  /lodash.mergewith@4.6.2:
+    resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
+    dev: false
 
   /lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}

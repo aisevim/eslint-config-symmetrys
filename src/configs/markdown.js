@@ -2,9 +2,9 @@ import pluginTS from '@typescript-eslint/eslint-plugin'
 import md from 'eslint-plugin-markdown'
 
 import { GLOB_LANGS_IN_MARKDOWN, GLOB_MARKDOWN } from '../globs.js'
-import { renameRules } from '../utils.js'
+import { renameRules, createConfig } from '../utils.js'
 
-export async function markdown() {
+export async function markdownConfig({ options = {} }) {
   return [
     {
       files: [GLOB_MARKDOWN],
@@ -13,7 +13,7 @@ export async function markdown() {
       },
       processor: md.processors.markdown,
     },
-    {
+    createConfig(options, {
       files: [GLOB_LANGS_IN_MARKDOWN],
       languageOptions: {
         parserOptions: {
@@ -50,6 +50,6 @@ export async function markdown() {
         'no-unused-vars': 'off',
         'unicode-bom': 'off',
       },
-    },
+    }),
   ]
 }

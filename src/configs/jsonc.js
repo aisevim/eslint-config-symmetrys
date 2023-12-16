@@ -2,15 +2,16 @@ import pluginJSONC from 'eslint-plugin-jsonc'
 import parserJSONC from 'jsonc-eslint-parser'
 
 import { GLOB_JSON5, GLOB_JSONC, GLOB_JSON } from '../globs.js'
+import { createConfig } from '../utils.js'
 
-export async function jsonc() {
+export async function jsoncConfig({ options = {} }) {
   return [
     {
       plugins: {
         jsonc: pluginJSONC,
       },
     },
-    {
+    createConfig(options, {
       files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
       languageOptions: {
         parser: parserJSONC,
@@ -58,6 +59,6 @@ export async function jsonc() {
         'jsonc/quotes': ['error', 'double'],
         'jsonc/space-unary-ops': 'error',
       },
-    },
+    }),
   ]
 }

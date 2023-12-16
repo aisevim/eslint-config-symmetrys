@@ -1,7 +1,9 @@
 import pluginStylistic from '@stylistic/eslint-plugin'
 
-export async function stylistic() {
-  return {
+import { createConfig } from '../utils.js'
+
+export async function stylisticConfig({ options = {} }) {
+  return createConfig(options, {
     plugins: {
       stylistic: pluginStylistic,
     },
@@ -184,5 +186,5 @@ export async function stylistic() {
         },
       ],
     },
-  }
+  })
 }

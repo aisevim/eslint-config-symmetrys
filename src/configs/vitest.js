@@ -2,9 +2,10 @@ import pluginNoOnlyTests from 'eslint-plugin-no-only-tests'
 import pluginVitest from 'eslint-plugin-vitest'
 
 import { GLOBS_TESTS } from '../globs.js'
+import { createConfig } from '../utils.js'
 
-export async function vitest() {
-  return {
+export async function vitestConfig({ options = {} }) {
+  return createConfig(options, {
     files: [GLOBS_TESTS],
     plugins: {
       'vitest': pluginVitest,
@@ -37,5 +38,5 @@ export async function vitest() {
 
       'no-only-tests/no-only-tests': 'error',
     },
-  }
+  })
 }

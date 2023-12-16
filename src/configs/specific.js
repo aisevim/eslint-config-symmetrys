@@ -2,7 +2,7 @@ import pluginJSONC from 'eslint-plugin-jsonc'
 
 import { GLOBS_TS_CONFIGS, GLOB_PACKAGE_JSON, GLOB_RELEASE_IT_JSON } from '../globs.js'
 
-export async function specific() {
+export async function specificConfig() {
   return [
     {
       plugins: {

@@ -65,6 +65,8 @@
     "globals": "^13.24.0",
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
+    "lodash.assign": "^4.2.0",
+    "lodash.mergewith": "^4.6.2",
     "vue-eslint-parser": "^9.3.2",
     "yaml-eslint-parser": "^1.2.2"
   },
