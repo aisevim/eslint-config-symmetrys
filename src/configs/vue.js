@@ -1,4 +1,4 @@
-import parserTS from '@typescript-eslint/parser'
+import parserTs from '@typescript-eslint/parser'
 import pluginVue from 'eslint-plugin-vue'
 import parserVue from 'vue-eslint-parser'
 
@@ -8,7 +8,6 @@ import { getTsConfigOptions } from './typescript.js'
 
 export async function vueConfig({ options = {}, ts }) {
   const tsConfigFileOptions = getTsConfigOptions(ts?.project)
-  const inParserPlugins = ts ? parserTS : 'espree'
 
   return [
     {
@@ -23,10 +22,17 @@ export async function vueConfig({ options = {}, ts }) {
         parser: parserVue,
         parserOptions: {
           parser: {
-            'js': inParserPlugins,
-            'ts': inParserPlugins,
-            '<template>': 'espree',
-            'vue': parserVue,
+            js: 'espree',
+            jsx: 'espree',
+            cjs: 'espree',
+            mjs: 'espree',
+
+            ...(configIsEnabled(ts) ? {
+              ts: parserTs,
+              tsx: parserTs,
+              cts: parserTs,
+              mts: parserTs,
+            } : {}),
           },
           extraFileExtensions: ['.vue'],
           ecmaVersion: 'latest',
