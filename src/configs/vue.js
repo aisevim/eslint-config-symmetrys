@@ -3,6 +3,7 @@ import pluginVue from 'eslint-plugin-vue'
 import parserVue from 'vue-eslint-parser'
 
 import { GLOB_VUE } from '../globs.js'
+import { configIsEnabled } from '../utils.js'
 import { getTsConfigOptions } from './typescript.js'
 
 export async function vue({ ts }) {
@@ -40,7 +41,7 @@ export async function vue({ ts }) {
         ...pluginVue.configs['vue3-essential'].rules,
         ...pluginVue.configs['vue3-strongly-recommended'].rules,
         ...pluginVue.configs['vue3-recommended'].rules,
-        ...tsConfigFileOptions?.rules,
+        ...(configIsEnabled(ts) ? tsConfigFileOptions?.rules : {}),
 
         'vue/multi-word-component-names': 'off',
         'vue/require-toggle-inside-transition': 'off',

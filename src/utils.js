@@ -27,3 +27,13 @@ export function renameRules(rules, from, newPrefix) {
       return [key, value]
     }))
 }
+
+export function configIsEnabled(configOptions) {
+  if (typeof configOptions === 'boolean') {
+    return configOptions
+  } else if (typeof configOptions === 'object') {
+    return !!Object.values(configOptions).length
+  }
+
+  return false
+}
