@@ -17,14 +17,28 @@ export default defineWorkspace([
   },
   {
     test: {
-      name: 'Typescript type information activated',
-      include: ['fixtures/ts-type-information/**/*.{test,spec}.{ts,js,tsx}'],
+      name: 'Typescript type information auto activated',
+      include: ['fixtures/ts-type-information-auto/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
   {
     test: {
-      name: 'Lint Not Enabled on config when false or nil',
+      name: 'Typescript type information activated with tsproject setting',
+      include: ['fixtures/ts-type-information-tsproject-setting/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
+  {
+    test: {
+      name: 'Typescript type information not allowed when is manually setted',
+      include: ['fixtures/ts-type-information-auto-ignore/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
+  {
+    test: {
+      name: 'Lint Not Enabled on configs when false or nil',
       include: ['fixtures/not-enabled/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },

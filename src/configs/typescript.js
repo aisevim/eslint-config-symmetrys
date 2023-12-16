@@ -3,7 +3,7 @@ import parserTS from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
 import { GLOBS_DEFAULT_IGNORES, GLOBS_TS_CONFIGS_ROOT, GLOB_TSX, GLOB_TS } from '../globs.js'
-import { renameRules, createConfig } from '../utils.js'
+import { renameRules, createConfig, getGlobFromExtension } from '../utils.js'
 
 function getRenamedRules(rules) {
   return renameRules(rules, '@typescript-eslint/', 'ts/')
@@ -13,33 +13,37 @@ function checkTsConfigPresence() {
   return !!globSync(GLOBS_TS_CONFIGS_ROOT, { ignore: GLOBS_DEFAULT_IGNORES, dot: true })?.length
 }
 
-export function getTsConfigOptions(project) {
-  const dirname = process.cwd()
-  const tsConfigExist = checkTsConfigPresence()
-  const hasProject = project ?? tsConfigExist
+export function getParserOptionsConfig(options, settings) {
+  if (
+    options?.ts?.merge?.languageOptions?.parserOptions?.project ||
+    options?.ts?.erase?.languageOptions?.parserOptions?.project
+  ) {
+    return null
+  }
 
-  const baseConfig = hasProject ?
+  const dirname = process.cwd()
+  const project = settings?.tsproject ?? checkTsConfigPresence()
+
+  return project ?
     {
       parserOptions: {
-        project: hasProject,
+        project,
         tsConfigRootDir: dirname,
       },
       rules: getRenamedRules(pluginTS.configs['strict-type-checked'].rules),
     } :
-    {
-      rules: getRenamedRules(pluginTS.configs.strict.rules),
-    }
-
-  baseConfig.rules = {
-    ...getRenamedRules(pluginTS.configs['eslint-recommended'].overrides[0].rules),
-    ...baseConfig.rules,
-  }
-
-  return baseConfig
+    null
 }
 
-export async function typescriptConfig({ options = {}, extensions }) {
-  const tsConfigFileOptions = getTsConfigOptions(options?.project)
+export const disabledTypescriptTypedRules = getRenamedRules(pluginTS.configs['disable-type-checked'].rules)
+
+export async function typescriptConfig({ options = {}, extensions = [], settings = {} }) {
+  const parserOptionsConfig = getParserOptionsConfig(options, settings)
+  const files = [
+    GLOB_TS,
+    GLOB_TSX,
+    ...extensions.map(ext => getGlobFromExtension(ext)),
+  ]
 
   return [
     {
@@ -48,21 +52,23 @@ export async function typescriptConfig({ options = {}, extensions }) {
       },
     },
     createConfig(options, {
-      files: [GLOB_TS, GLOB_TSX],
+      files,
       languageOptions: {
         parser: parserTS,
         parserOptions: {
-          extraFileExtensions: extensions,
+          extraFileExtensions: extensions.map(ext => `.${ ext }`),
           sourceType: 'module',
           ecmaFeatures: {
             jsx: true,
           },
           ecmaVersion: 'latest',
-          ...tsConfigFileOptions?.parserOptions,
+          ...parserOptionsConfig?.parserOptions,
         },
       },
       rules: {
-        ...tsConfigFileOptions.rules,
+        ...getRenamedRules(pluginTS.configs['eslint-recommended'].overrides[0].rules),
+        ...getRenamedRules(pluginTS.configs.strict.rules),
+        ...parserOptionsConfig?.rules,
       },
     }),
   ]

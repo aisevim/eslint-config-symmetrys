@@ -4,11 +4,8 @@ import parserVue from 'vue-eslint-parser'
 
 import { GLOB_VUE } from '../globs.js'
 import { configIsEnabled, createConfig } from '../utils.js'
-import { getTsConfigOptions } from './typescript.js'
 
 export async function vueConfig({ options = {}, ts }) {
-  const tsConfigFileOptions = getTsConfigOptions(ts?.project)
-
   return [
     {
       plugins: {
@@ -27,12 +24,14 @@ export async function vueConfig({ options = {}, ts }) {
             cjs: 'espree',
             mjs: 'espree',
 
-            ...(configIsEnabled(ts) ? {
-              ts: parserTs,
-              tsx: parserTs,
-              cts: parserTs,
-              mts: parserTs,
-            } : {}),
+            ...(configIsEnabled(ts) ?
+              {
+                ts: parserTs,
+                tsx: parserTs,
+                cts: parserTs,
+                mts: parserTs,
+              } :
+              {}),
           },
           extraFileExtensions: ['.vue'],
           ecmaVersion: 'latest',
@@ -40,14 +39,12 @@ export async function vueConfig({ options = {}, ts }) {
           ecmaFeatures: {
             jsx: true,
           },
-          ...tsConfigFileOptions.parserOptions,
         },
       },
       rules: {
         ...pluginVue.configs['vue3-essential'].rules,
         ...pluginVue.configs['vue3-strongly-recommended'].rules,
         ...pluginVue.configs['vue3-recommended'].rules,
-        ...(configIsEnabled(ts) ? tsConfigFileOptions?.rules : {}),
 
         'vue/multi-word-component-names': 'off',
         'vue/require-toggle-inside-transition': 'off',

@@ -43,9 +43,14 @@ function config(options = {}) {
     unicorn = {},
     comments = {},
     imports = {},
+    settings = {},
   } = options
   const configs = []
   const extensions = []
+
+  if (configIsEnabled(vue)) {
+    extensions.push('vue')
+  }
 
   if (gitignore) {
     configs.push(gitignoreConfig({ strict: false }))
@@ -60,7 +65,15 @@ function config(options = {}) {
     unicornConfig({ options: unicorn }),
     commentsConfig({ options: comments }),
     importsConfig({ options: imports }),
-  ]
+  )
+
+  if (configIsEnabled(ts)) {
+    configs.push(typescriptConfig({ options: ts, extensions, settings }))
+  }
+
+  if (configIsEnabled(vue)) {
+    configs.push(vueConfig({ options: vue, ts }))
+  }
 
   if (configIsEnabled(specific)) {
     configs.push(specificConfig())
@@ -90,17 +103,8 @@ function config(options = {}) {
     configs.push(markdownConfig({ options: markdown }))
   }
 
-  if (configIsEnabled(vue)) {
-    configs.push(vueConfig({ options: vue, ts }))
-    extensions.push('.vue')
-  }
-
   if (configIsEnabled(vitest)) {
     configs.push(vitestConfig({ options: vitest }))
-  }
-
-  if (configIsEnabled(ts)) {
-    configs.push(typescriptConfig({ options: ts, extensions }))
   }
 
   return toFlatConfigs(configs)

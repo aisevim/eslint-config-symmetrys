@@ -2,6 +2,8 @@ import { isPackageExists } from 'local-pkg'
 import _assign from 'lodash.assign'
 import _mergewith from 'lodash.mergewith'
 
+import { GLOB_VUE } from './globs.js'
+
 export function moduleExists(importPath) {
   try {
     const isExist = isPackageExists(importPath)
@@ -55,5 +57,13 @@ export function createConfig(options, config) {
 function customizer(objValue, srcValue) {
   if (Array.isArray(objValue)) {
     return objValue.concat(srcValue)
+  }
+}
+
+
+export function getGlobFromExtension(extension) {
+  switch (extension) {
+    case 'vue':
+      return GLOB_VUE
   }
 }

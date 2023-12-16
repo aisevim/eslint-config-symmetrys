@@ -1,6 +1,8 @@
 packages:
   - "fixtures/auto-detect-packages/"
-  - "fixtures/ts-type-information/"
+  - "fixtures/ts-type-information-auto/"
+  - "fixtures/ts-type-information-tsproject-setting/"
+  - "fixtures/ts-type-information-auto-ignore/"
   - "fixtures/not-enabled/"
   - "fixtures/options-merge/"
   - "fixtures/options-erase/"
