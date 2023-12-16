@@ -167,6 +167,25 @@ importers:
         specifier: ^1.0.4
         version: 1.0.4
 
+  fixtures/setting-tsproject:
+    dependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      vue:
+        specifier: ^3.3.11
+        version: 3.3.11(typescript@5.3.3)
+    devDependencies:
+      eslint:
+        specifier: ^8.55.0
+        version: 8.55.0
+      eslint-config-symmetrys:
+        specifier: link:../..
+        version: link:../..
+      vitest:
+        specifier: ^1.0.4
+        version: 1.0.4
+
   fixtures/ts-type-information-auto:
     dependencies:
       typescript:
@@ -187,25 +206,6 @@ importers:
         version: 1.0.4
 
   fixtures/ts-type-information-auto-ignore:
-    dependencies:
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-      vue:
-        specifier: ^3.3.11
-        version: 3.3.11(typescript@5.3.3)
-    devDependencies:
-      eslint:
-        specifier: ^8.55.0
-        version: 8.55.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
-      vitest:
-        specifier: ^1.0.4
-        version: 1.0.4
-
-  fixtures/ts-type-information-tsproject-setting:
     dependencies:
       typescript:
         specifier: ^5.3.3
