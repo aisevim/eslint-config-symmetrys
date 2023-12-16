@@ -36,7 +36,7 @@ export async function markdown() {
         'ts/no-use-before-define': 'off',
         'ts/no-var-requires': 'off',
 
-        'style/eol-last': 'off',
+        'stylistic/eol-last': 'off',
 
         'no-labels': 'off',
         'no-lone-blocks': 'off',
