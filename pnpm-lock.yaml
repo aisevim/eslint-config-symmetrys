@@ -125,6 +125,18 @@ importers:
         specifier: ^1.0.4
         version: 1.0.4
 
+  fixtures/not-enabled:
+    devDependencies:
+      eslint:
+        specifier: ^8.55.0
+        version: 8.55.0
+      eslint-config-symmetrys:
+        specifier: link:../..
+        version: link:../..
+      vitest:
+        specifier: ^1.0.4
+        version: 1.0.4
+
   fixtures/ts-type-information:
     dependencies:
       typescript:

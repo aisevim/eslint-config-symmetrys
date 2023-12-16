@@ -1,3 +1,4 @@
 packages:
   - "fixtures/auto-detect-packages/"
   - "fixtures/ts-type-information/"
+  - "fixtures/not-enabled/"

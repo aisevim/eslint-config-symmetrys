@@ -22,4 +22,11 @@ export default defineWorkspace([
       environment: 'node',
     },
   },
+  {
+    test: {
+      name: 'Lint Not Enabled on config when false or nil',
+      include: ['fixtures/not-enabled/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
 ])
