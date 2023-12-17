@@ -1,5 +1,27 @@
 # Symmetrys Changelog
 
+## [0.6.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.5.0...v0.6.0) (2023-12-17)
+
+
+### Features
+
+* import module a la carte ([645fab0](https://github.com/aisevim/eslint-config-symmetrys/commit/645fab0a34710448705cdd1888dfb4380b3299da))
+
+
+### Bug Fixes
+
+* **specific:** add jsoncParser to specific configs ([ef1e229](https://github.com/aisevim/eslint-config-symmetrys/commit/ef1e2299fd0ff7f6eeecae4939286325cdad3dc1))
+
+
+### Chore
+
+* add "eslint-symmetrys" keywords ([129da37](https://github.com/aisevim/eslint-config-symmetrys/commit/129da37b35f232cad37f1e2d001416c0c2397692))
+
+
+### Docs
+
+* update badge links ([338946d](https://github.com/aisevim/eslint-config-symmetrys/commit/338946d75c6de8e464e2dc843d5c11e12befbef6))
+
 ## [0.5.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.4.0...v0.5.0) (2023-12-17)
 
 
