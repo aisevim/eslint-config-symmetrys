@@ -1,8 +1,8 @@
-import pluginSecurity from 'eslint-plugin-security'
-
-import { createConfig } from '../utils.js'
+import { createConfig, interopDefault } from '../utils.js'
 
 export async function securityConfig({ options = {} }) {
+  const pluginSecurity = await interopDefault(import('eslint-plugin-security'))
+
   return createConfig(options, {
     plugins: {
       security: pluginSecurity,

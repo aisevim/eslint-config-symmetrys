@@ -1,8 +1,8 @@
-import pluginStylistic from '@stylistic/eslint-plugin'
-
-import { createConfig } from '../utils.js'
+import { createConfig, interopDefault } from '../utils.js'
 
 export async function stylisticConfig({ options = {} }) {
+  const pluginStylistic = await interopDefault(import('@stylistic/eslint-plugin'))
+
   return createConfig(options, {
     plugins: {
       stylistic: pluginStylistic,

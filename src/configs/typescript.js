@@ -1,9 +1,7 @@
-import pluginTS from '@typescript-eslint/eslint-plugin'
-import parserTS from '@typescript-eslint/parser'
 import { globSync } from 'glob'
 
 import { GLOBS_DEFAULT_IGNORES, GLOBS_TS_CONFIGS_ROOT, GLOB_TSX, GLOB_TS } from '../globs.js'
-import { renameRules, createConfig, getGlobFromExtension } from '../utils.js'
+import { renameRules, createConfig, getGlobFromExtension, interopDefault } from '../utils.js'
 
 function getRenamedRules(rules) {
   return renameRules(rules, '@typescript-eslint/', 'ts/')
@@ -13,7 +11,7 @@ function checkTsConfigPresence() {
   return !!globSync(GLOBS_TS_CONFIGS_ROOT, { ignore: GLOBS_DEFAULT_IGNORES, dot: true })?.length
 }
 
-export function getParserOptionsConfig(options, settings) {
+export function getParserOptionsConfig(options, settings, pluginTS) {
   if (
     options?.ts?.merge?.languageOptions?.parserOptions?.project ||
     options?.ts?.erase?.languageOptions?.parserOptions?.project
@@ -35,15 +33,21 @@ export function getParserOptionsConfig(options, settings) {
     null
 }
 
-export const disabledTypescriptTypedRules = getRenamedRules(pluginTS.configs['disable-type-checked'].rules)
-
 export async function typescriptConfig({ options = {}, extensions = [], settings = {} }) {
-  const parserOptionsConfig = getParserOptionsConfig(options, settings)
   const files = [
     GLOB_TS,
     GLOB_TSX,
     ...extensions.map(ext => getGlobFromExtension(ext)),
   ]
+  const [
+    pluginTS,
+    parserTS,
+  ] = await Promise.all([
+    interopDefault(import('@typescript-eslint/eslint-plugin')),
+    interopDefault(import('@typescript-eslint/parser')),
+  ])
+  const parserOptionsConfig = getParserOptionsConfig(options, settings, pluginTS)
+
 
   return [
     {

@@ -1,11 +1,15 @@
-import parserTs from '@typescript-eslint/parser'
-import pluginVue from 'eslint-plugin-vue'
-import parserVue from 'vue-eslint-parser'
-
 import { GLOB_VUE } from '../globs.js'
-import { configIsEnabled, createConfig } from '../utils.js'
+import { configIsEnabled, createConfig, interopDefault } from '../utils.js'
 
 export async function vueConfig({ options = {}, ts }) {
+  const [
+    pluginVue,
+    parserVue,
+  ] = await Promise.all([
+    interopDefault(import('eslint-plugin-vue')),
+    interopDefault(import('vue-eslint-parser')),
+  ])
+
   return [
     {
       plugins: {
@@ -26,10 +30,10 @@ export async function vueConfig({ options = {}, ts }) {
 
             ...(configIsEnabled(ts) ?
               {
-                ts: parserTs,
-                tsx: parserTs,
-                cts: parserTs,
-                mts: parserTs,
+                ts: await interopDefault(import('@typescript-eslint/parser')),
+                tsx: await interopDefault(import('@typescript-eslint/parser')),
+                cts: await interopDefault(import('@typescript-eslint/parser')),
+                mts: await interopDefault(import('@typescript-eslint/parser')),
               } :
               {}),
           },

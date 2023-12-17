@@ -65,3 +65,8 @@ export function getGlobFromExtension(extension) {
       return GLOB_VUE
   }
 }
+
+export async function interopDefault(m) {
+  const resolved = await m
+  return resolved.default || resolved
+}

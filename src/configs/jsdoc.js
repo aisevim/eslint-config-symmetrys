@@ -1,8 +1,8 @@
-import pluginJsDoc from 'eslint-plugin-jsdoc'
-
-import { createConfig } from '../utils.js'
+import { createConfig, interopDefault } from '../utils.js'
 
 export async function jsDocConfig({ options = {} }) {
+  const pluginJsDoc = await interopDefault(import('eslint-plugin-jsdoc'))
+
   return createConfig(options, {
     plugins: {
       jsdoc: pluginJsDoc,

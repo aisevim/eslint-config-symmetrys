@@ -1,10 +1,11 @@
-import pluginTS from '@typescript-eslint/eslint-plugin'
 import md from 'eslint-plugin-markdown'
 
 import { GLOB_LANGS_IN_MARKDOWN, GLOB_MARKDOWN } from '../globs.js'
-import { renameRules, createConfig } from '../utils.js'
+import { renameRules, createConfig, interopDefault } from '../utils.js'
 
 export async function markdownConfig({ options = {} }) {
+  const pluginTS = await interopDefault(import('@typescript-eslint/eslint-plugin'))
+
   return [
     {
       files: [GLOB_MARKDOWN],

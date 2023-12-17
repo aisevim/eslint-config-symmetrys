@@ -1,10 +1,12 @@
-import pluginNoOnlyTests from 'eslint-plugin-no-only-tests'
-import pluginVitest from 'eslint-plugin-vitest'
-
 import { GLOBS_TESTS } from '../globs.js'
-import { createConfig } from '../utils.js'
+import { createConfig, interopDefault } from '../utils.js'
 
 export async function vitestConfig({ options = {} }) {
+  const [pluginVitest, pluginNoOnlyTests] = await Promise.all([
+    interopDefault(import('eslint-plugin-vitest')),
+    interopDefault(import('eslint-plugin-no-only-tests')),
+  ])
+
   return createConfig(options, {
     files: [GLOBS_TESTS],
     plugins: {

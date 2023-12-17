@@ -1,8 +1,9 @@
-import pluginJSONC from 'eslint-plugin-jsonc'
-
 import { GLOBS_TS_CONFIGS, GLOB_PACKAGE_JSON, GLOB_RELEASE_IT_JSON } from '../globs.js'
+import { interopDefault } from '../utils.js'
 
 export async function specificConfig() {
+  const pluginJSONC = await interopDefault(import('eslint-plugin-jsonc'))
+
   return [
     {
       plugins: {
