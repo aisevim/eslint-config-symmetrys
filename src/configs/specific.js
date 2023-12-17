@@ -2,7 +2,10 @@ import { GLOBS_TS_CONFIGS, GLOB_PACKAGE_JSON, GLOB_RELEASE_IT_JSON } from '../gl
 import { interopDefault } from '../utils.js'
 
 export async function specificConfig() {
-  const pluginJSONC = await interopDefault(import('eslint-plugin-jsonc'))
+  const [pluginJSONC, parserJSONC] = await Promise.all([
+    interopDefault(import('eslint-plugin-jsonc')),
+    interopDefault(import('jsonc-eslint-parser')),
+  ])
 
   return [
     {
@@ -12,6 +15,9 @@ export async function specificConfig() {
     },
     {
       files: [GLOB_PACKAGE_JSON],
+      languageOptions: {
+        parser: parserJSONC,
+      },
       rules: {
         'jsonc/sort-keys': [
           'error',
@@ -106,6 +112,9 @@ export async function specificConfig() {
     },
     {
       files: [GLOB_RELEASE_IT_JSON],
+      languageOptions: {
+        parser: parserJSONC,
+      },
       rules: {
         'jsonc/sort-keys': [
           'error',
@@ -141,6 +150,9 @@ export async function specificConfig() {
     },
     {
       files: GLOBS_TS_CONFIGS,
+      languageOptions: {
+        parser: parserJSONC,
+      },
       rules: {
         'jsonc/sort-keys': [
           'error',
