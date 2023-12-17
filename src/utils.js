@@ -48,16 +48,14 @@ export function createConfig(options, config) {
     erase = {},
   } = options
 
-  const mergedConfig = _mergewith({}, config, merge, customizer)
-  const erasedConfig = _assign({}, mergedConfig, erase)
+  const erasedConfig = _assign({}, config, erase)
+  const mergedConfig = _mergewith({}, erasedConfig, merge, (objValue, srcValue) => {
+    if (Array.isArray(objValue)) {
+      return objValue.concat(srcValue)
+    }
+  })
 
-  return erasedConfig
-}
-
-function customizer(objValue, srcValue) {
-  if (Array.isArray(objValue)) {
-    return objValue.concat(srcValue)
-  }
+  return mergedConfig
 }
 
 

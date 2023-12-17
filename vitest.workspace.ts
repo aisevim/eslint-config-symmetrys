@@ -29,7 +29,7 @@ export default defineWorkspace([
       environment: 'node',
     },
   },
-    {
+  {
     test: {
       name: 'Setting tsproject',
       include: ['fixtures/setting-tsproject/**/*.{test,spec}.{ts,js,tsx}'],
