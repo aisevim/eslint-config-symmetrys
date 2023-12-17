@@ -20,7 +20,8 @@
     "eslint-config",
     "eslint-config-symmetry",
     "eslint-config-symmetrys",
-    "symmetrys"
+    "symmetrys",
+    "eslint-symmetrys"
   ],
   "type": "module",
   "main": "./dist/index.js",
