@@ -34,7 +34,7 @@
   "files": ["dist"],
   "scripts": {
     "dev": "tsup src/index.js --watch --format esm,cjs",
-    "build": "tsup src/index.js --format esm,cjs --minify --sourcemap --clean",
+    "build": "tsup src/index.js --format esm,cjs --minify --clean",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint . --ignore-pattern 'fixtures/' --rule 'security/detect-bidi-characters: off'",
     "lint:fix": "pnpm run lint --fix",
     "test": "vitest",
