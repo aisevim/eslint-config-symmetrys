@@ -1,5 +1,12 @@
 # Symmetrys Changelog
 
+## [0.6.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.6.0...v0.6.1) (2023-12-17)
+
+
+### Bug Fixes
+
+* delete source-map in dist ([e1fa537](https://github.com/aisevim/eslint-config-symmetrys/commit/e1fa537421ee1eaa2136b6bacbb89ca4d12245c7))
+
 ## [0.6.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.5.0...v0.6.0) (2023-12-17)
 
 
