@@ -1,5 +1,31 @@
 # Symmetrys Changelog
 
+## [0.5.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.4.0...v0.5.0) (2023-12-17)
+
+
+### Features
+
+* **configs:** change api, add merge and erase options to configs ([05e077d](https://github.com/aisevim/eslint-config-symmetrys/commit/05e077d57a9bb4569ba0b858c623bae838b77159))
+* enable per config with tests ([9e35596](https://github.com/aisevim/eslint-config-symmetrys/commit/9e355960189edd9d3be0da2700281a6b1d24672d))
+* export utils, config and default factory ([1f75e04](https://github.com/aisevim/eslint-config-symmetrys/commit/1f75e048f3ecab25f4dec0f1565515daf9ea453a))
+
+
+### Bug Fixes
+
+* **gitignore:** resend gitignore to configs after ([23660ba](https://github.com/aisevim/eslint-config-symmetrys/commit/23660ba231ddd7e3e66d1a8da6641f8552f87d19))
+* **md:** rename plugin rule style to stylistic ([c22b725](https://github.com/aisevim/eslint-config-symmetrys/commit/c22b72543b1a48c509e13170fa539a68b76ed93b))
+* package json dist path ([85ed46f](https://github.com/aisevim/eslint-config-symmetrys/commit/85ed46fba8c4d918a54fd10d70584484a447dd8f))
+* set priority to merge in createConfig ([5e81c16](https://github.com/aisevim/eslint-config-symmetrys/commit/5e81c16afb7c747e91d9fa020e424f416a6d6129))
+* **vue:** best support of ts in vue files ([5152ee3](https://github.com/aisevim/eslint-config-symmetrys/commit/5152ee3125a9b148870ace8fa542c3d1f65cb6f0))
+* **vue:** disable ts rules when ts config is not enabled ([cef9934](https://github.com/aisevim/eslint-config-symmetrys/commit/cef993468a6145a056fb87073e4b173da06adbde))
+* **vue:** set specific parser per files ([223a8ef](https://github.com/aisevim/eslint-config-symmetrys/commit/223a8efc2e6b6139d0a8b8865e1dce2bc0f6bee7))
+
+
+### Docs
+
+* add badges ([cb6b042](https://github.com/aisevim/eslint-config-symmetrys/commit/cb6b042c93ebc6224925f2e05d9cd22ce6ef6888))
+* update readme ([6df212d](https://github.com/aisevim/eslint-config-symmetrys/commit/6df212d3f7c4d7dab602b909d99986a0e4ea9d34))
+
 ## [0.4.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.3.0...v0.4.0) (2023-12-15)
 
 
