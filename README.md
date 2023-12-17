@@ -1,4 +1,7 @@
 # Symmetrys
+![Tests](https://github.com/aisevim/eslint-config-symmetrys/workflows/Tests/badge.svg)
+![NPM Badge](https://img.shields.io/npm/v/eslint-config-symmetrys?logo=npm)
+![Downloads](https://img.shields.io/npm/dm/eslint-config-symmetrys)
 
 `eslint-config-symmetrys` is a versatile and configurable ESLint preset designed for modern web development projects. It offers a comprehensive and customizable rule set, making it ideal for projects that require specific coding standards and practices. This preset enables easy integration and customization across a variety of development environments.
 
