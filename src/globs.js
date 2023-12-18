@@ -14,6 +14,7 @@ export const GLOB_MARKDOWN = '**/*.{md,mkdn,mdown,markdown}'
 export const GLOB_PACKAGE_JSON = '**/package.json'
 export const GLOB_RELEASE_IT_JSON = '**/.release-it.json'
 export const GLOB_STORYBOOK_MAINFILE = `**/.storybook/main.${ GLOB_JSX_TSX_EXT }`
+export const GLOB_CYPRESS = `**/cypress/e2e/**/*.cy.${ GLOB_JSX_TSX_EXT }`
 
 export const GLOB_LANGS_IN_MARKDOWN = `${ GLOB_MARKDOWN }/${ GLOB_JSX_TSX }`
 

@@ -21,6 +21,7 @@ import {
   vueConfig,
   storybookConfig,
   vueA11yConfig,
+  cypressConfig,
 } from './configs/index.js'
 import { configIsEnabled, moduleExists, toFlatConfigs } from './utils.js'
 
@@ -31,6 +32,7 @@ function config(options = {}) {
     ts = moduleExists('typescript'),
     storybook = moduleExists('storybook'),
     vueA11y = moduleExists('vue'),
+    cypress = moduleExists('cypress'),
     markdown = true,
     security = true,
     jsDoc = true,
@@ -117,6 +119,10 @@ function config(options = {}) {
 
   if (configIsEnabled(storybook)) {
     configs.push(storybookConfig({ options: storybook }))
+  }
+
+  if (configIsEnabled(cypress)) {
+    configs.push(cypressConfig({ options: cypress }))
   }
 
   return toFlatConfigs(...configs, ...settings?.addConfigs ?? [])

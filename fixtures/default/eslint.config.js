@@ -6,4 +6,5 @@ export default symmertry({
   vue: true,
   vueA11y: true,
   storybook: true,
+  cypress: true,
 })

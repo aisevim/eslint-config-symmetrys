@@ -4,6 +4,7 @@ export default symmertry({
   ts: false,
   vue: false, // vueA11y not enabled
   storybook: false,
+  cypress: false,
   markdown: false,
   security: false,
   jsDoc: false,

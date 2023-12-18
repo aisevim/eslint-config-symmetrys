@@ -12,6 +12,7 @@
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "cypress": "npm:eslint",
     "eslint": "^8.54.0",
     "eslint-config-symmetrys": "link:../..",
     "vitest": "^1.0.4"

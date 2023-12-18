@@ -42,6 +42,9 @@ describe('Rules', () => {
       /fixtures/default/Btn.stories.js
         1:1  error  The file should have at least one story export  storybook/story-exports
 
+      /fixtures/default/cypress/e2e/cypress.cy.js
+        3:5  error  Do not use cy.pause command  cypress/no-pause
+
       /fixtures/default/exampl.yaml
         3:1  error  Empty mapping keys are forbidden  yaml/no-empty-key
 
@@ -73,7 +76,7 @@ describe('Rules', () => {
         29:1   error  Empty mapping keys are forbidden                         yaml/no-empty-key
         37:1   error  '<script setup>' should be above '<template>' on line 1  vue/block-order
 
-      ✖ 38 problems (34 errors, 4 warnings)
+      ✖ 39 problems (35 errors, 4 warnings)
         6 errors and 0 warnings potentially fixable with the \`--fix\` option.
 
       "

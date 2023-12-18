@@ -29,6 +29,7 @@
 | `vueA11y`       | yes with `vue` | yes          | yes and auto disabled<br>if `vue: false` | `vue-a11y/`                    |
 | `vitest`        | yes            | yes          | yes                                      | `vitest/`,<br>`no-only-tests/` |
 | `storybook`     | yes            | yes          | yes                                      | `storybook/`                   |
+| `cypress`       | yes            | yes          | yes                                      | `cypress/`                     |
 | `markdown`      | -              | yes          | yes                                      | `markdown/`                    |
 | `security`      | -              | yes          | yes                                      | `security/`                    |
 | `jsDoc`         | -              | yes          | yes                                      | `jsdoc/`                       |
@@ -77,6 +78,11 @@ Vitest specific rules.
 [Storybook Rules](https://github.com/storybookjs/eslint-plugin-storybook)
 
 Storybook specific rules.
+
+### ****Cypress****
+[Cypress Rules](https://github.com/cypress-io/eslint-plugin-cypress)
+
+Cypress specific rules.
 
 ### ****Node****
 [Node Plugin](https://github.com/eslint-community/eslint-plugin-n)
