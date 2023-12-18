@@ -5,7 +5,7 @@ import { it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-it('lint not enable specific files, see eslint.config.js', ({ expect }) => {
+it('check config not enable when setted to false', ({ expect }) => {
   let output
 
   try {

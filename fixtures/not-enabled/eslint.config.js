@@ -2,7 +2,8 @@ import symmertry from 'eslint-config-symmetrys'
 
 export default symmertry({
   ts: false,
-  vue: false,
+  vue: false, // vueA11y not enabled
+  storybook: false,
   markdown: false,
   security: false,
   jsDoc: false,

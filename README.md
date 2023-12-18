@@ -14,29 +14,30 @@
 
 ## Configurations Overview
 
-| Name             |   Config name   |  Auto detection   | Configurable | activable/Deactivable |      Prefix      |
-| ---------------- | :-------------: | :---------------: | :----------: | :-------------------: | :--------------: |
-| Javascript       |      `js`       |         /         |    `yes`     |         `no`          |        ``        |
-| Ignore           |    `ignore`     |         /         |    `yes`     |         `no`          |        /         |
-| Node             |     `node`      |         /         |    `yes`     |         `no`          |     `node/`      |
-| Promise          |    `promise`    |         /         |    `yes`     |         `no`          |    `promise/`    |
-| Perfectionist    | `perfectionist` |         /         |    `yes`     |         `no`          | `perfectionist/` |
-| Unicorn          |    `unicorn`    |         /         |    `yes`     |         `no`          |    `unicorn/`    |
-| Comments         |   `comments`    |         /         |    `yes`     |         `no`          |   `comments/`    |
-| Imports          |    `imports`    |         /         |    `yes`     |         `no`          |    `import/`     |
-| Typescript       |      `ts`       |       `yes`       |    `yes`     |         `yes`         |      `ts/`       |
-| Vue              |      `vue`      |       `yes`       |    `yes`     |         `yes`         |      `vue/`      |
-| Vitest           |    `vitest`     |       `yes`       |    `yes`     |         `yes`         |    `vitest/`     |
-| No only tests    |    `vitest`     | `yes` with vitest |    `yes`     |   `yes` with vitest   | `no-only-tests/` |
-| Storybook        |   `storybook`   |       `yes`       |    `yes`     |         `yes`         |   `storybook/`   |
-| Markdown         |   `markdown`    |         /         |    `yes`     |         `yes`         |   `markdown/`    |
-| Security         |   `security`    |         /         |    `yes`     |         `yes`         |   `security/`    |
-| Js Doc           |     `jsDoc`     |         /         |    `yes`     |         `yes`         |     `jsdoc/`     |
-| YAML             |     `yaml`      |         /         |    `yes`     |         `yes`         |     `yaml/`      |
-| JSON             |     `json`      |         /         |    `yes`     |         `yes`         |     `jsonc/`     |
-| Stylistic Eslint |   `stylistic`   |         /         |    `yes`     |         `yes`         |   `stylistic/`   |
-| GitIgnore flat   |   `gitignore`   |         /         |     `no`     |         `yes`         |        /         |
-| Specific         |   `specific`    |         /         |     `no`     |         `yes`         |        /         |
+| Name             |   Config name   |   Auto detection    | Configurable |        activable/Deactivable         |      Prefix      |
+| ---------------- | :-------------: | :-----------------: | :----------: | :----------------------------------: | :--------------: |
+| Javascript       |      `js`       |          /          |    `yes`     |                 `no`                 |        ``        |
+| Ignore           |    `ignore`     |          /          |    `yes`     |                 `no`                 |        /         |
+| Node             |     `node`      |          /          |    `yes`     |                 `no`                 |     `node/`      |
+| Promise          |    `promise`    |          /          |    `yes`     |                 `no`                 |    `promise/`    |
+| Perfectionist    | `perfectionist` |          /          |    `yes`     |                 `no`                 | `perfectionist/` |
+| Unicorn          |    `unicorn`    |          /          |    `yes`     |                 `no`                 |    `unicorn/`    |
+| Comments         |   `comments`    |          /          |    `yes`     |                 `no`                 |   `comments/`    |
+| Imports          |    `imports`    |          /          |    `yes`     |                 `no`                 |    `import/`     |
+| Typescript       |      `ts`       |        `yes`        |    `yes`     |                `yes`                 |      `ts/`       |
+| Vue              |      `vue`      |        `yes`        |    `yes`     |                `yes`                 |      `vue/`      |
+| Vue A11y         |    `vueA11y`    |  `yes` with `vue`   |    `yes`     | `yes`, auto disabled if `vue: false` |   `vue-a11y/`    |
+| Vitest           |    `vitest`     |        `yes`        |    `yes`     |                `yes`                 |    `vitest/`     |
+| No only tests    |    `vitest`     | `yes` with `vitest` |    `yes`     |         `yes` with `vitest`          | `no-only-tests/` |
+| Storybook        |   `storybook`   |        `yes`        |    `yes`     |                `yes`                 |   `storybook/`   |
+| Markdown         |   `markdown`    |          /          |    `yes`     |                `yes`                 |   `markdown/`    |
+| Security         |   `security`    |          /          |    `yes`     |                `yes`                 |   `security/`    |
+| Js Doc           |     `jsDoc`     |          /          |    `yes`     |                `yes`                 |     `jsdoc/`     |
+| YAML             |     `yaml`      |          /          |    `yes`     |                `yes`                 |     `yaml/`      |
+| JSON             |     `json`      |          /          |    `yes`     |                `yes`                 |     `jsonc/`     |
+| Stylistic Eslint |   `stylistic`   |          /          |    `yes`     |                `yes`                 |   `stylistic/`   |
+| GitIgnore flat   |   `gitignore`   |          /          |     `no`     |                `yes`                 |        /         |
+| Specific         |   `specific`    |          /          |     `no`     |                `yes`                 |        /         |
 
 
 <details>
@@ -59,6 +60,12 @@ TypeScript configuration rules. Extends ESLint with TypeScript-specific rules, e
 Vue.js specific rules.
 **Automatically sets TypeScript support when enabled.**
 **This project currently utilizes `vue3-essential`, `vue3-strongly-recommended`, `vue3-recommended`**
+
+### ****Vue A11y****
+[Vue A11y Rules](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rule-overview/)
+
+An eslint plugin for checking accessibility rules from within .vue files.
+**Available only when vue is enabled**
 
 ### ****Vitest****
 [Vitest Rules](https://github.com/veritem/eslint-plugin-vitest)

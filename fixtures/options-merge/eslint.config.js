@@ -14,8 +14,8 @@ export default symmertry({
   jsDoc: false,
   yaml: {
     merge: {
-      files: ['**/*.fake-yyy']
-    }
+      files: ['**/*.fake-yyy'],
+    },
   },
   json: false,
   stylistic: false,

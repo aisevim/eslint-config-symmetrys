@@ -20,22 +20,24 @@ describe('Rules', () => {
     expect(output).toMatchInlineSnapshot(`
       "
       /fixtures/default/App-ts.vue
-         7:1   error    '<script setup>' should be above '<template>' on line 1                                       vue/block-order
-        10:1   error    Module imports itself                                                                         import/no-self-import
-        10:8   error    'AppTs' is defined but never used                                                             ts/no-unused-vars
-        14:1   warning  @param "fooo" does not match an existing function parameter                                   jsdoc/check-param-names
-        22:1   error    Promise.resolve() requires 0 or 1 arguments, but received 2                                   promise/valid-params
-        26:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
-        31:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
+         3:8   error    Elements with ARIA roles must use a valid, non-abstract ARIA role                             vue-a11y/aria-role
+         8:1   error    '<script setup lang=ts>' should be above '<template>' on line 1                               vue/block-order
+        11:1   error    Module imports itself                                                                         import/no-self-import
+        11:8   error    'AppTs' is defined but never used                                                             ts/no-unused-vars
+        15:1   warning  @param "fooo" does not match an existing function parameter                                   jsdoc/check-param-names
+        23:1   error    Promise.resolve() requires 0 or 1 arguments, but received 2                                   promise/valid-params
+        27:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
+        32:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
       /fixtures/default/App.vue
-         7:1   error    '<script setup>' should be above '<template>' on line 1                                       vue/block-order
-        10:1   error    Module imports itself                                                                         import/no-self-import
-        10:8   error    'App' is defined but never used                                                               ts/no-unused-vars
-        14:1   warning  @param "fooo" does not match an existing function parameter                                   jsdoc/check-param-names
-        22:1   error    Promise.resolve() requires 0 or 1 arguments, but received 2                                   promise/valid-params
-        26:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
-        31:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
+         3:8   error    Elements with ARIA roles must use a valid, non-abstract ARIA role                             vue-a11y/aria-role
+         8:1   error    '<script setup>' should be above '<template>' on line 1                                       vue/block-order
+        11:1   error    Module imports itself                                                                         import/no-self-import
+        11:8   error    'App' is defined but never used                                                               ts/no-unused-vars
+        15:1   warning  @param "fooo" does not match an existing function parameter                                   jsdoc/check-param-names
+        23:1   error    Promise.resolve() requires 0 or 1 arguments, but received 2                                   promise/valid-params
+        27:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
+        32:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
       /fixtures/default/Btn.stories.js
         1:1  error  The file should have at least one story export  storybook/story-exports
@@ -71,7 +73,7 @@ describe('Rules', () => {
         29:1   error  Empty mapping keys are forbidden                         yaml/no-empty-key
         37:1   error  '<script setup>' should be above '<template>' on line 1  vue/block-order
 
-      ✖ 36 problems (32 errors, 4 warnings)
+      ✖ 38 problems (34 errors, 4 warnings)
         6 errors and 0 warnings potentially fixable with the \`--fix\` option.
 
       "

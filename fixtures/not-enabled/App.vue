@@ -1,6 +1,7 @@
 <!-- do nothing -->
 <template>
-  <div>
+  <!-- Vue-a11y Plugin -->
+  <div role="datepicker">
     <h1>Foo</h1>
   </div>
 </template>

@@ -20,6 +20,7 @@ import {
   vitestConfig,
   vueConfig,
   storybookConfig,
+  vueA11yConfig,
 } from './configs/index.js'
 import { configIsEnabled, moduleExists, toFlatConfigs } from './utils.js'
 
@@ -29,6 +30,7 @@ function config(options = {}) {
     vitest = moduleExists('vitest'),
     ts = moduleExists('typescript'),
     storybook = moduleExists('storybook'),
+    vueA11y = moduleExists('vue'),
     markdown = true,
     security = true,
     jsDoc = true,
@@ -75,6 +77,10 @@ function config(options = {}) {
 
   if (configIsEnabled(vue)) {
     configs.push(vueConfig({ options: vue, ts }))
+
+    if (configIsEnabled(vueA11y)) {
+      configs.push(vueA11yConfig({ options: vueA11y }))
+    }
   }
 
   if (configIsEnabled(specific)) {

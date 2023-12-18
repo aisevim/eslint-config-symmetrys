@@ -1,11 +1,12 @@
 <!-- do nothing -->
 <template>
-  <div>
+  <!-- Vue-a11y Plugin -->
+  <div role="datepicker">
     <h1>Foo</h1>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // Eslint Plugin
 // Import Plugin
 import AppTs from './App-ts.vue'

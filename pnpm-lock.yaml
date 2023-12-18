@@ -62,6 +62,9 @@ importers:
       eslint-plugin-vue:
         specifier: ^9.19.2
         version: 9.19.2(eslint@8.55.0)
+      eslint-plugin-vuejs-accessibility:
+        specifier: ^2.2.0
+        version: 2.2.0(eslint@8.55.0)
       eslint-plugin-yml:
         specifier: ^1.10.0
         version: 1.10.0(eslint@8.55.0)
@@ -138,6 +141,16 @@ importers:
         version: 1.0.4
 
   fixtures/not-enabled:
+    dependencies:
+      storybook:
+        specifier: ^7.6.5
+        version: 7.6.5
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      vue:
+        specifier: ^3.3.11
+        version: 3.3.11(typescript@5.3.3)
     devDependencies:
       eslint:
         specifier: ^8.55.0
@@ -2361,7 +2374,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.6
       '@babel/preset-env': 7.23.6(@babel/core@7.23.6)
-      '@babel/types': 7.23.5
+      '@babel/types': 7.23.6
       '@ndelangen/get-tarball': 3.0.9
       '@storybook/codemod': 7.6.5
       '@storybook/core-common': 7.6.5
@@ -2418,7 +2431,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.6
       '@babel/preset-env': 7.23.6(@babel/core@7.23.6)
-      '@babel/types': 7.23.5
+      '@babel/types': 7.23.6
       '@storybook/csf': 0.1.2
       '@storybook/csf-tools': 7.6.5
       '@storybook/node-logger': 7.6.5
@@ -2526,9 +2539,9 @@ packages:
     resolution: {integrity: sha512-1iaCh7nt+WE7Q5UwRhLLc5flMNoAV/vBr0tvDSCKiHaO+D3dZzlZOe/U+S6wegdyN2QNcvT2xs179CcrX6Qp6w==}
     dependencies:
       '@babel/generator': 7.23.6
-      '@babel/parser': 7.23.5
+      '@babel/parser': 7.23.6
       '@babel/traverse': 7.23.6
-      '@babel/types': 7.23.5
+      '@babel/types': 7.23.6
       '@storybook/csf': 0.1.2
       '@storybook/types': 7.6.5
       fs-extra: 11.2.0
@@ -3100,7 +3113,7 @@ packages:
   /@vue/compiler-core@3.3.11:
     resolution: {integrity: sha512-h97/TGWBilnLuRaj58sxNrsUU66fwdRKLOLQ9N/5iNDfp+DZhYH9Obhe0bXxhedl8fjAgpRANpiZfbgWyruQ0w==}
     dependencies:
-      '@babel/parser': 7.23.5
+      '@babel/parser': 7.23.6
       '@vue/shared': 3.3.11
       estree-walker: 2.0.2
       source-map-js: 1.0.2
@@ -3116,7 +3129,7 @@ packages:
   /@vue/compiler-sfc@3.3.11:
     resolution: {integrity: sha512-U4iqPlHO0KQeK1mrsxCN0vZzw43/lL8POxgpzcJweopmqtoYy9nljJzWDIQS3EfjiYhfdtdk9Gtgz7MRXnz3GA==}
     dependencies:
-      '@babel/parser': 7.23.5
+      '@babel/parser': 7.23.6
       '@vue/compiler-core': 3.3.11
       '@vue/compiler-dom': 3.3.11
       '@vue/compiler-ssr': 3.3.11
@@ -3138,7 +3151,7 @@ packages:
   /@vue/reactivity-transform@3.3.11:
     resolution: {integrity: sha512-fPGjH0wqJo68A0wQ1k158utDq/cRyZNlFoxGwNScE28aUFOKFEnCBsvyD8jHn+0kd0UKVpuGuaZEQ6r9FJRqCg==}
     dependencies:
-      '@babel/parser': 7.23.5
+      '@babel/parser': 7.23.6
       '@vue/compiler-core': 3.3.11
       '@vue/shared': 3.3.11
       estree-walker: 2.0.2
@@ -3340,6 +3353,12 @@ packages:
 
   /argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
+
+  /aria-query@5.3.0:
+    resolution: {integrity: sha512-b0P0sZPKtyu8HkeRAfCq0IfURZK+SuwMjY1UXGBU27wpAiTwQAIlq56IbIO+ytk/JjS1fMR14ee5WBBfKi5J6A==}
+    dependencies:
+      dequal: 2.0.3
+    dev: false
 
   /array-buffer-byte-length@1.0.0:
     resolution: {integrity: sha512-LPuwb2P+NrQw3XhxGc36+XSvuBPopovXYTR9Ew++Du9Yb/bx5AzBfrIsBoj0EZUifjQU+sHL21sseZ3jerWO/A==}
@@ -4448,7 +4467,6 @@ packages:
 
   /emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
-    dev: true
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -4970,6 +4988,20 @@ packages:
       semver: 7.5.4
       vue-eslint-parser: 9.3.2(eslint@8.55.0)
       xml-name-validator: 4.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /eslint-plugin-vuejs-accessibility@2.2.0(eslint@8.55.0):
+    resolution: {integrity: sha512-/Dr02rkrBU/mDE4+xO8/9Y230mC9ZTkh2U5tJHEFHxw/CldccmVCWgWs4NM1lq+Bbu9bJzwJPHOsZ+o5wIQuOA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      aria-query: 5.3.0
+      emoji-regex: 10.3.0
+      eslint: 8.55.0
+      vue-eslint-parser: 9.3.2(eslint@8.55.0)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6349,7 +6381,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.23.6
-      '@babel/parser': 7.23.5
+      '@babel/parser': 7.23.6
       '@babel/plugin-transform-class-properties': 7.23.3(@babel/core@7.23.6)
       '@babel/plugin-transform-modules-commonjs': 7.23.3(@babel/core@7.23.6)
       '@babel/plugin-transform-nullish-coalescing-operator': 7.23.4(@babel/core@7.23.6)
