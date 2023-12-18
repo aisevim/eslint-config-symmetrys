@@ -5,7 +5,7 @@ export default results => {
 
   results.forEach(result => {
     if (result.output && result.filePath) {
-      const newFilePath = result.filePath.replace(/(\.[^.]*$)/, '-tmp$1')
+      const newFilePath = result.filePath.replace(/((?<!^)\.)/, '-tmp$1')
       files[newFilePath] = result.output
 
       writeFileSync(newFilePath, result.output)

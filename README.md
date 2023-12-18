@@ -28,6 +28,7 @@
 | Vue              |      `vue`      |       `yes`       |    `yes`     |         `yes`         |      `vue/`      |
 | Vitest           |    `vitest`     |       `yes`       |    `yes`     |         `yes`         |    `vitest/`     |
 | No only tests    |    `vitest`     | `yes` with vitest |    `yes`     |   `yes` with vitest   | `no-only-tests/` |
+| Storybook        |   `storybook`   |       `yes`       |    `yes`     |         `yes`         |   `storybook/`   |
 | Markdown         |   `markdown`    |         /         |    `yes`     |         `yes`         |   `markdown/`    |
 | Security         |   `security`    |         /         |    `yes`     |         `yes`         |   `security/`    |
 | Js Doc           |     `jsDoc`     |         /         |    `yes`     |         `yes`         |     `jsdoc/`     |
@@ -64,6 +65,11 @@ Vue.js specific rules.
 [No only tests](https://github.com/levibuzolic/eslint-plugin-no-only-tests)
 
 Vitest specific rules.
+
+### ****Storybook****
+[Storybook Rules](https://github.com/storybookjs/eslint-plugin-storybook)
+
+Storybook specific rules.
 
 ### ****Node****
 [Node Plugin](https://github.com/eslint-community/eslint-plugin-n)
@@ -210,17 +216,9 @@ import symmetrys from 'eslint-config-symmetrys'
 
 // Enabled configs
 export default symmetrys({
-  vue: moduleExists('vue'), // Automatically checks for Vue presence in the project
-  ts: moduleExists('typescript'), // Automatically checks for TypeScript presence in the project
-  vitest: moduleExists('vitest'), // Automatically checks for Vitest presence in the project
-  markdown: true,
-  security: true,
   jsDoc: true,
-  yaml: true,
-  json: true,
-  stylistic: true,
-  gitignore: true,
-  specific: true,
+  ts: true,
+  // vue: true || false // if vue existe in project
 })
 ```
 

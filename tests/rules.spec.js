@@ -37,6 +37,9 @@ describe('Rules', () => {
         26:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
         31:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
+      /fixtures/default/Btn.stories.js
+        1:1  error  The file should have at least one story export  storybook/story-exports
+
       /fixtures/default/exampl.yaml
         3:1  error  Empty mapping keys are forbidden  yaml/no-empty-key
 
@@ -68,7 +71,7 @@ describe('Rules', () => {
         29:1   error  Empty mapping keys are forbidden                         yaml/no-empty-key
         37:1   error  '<script setup>' should be above '<template>' on line 1  vue/block-order
 
-      ✖ 35 problems (31 errors, 4 warnings)
+      ✖ 36 problems (32 errors, 4 warnings)
         6 errors and 0 warnings potentially fixable with the \`--fix\` option.
 
       "

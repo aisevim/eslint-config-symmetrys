@@ -24,10 +24,10 @@
     "eslint-symmetrys"
   ],
   "type": "module",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./src/index.js",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
@@ -59,6 +59,7 @@
     "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-security": "^2.0.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-unicorn": "^49.0.0",
     "eslint-plugin-vitest": "^0.3.15",
     "eslint-plugin-vue": "^9.19.2",

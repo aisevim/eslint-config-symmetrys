@@ -19,6 +19,7 @@ import {
   typescriptConfig,
   vitestConfig,
   vueConfig,
+  storybookConfig,
 } from './configs/index.js'
 import { configIsEnabled, moduleExists, toFlatConfigs } from './utils.js'
 
@@ -27,6 +28,7 @@ function config(options = {}) {
     vue = moduleExists('vue'),
     vitest = moduleExists('vitest'),
     ts = moduleExists('typescript'),
+    storybook = moduleExists('storybook'),
     markdown = true,
     security = true,
     jsDoc = true,
@@ -105,6 +107,10 @@ function config(options = {}) {
 
   if (configIsEnabled(vitest)) {
     configs.push(vitestConfig({ options: vitest }))
+  }
+
+  if (configIsEnabled(storybook)) {
+    configs.push(storybookConfig({ options: storybook }))
   }
 
   return toFlatConfigs(...configs, ...settings?.addConfigs ?? [])

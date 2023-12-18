@@ -20,7 +20,7 @@ describe('Format', () => {
       execSync(`eslint ${ dir } -c ${ config } --ignore-pattern='**/output/**' --fix-dry-run --format=./tests/utils/generate-formatted-tmp.js`)
     } catch {}
 
-    const inSpecificReleaseIt = readFileSync(join(dir, '.release-it-tmp.json'), 'utf-8')
+    const inSpecificReleaseIt = readFileSync(join(dir, '-tmp.release-it.json'), 'utf-8')
     expect(inSpecificReleaseIt).toMatchFileSnapshot(join(dir, 'output', '.release-it.json'))
 
     const inSpecificPackageJson = readFileSync(join(dir, 'package-tmp.json'), 'utf-8')
@@ -43,5 +43,8 @@ describe('Format', () => {
 
     const inTs = readFileSync(join(dir, 'index-tmp.ts'), 'utf-8')
     expect(inTs).toMatchFileSnapshot(join(dir, 'output', 'index.ts'))
+
+    const inStorybook = readFileSync(join(dir, 'Btn-tmp.stories.js'), 'utf-8')
+    expect(inStorybook).toMatchFileSnapshot(join(dir, 'output', 'Btn.stories.js'))
   })
 })
