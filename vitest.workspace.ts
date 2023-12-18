@@ -9,6 +9,7 @@ export default defineWorkspace([
     },
   },
   {
+    root: './fixutres/auto-detect-packages',
     test: {
       name: 'Packages Auto Detected',
       include: ['fixtures/auto-detect-packages/**/*.{test,spec}.{ts,js,tsx}'],
@@ -16,6 +17,7 @@ export default defineWorkspace([
     },
   },
   {
+    root: './fixutres/ts-type-information-auto',
     test: {
       name: 'Typescript type information auto activated',
       include: ['fixtures/ts-type-information-auto/**/*.{test,spec}.{ts,js,tsx}'],
@@ -23,6 +25,7 @@ export default defineWorkspace([
     },
   },
   {
+    root: './fixutres/ts-type-information-auto-ignore',
     test: {
       name: 'Typescript type information not allowed when is manually setted',
       include: ['fixtures/ts-type-information-auto-ignore/**/*.{test,spec}.{ts,js,tsx}'],
@@ -30,37 +33,37 @@ export default defineWorkspace([
     },
   },
   {
+    root: `./fixtures/setting-tsproject`,
     test: {
       name: 'Setting tsproject',
-      include: ['fixtures/setting-tsproject/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
   {
+    root: `./fixtures/setting-add-config`,
     test: {
       name: 'Setting addConfig',
-      include: ['fixtures/setting-add-config/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
   {
+    root: `./fixtures/not-enabled`,
     test: {
       name: 'Lint Not Enabled on configs when false or nil',
-      include: ['fixtures/not-enabled/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
   {
+    root: `./fixtures/options-merge`,
     test: {
       name: 'Options Merge',
-      include: ['fixtures/options-merge/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
   {
+    root: `./fixtures/options-erase`,
     test: {
       name: 'Options Erase',
-      include: ['fixtures/options-erase/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
