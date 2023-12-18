@@ -256,21 +256,7 @@ const config = {
 }
 ```
 
-```js
-// eslint.config.js
-import symmetrys from 'eslint-config-symmetrys'
-
-// Customizable configurations
-export default symmetrys({
-  vue: {},
-  ts: {},
-  vitest: {},
-  markdown: {},
-  // ...configs can be customized as needed
-})
-```
-
-### Merge Config
+#### Merge Config
 ```js
 // eslint.config.js
 import symmetrys from 'eslint-config-symmetrys'
@@ -295,7 +281,7 @@ export default symmetrys({
 })
 ```
 
-### Erase Config
+#### Erase Config
 ```js
 // eslint.config.js
 import symmetrys from 'eslint-config-symmetrys'
