@@ -317,6 +317,7 @@ export default symmetrys({
 ### Setting Config
 
 #### Typescript
+
 `strict-type-checking` rules are automatically set if `tsconfig.json` or `tsconfig.*.json` are found in racine of the project. The `tsconfig.json` file can be specified in the settings. [Typescript ESlint docs](https://typescript-eslint.io/linting/typed-linting#specifying-tsconfigs)
 
 ```js
@@ -348,6 +349,30 @@ export default symmetrys({
         // strict type-checking rules are not applied
       },
     },
+  },
+})
+```
+
+#### Add Config
+
+```js
+// eslint.config.js
+import symmertry from 'eslint-config-symmetrys'
+import eslintPluginRecommended from 'eslint-plugin-eslint-plugin/configs/recommended'
+
+export default symmertry({
+  settings: {
+    addConfigs: [
+      // Config 1
+      eslintPluginRecommended,
+
+      // Config 2
+      {
+        rules: {
+          'eslint-plugin/test-case-shorthand-strings': 'error',
+        },
+      },
+    ],
   },
 })
 ```

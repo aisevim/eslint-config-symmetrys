@@ -50,6 +50,8 @@ export async function markdownConfig({ options = {} }) {
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
         'unicode-bom': 'off',
+
+        'import/no-extraneous-dependencies': 'off',
       },
     }),
   ]
