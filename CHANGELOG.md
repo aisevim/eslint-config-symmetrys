@@ -1,5 +1,22 @@
 # Symmetrys Changelog
 
+## [0.7.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.6.1...v0.7.0) (2023-12-18)
+
+
+### Features
+
+* **config:** create confg vueA11y ([63fd1c4](https://github.com/aisevim/eslint-config-symmetrys/commit/63fd1c4fad5ed2a4949f7729ed8f530fef38dbf1))
+* **config:** create config cypress ([78987b0](https://github.com/aisevim/eslint-config-symmetrys/commit/78987b00b5381b0c03aee943b263580a9bf863b0))
+* **config:** create config Storybook ([ce076fe](https://github.com/aisevim/eslint-config-symmetrys/commit/ce076fe80c7862e519c57d132876fc2fcaf73458))
+* **settings:** create addConfig setting ([b89fd56](https://github.com/aisevim/eslint-config-symmetrys/commit/b89fd5655c0396c3b293f6aa22db032c173e58f5))
+
+
+### Docs
+
+* delete customise config section in Readme ([4ba1fcb](https://github.com/aisevim/eslint-config-symmetrys/commit/4ba1fcb273e5c2172b493a5df2dc403e95d4b2e0))
+* readme, delete name in table ([585b331](https://github.com/aisevim/eslint-config-symmetrys/commit/585b3315a6c79d7b71adefc23fb4bdb70a78ed4d))
+* update readme for setting: addConfig ([ddad674](https://github.com/aisevim/eslint-config-symmetrys/commit/ddad67424b0bfdb99e45ece01c0a75a1419e4712))
+
 ## [0.6.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.6.0...v0.6.1) (2023-12-17)
 
 
