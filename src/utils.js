@@ -14,7 +14,7 @@ export function moduleExists(importPath) {
   }
 }
 
-export async function toFlatConfigs(configs) {
+export async function toFlatConfigs(...configs) {
   const resolvedConfigs = await Promise.all(configs)
   return resolvedConfigs.flat(Infinity)
 }

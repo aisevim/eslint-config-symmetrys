@@ -107,7 +107,7 @@ function config(options = {}) {
     configs.push(vitestConfig({ options: vitest }))
   }
 
-  return toFlatConfigs(configs)
+  return toFlatConfigs(...configs, ...settings?.addConfigs ?? [])
 }
 
 export default config

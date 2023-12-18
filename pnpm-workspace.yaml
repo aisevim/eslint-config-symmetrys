@@ -3,6 +3,7 @@ packages:
   - "fixtures/ts-type-information-auto/"
   - "fixtures/ts-type-information-auto-ignore/"
   - "fixtures/setting-tsproject/"
+  - "fixtures/setting-add-config/"
   - "fixtures/not-enabled/"
   - "fixtures/options-merge/"
   - "fixtures/options-erase/"

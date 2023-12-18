@@ -38,6 +38,13 @@ export default defineWorkspace([
   },
   {
     test: {
+      name: 'Setting addConfig',
+      include: ['fixtures/setting-add-config/**/*.{test,spec}.{ts,js,tsx}'],
+      environment: 'node',
+    },
+  },
+  {
+    test: {
       name: 'Lint Not Enabled on configs when false or nil',
       include: ['fixtures/not-enabled/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
