@@ -14,30 +14,30 @@
 
 ## Configurations Overview
 
-| Name             |   Config name   |   Auto detection    | Configurable |        activable/Deactivable         |      Prefix      |
-| ---------------- | :-------------: | :-----------------: | :----------: | :----------------------------------: | :--------------: |
-| Javascript       |      `js`       |          /          |    `yes`     |                 `no`                 |        ``        |
-| Ignore           |    `ignore`     |          /          |    `yes`     |                 `no`                 |        /         |
-| Node             |     `node`      |          /          |    `yes`     |                 `no`                 |     `node/`      |
-| Promise          |    `promise`    |          /          |    `yes`     |                 `no`                 |    `promise/`    |
-| Perfectionist    | `perfectionist` |          /          |    `yes`     |                 `no`                 | `perfectionist/` |
-| Unicorn          |    `unicorn`    |          /          |    `yes`     |                 `no`                 |    `unicorn/`    |
-| Comments         |   `comments`    |          /          |    `yes`     |                 `no`                 |   `comments/`    |
-| Imports          |    `imports`    |          /          |    `yes`     |                 `no`                 |    `import/`     |
-| Typescript       |      `ts`       |        `yes`        |    `yes`     |                `yes`                 |      `ts/`       |
-| Vue              |      `vue`      |        `yes`        |    `yes`     |                `yes`                 |      `vue/`      |
-| Vue A11y         |    `vueA11y`    |  `yes` with `vue`   |    `yes`     | `yes`, auto disabled if `vue: false` |   `vue-a11y/`    |
-| Vitest           |    `vitest`     |        `yes`        |    `yes`     |                `yes`                 |    `vitest/`     |
-| No only tests    |    `vitest`     | `yes` with `vitest` |    `yes`     |         `yes` with `vitest`          | `no-only-tests/` |
-| Storybook        |   `storybook`   |        `yes`        |    `yes`     |                `yes`                 |   `storybook/`   |
-| Markdown         |   `markdown`    |          /          |    `yes`     |                `yes`                 |   `markdown/`    |
-| Security         |   `security`    |          /          |    `yes`     |                `yes`                 |   `security/`    |
-| Js Doc           |     `jsDoc`     |          /          |    `yes`     |                `yes`                 |     `jsdoc/`     |
-| YAML             |     `yaml`      |          /          |    `yes`     |                `yes`                 |     `yaml/`      |
-| JSON             |     `json`      |          /          |    `yes`     |                `yes`                 |     `jsonc/`     |
-| Stylistic Eslint |   `stylistic`   |          /          |    `yes`     |                `yes`                 |   `stylistic/`   |
-| GitIgnore flat   |   `gitignore`   |          /          |     `no`     |                `yes`                 |        /         |
-| Specific         |   `specific`    |          /          |     `no`     |                `yes`                 |        /         |
+| Config name     | Auto detection | Configurable | Activable/Deactivable                    | Prefix                         |
+| --------------- | -------------- | ------------ | ---------------------------------------- | ------------------------------ |
+| `js`            | -              | yes          | no                                       | -                              |
+| `ignore`        | -              | yes          | no                                       | -                              |
+| `node`          | -              | yes          | no                                       | `node/`                        |
+| `promise`       | -              | yes          | no                                       | `promise/`                     |
+| `perfectionist` | -              | yes          | no                                       | `perfectionist/`               |
+| `unicorn`       | -              | yes          | no                                       | `unicorn/`                     |
+| `comments`      | -              | yes          | no                                       | `comments/`                    |
+| `imports`       | -              | yes          | no                                       | `import/`                      |
+| `ts`            | yes            | yes          | yes                                      | `ts/`                          |
+| `vue`           | yes            | yes          | yes                                      | `vue/`                         |
+| `vueA11y`       | yes with `vue` | yes          | yes and auto disabled<br>if `vue: false` | `vue-a11y/`                    |
+| `vitest`        | yes            | yes          | yes                                      | `vitest/`,<br>`no-only-tests/` |
+| `storybook`     | yes            | yes          | yes                                      | `storybook/`                   |
+| `markdown`      | -              | yes          | yes                                      | `markdown/`                    |
+| `security`      | -              | yes          | yes                                      | `security/`                    |
+| `jsDoc`         | -              | yes          | yes                                      | `jsdoc/`                       |
+| `yaml`          | -              | yes          | yes                                      | `yaml/`                        |
+| `json`          | -              | yes          | yes                                      | `jsonc/`                       |
+| `stylistic`     | -              | yes          | yes                                      | `stylistic/`                   |
+| `gitignore`     | -              | no           | yes                                      | -                              |
+| `specific`      | -              | no           | yes                                      | -                              |
+
 
 
 <details>
