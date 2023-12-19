@@ -7,7 +7,7 @@ import {
   perfectionistConfig,
   promiseConfig,
   unicornConfig,
-  commentsConfig,
+  eslintCommentsConfig,
   importsConfig,
   specificConfig,
   yamlConfig,
@@ -47,7 +47,7 @@ function config(options = {}) {
     promise = {},
     perfectionist = {},
     unicorn = {},
-    comments = {},
+    eslintComments = {},
     imports = {},
     settings = {},
   } = options
@@ -69,7 +69,7 @@ function config(options = {}) {
     promiseConfig({ options: promise }),
     perfectionistConfig({ options: perfectionist }),
     unicornConfig({ options: unicorn }),
-    commentsConfig({ options: comments }),
+    eslintCommentsConfig({ options: eslintComments }),
     importsConfig({ options: imports }),
   )
 

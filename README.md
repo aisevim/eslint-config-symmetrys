@@ -14,30 +14,30 @@
 
 ## Configurations Overview
 
-| Config name     | Auto detection | Configurable | Activable/Deactivable                    | Prefix                         |
-| --------------- | -------------- | ------------ | ---------------------------------------- | ------------------------------ |
-| `js`            | -              | yes          | no                                       | -                              |
-| `ignore`        | -              | yes          | no                                       | -                              |
-| `node`          | -              | yes          | no                                       | `node/`                        |
-| `promise`       | -              | yes          | no                                       | `promise/`                     |
-| `perfectionist` | -              | yes          | no                                       | `perfectionist/`               |
-| `unicorn`       | -              | yes          | no                                       | `unicorn/`                     |
-| `comments`      | -              | yes          | no                                       | `comments/`                    |
-| `imports`       | -              | yes          | no                                       | `import/`                      |
-| `ts`            | yes            | yes          | yes                                      | `ts/`                          |
-| `vue`           | yes            | yes          | yes                                      | `vue/`                         |
-| `vueA11y`       | yes with `vue` | yes          | yes and auto disabled<br>if `vue: false` | `vue-a11y/`                    |
-| `vitest`        | yes            | yes          | yes                                      | `vitest/`,<br>`no-only-tests/` |
-| `storybook`     | yes            | yes          | yes                                      | `storybook/`                   |
-| `cypress`       | yes            | yes          | yes                                      | `cypress/`                     |
-| `markdown`      | -              | yes          | yes                                      | `markdown/`                    |
-| `security`      | -              | yes          | yes                                      | `security/`                    |
-| `jsDoc`         | -              | yes          | yes                                      | `jsdoc/`                       |
-| `yaml`          | -              | yes          | yes                                      | `yaml/`                        |
-| `json`          | -              | yes          | yes                                      | `jsonc/`                       |
-| `stylistic`     | -              | yes          | yes                                      | `stylistic/`                   |
-| `gitignore`     | -              | no           | yes                                      | -                              |
-| `specific`      | -              | no           | yes                                      | -                              |
+| Config name       | Auto detection | Configurable | Activable/Deactivable                    | Prefix                         |
+| ----------------- | -------------- | ------------ | ---------------------------------------- | ------------------------------ |
+| `js`              | -              | yes          | no                                       | -                              |
+| `ignore`          | -              | yes          | no                                       | -                              |
+| `node`            | -              | yes          | no                                       | `node/`                        |
+| `promise`         | -              | yes          | no                                       | `promise/`                     |
+| `perfectionist`   | -              | yes          | no                                       | `perfectionist/`               |
+| `unicorn`         | -              | yes          | no                                       | `unicorn/`                     |
+| `eslint-comments` | -              | yes          | no                                       | `eslint-comments/`             |
+| `imports`         | -              | yes          | no                                       | `import/`                      |
+| `ts`              | yes            | yes          | yes                                      | `ts/`                          |
+| `vue`             | yes            | yes          | yes                                      | `vue/`                         |
+| `vueA11y`         | yes with `vue` | yes          | yes and auto disabled<br>if `vue: false` | `vue-a11y/`                    |
+| `vitest`          | yes            | yes          | yes                                      | `vitest/`,<br>`no-only-tests/` |
+| `storybook`       | yes            | yes          | yes                                      | `storybook/`                   |
+| `cypress`         | yes            | yes          | yes                                      | `cypress/`                     |
+| `markdown`        | -              | yes          | yes                                      | `markdown/`                    |
+| `security`        | -              | yes          | yes                                      | `security/`                    |
+| `jsDoc`           | -              | yes          | yes                                      | `jsdoc/`                       |
+| `yaml`            | -              | yes          | yes                                      | `yaml/`                        |
+| `json`            | -              | yes          | yes                                      | `jsonc/`                       |
+| `stylistic`       | -              | yes          | yes                                      | `stylistic/`                   |
+| `gitignore`       | -              | no           | yes                                      | -                              |
+| `specific`        | -              | no           | yes                                      | -                              |
 
 
 
@@ -104,10 +104,10 @@ Perfectionist additional ESLint Rules.
 
 Unicorn rules. Implements advanced and specific coding standards to encourage the writing of clean and maintainable code.
 
-### ****Comments****
-[Comment Rules](https://mysticatea.github.io/eslint-plugin-eslint-comments/)
+### ****ESlint Comments****
+[Eslint Comments Rules](https://mysticatea.github.io/eslint-plugin-eslint-comments/)
 
-Additional rules Comments.
+Additional rules Eslint Comments.
 
 ### ****Imports****
 [Import Rules](https://github.com/un-es/eslint-plugin-i)

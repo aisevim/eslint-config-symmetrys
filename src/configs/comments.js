@@ -2,18 +2,18 @@ import pluginComments from 'eslint-plugin-eslint-comments'
 
 import { createConfig } from '../utils.js'
 
-export async function commentsConfig({ options = {} }) {
+export async function eslintCommentsConfig({ options = {} }) {
   return createConfig(options, {
-    name: 'main:comments',
+    name: 'main:eslint-comments',
     plugins: {
-      comments: pluginComments,
+      'eslint-comments': pluginComments,
     },
     rules: {
-      'comments/no-duplicate-disable': 'error',
-      'comments/no-unlimited-disable': 'error',
-      'comments/no-unused-disable': 'error',
-      'comments/no-unused-enable': 'error',
-      'comments/no-restricted-disable': 'error',
+      'eslint-comments/no-duplicate-disable': 'error',
+      'eslint-comments/no-unlimited-disable': 'error',
+      'eslint-comments/no-unused-disable': 'error',
+      'eslint-comments/no-unused-enable': 'error',
+      'eslint-comments/no-restricted-disable': 'error',
     },
   })
 }
