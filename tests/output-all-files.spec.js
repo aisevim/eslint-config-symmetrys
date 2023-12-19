@@ -5,10 +5,10 @@ import { describe, it } from 'vitest'
 
 const dirname = process.cwd()
 
-describe('Rules', () => {
-  it('check rules applied on files per configs', ({ expect }) => {
-    const target = join(dirname, 'fixtures/default')
-    const config = join(dirname, 'fixtures/default/eslint.config.js')
+describe.concurrent('Lint all files in real environnement (with package.json, install, etc...)', () => {
+  it.concurrent('Should return ESLint errors in output, need to have 1 or more errors per configs (except Vite)', ({ expect }) => {
+    const target = join(dirname, 'fixtures/output-all-files')
+    const config = join(dirname, 'fixtures/output-all-files/eslint.config.js')
     let output
 
     try {
@@ -19,7 +19,7 @@ describe('Rules', () => {
 
     expect(output).toMatchInlineSnapshot(`
       "
-      /fixtures/default/App-ts.vue
+      /fixtures/output-all-files/App-ts.vue
          3:8   error    Elements with ARIA roles must use a valid, non-abstract ARIA role                             vue-a11y/aria-role
          8:1   error    '<script setup lang=ts>' should be above '<template>' on line 1                               vue/block-order
         11:1   error    Module imports itself                                                                         import/no-self-import
@@ -29,7 +29,7 @@ describe('Rules', () => {
         27:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
         32:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
-      /fixtures/default/App.vue
+      /fixtures/output-all-files/App.vue
          3:8   error    Elements with ARIA roles must use a valid, non-abstract ARIA role                             vue-a11y/aria-role
          8:1   error    '<script setup>' should be above '<template>' on line 1                                       vue/block-order
         11:1   error    Module imports itself                                                                         import/no-self-import
@@ -39,19 +39,19 @@ describe('Rules', () => {
         27:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
         32:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
-      /fixtures/default/Btn.stories.js
+      /fixtures/output-all-files/Btn.stories.js
         1:1  error  The file should have at least one story export  storybook/story-exports
 
-      /fixtures/default/cypress/e2e/cypress.cy.js
+      /fixtures/output-all-files/cypress/e2e/cypress.cy.js
         3:5  error  Do not use cy.pause command  cypress/no-pause
 
-      /fixtures/default/exampl.yaml
+      /fixtures/output-all-files/exampl.yaml
         3:1  error  Empty mapping keys are forbidden  yaml/no-empty-key
 
-      /fixtures/default/example.json
+      /fixtures/output-all-files/example.json
         3:3  error  Duplicate key 'a'  jsonc/no-dupe-keys
 
-      /fixtures/default/index.js
+      /fixtures/output-all-files/index.js
          3:1   error    Module imports itself                                                                         import/no-self-import
          3:8   error    'file' is defined but never used                                                              no-unused-vars
          7:1   warning  Expected @param names to be "foo". Got "fooo"                                                 jsdoc/check-param-names
@@ -60,7 +60,7 @@ describe('Rules', () => {
         21:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
         25:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
-      /fixtures/default/index.ts
+      /fixtures/output-all-files/index.ts
          3:1   error    Module imports itself                                                                         import/no-self-import
          3:8   error    'file' is defined but never used                                                              ts/no-unused-vars
          7:1   warning  @param "fooo" does not match an existing function parameter                                   jsdoc/check-param-names
@@ -68,7 +68,7 @@ describe('Rules', () => {
         18:5   error    Prefer \`.textContent\` over \`.innerText\`                                                       unicorn/prefer-dom-node-text-content
         23:26  error    Detected potential trojan source attack with unicode bidi introduced in this code: ''user‮''  security/detect-bidi-characters
 
-      /fixtures/default/markdown.md
+      /fixtures/output-all-files/markdown.md
          7:19  error  Unexpected string concatenation of literals              no-useless-concat
         11:34  error  The array literal notation [] is preferable              ts/no-array-constructor
         16:40  error  Extra semicolon                                          stylistic/semi

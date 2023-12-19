@@ -3,7 +3,7 @@ import { defineWorkspace } from 'vitest/config'
 export default defineWorkspace([
   {
     test: {
-      name: 'default - format',
+      name: 'Root Tests',
       include: ['tests/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
@@ -32,9 +32,9 @@ export default defineWorkspace([
     },
   },
   {
-    root: `./fixtures/not-enabled`,
+    root: `./fixtures/disable-configs`,
     test: {
-      name: 'Lint Not Enabled on configs when false or nil',
+      name: 'Disabled all configs',
       environment: 'node',
     },
   },

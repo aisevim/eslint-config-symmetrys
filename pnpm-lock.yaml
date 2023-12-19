@@ -146,7 +146,7 @@ importers:
         specifier: ^1.0.4
         version: 1.0.4
 
-  fixtures/not-enabled:
+  fixtures/disable-configs:
     dependencies:
       storybook:
         specifier: ^7.6.5
@@ -163,7 +163,7 @@ importers:
         version: /eslint@8.56.0
       eslint:
         specifier: ^8.55.0
-        version: 8.55.0
+        version: 8.56.0
       eslint-config-symmetrys:
         specifier: link:../..
         version: link:../..

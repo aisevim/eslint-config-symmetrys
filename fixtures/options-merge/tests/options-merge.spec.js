@@ -5,16 +5,16 @@ import { describe, it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-describe('options merge rules', () => {
-  it('d\'ont catch security-rules-not.js when the only rules is erased by configuration in eslint.config.js', ({ expect }) => {
+describe.concurrent('Merge Configs, see `./options-merge/eslint.config.js` for customisation details', () => {
+  it.concurrent('Should not catch file `security-rules-not.js`, when the errors in these files are replaced in merge', ({ expect }) => {
     let output
-  
+
     try {
       execSync(`eslint **/security-rules*.js`, { encoding: 'utf-8', cwd: dir })
     } catch (error) {
       output = error.stdout.replaceAll(dir, '')
     }
-  
+
     expect(output).toMatchInlineSnapshot(`
       "
       /security-rules.js
@@ -25,18 +25,16 @@ describe('options merge rules', () => {
       "
     `)
   })
-})
 
-describe('options merge files', () => {
-  it('catch **/*.fake-yyy too, when the files in eslint.config.js is updated for yaml config', ({ expect }) => {
+  it.concurrent('Should catch files `**/*.fake-yyy` with YAML rules', ({ expect }) => {
     let output
-  
+
     try {
       execSync(`eslint **/yaml-config.*`, { encoding: 'utf-8', cwd: dir })
     } catch (error) {
       output = error.stdout.replaceAll(dir, '')
     }
-  
+
     expect(output).toMatchInlineSnapshot(`
       "
       /yaml-config.fake-yyy
