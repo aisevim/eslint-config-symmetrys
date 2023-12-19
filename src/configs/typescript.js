@@ -77,5 +77,27 @@ export async function typescriptConfig({ options = {}, extensions = [], settings
         ...parserOptionsConfig?.rules,
       },
     }),
+    {
+      files: ['**/*.d.ts'],
+      rules: {
+        'eslint-comments/no-unlimited-disable': 'off',
+        'import/no-duplicates': 'off',
+        'no-restricted-syntax': 'off',
+        'unused-imports/no-unused-vars': 'off',
+      },
+    },
+    {
+      files: ['**/*.{test,spec}.ts?(x)'],
+      rules: {
+        'no-unused-expressions': 'off',
+      },
+    },
+    {
+      files: ['**/*.js', '**/*.cjs'],
+      rules: {
+        'ts/no-require-imports': 'off',
+        'ts/no-var-requires': 'off',
+      },
+    },
   ]
 }
