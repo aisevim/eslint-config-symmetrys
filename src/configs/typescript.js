@@ -13,8 +13,8 @@ function checkTsConfigPresence() {
 
 export function getParserOptionsConfig(options, settings, pluginTS) {
   if (
-    options?.ts?.merge?.languageOptions?.parserOptions?.project ||
-    options?.ts?.erase?.languageOptions?.parserOptions?.project
+    options?.merge?.languageOptions?.parserOptions?.project ||
+    options?.erase?.languageOptions?.parserOptions?.project
   ) {
     return null
   }
@@ -47,7 +47,6 @@ export async function typescriptConfig({ options = {}, extensions = [], settings
     interopDefault(import('@typescript-eslint/parser')),
   ])
   const parserOptionsConfig = getParserOptionsConfig(options, settings, pluginTS)
-
 
   return [
     {

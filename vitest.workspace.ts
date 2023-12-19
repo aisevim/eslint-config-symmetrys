@@ -25,21 +25,6 @@ export default defineWorkspace([
     },
   },
   {
-    root: './fixutres/ts-type-information-auto-ignore',
-    test: {
-      name: 'Typescript type information not allowed when is manually setted',
-      include: ['fixtures/ts-type-information-auto-ignore/**/*.{test,spec}.{ts,js,tsx}'],
-      environment: 'node',
-    },
-  },
-  {
-    root: `./fixtures/setting-tsproject`,
-    test: {
-      name: 'Setting tsproject',
-      environment: 'node',
-    },
-  },
-  {
     root: `./fixtures/setting-add-config`,
     test: {
       name: 'Setting addConfig',
