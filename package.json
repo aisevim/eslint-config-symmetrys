@@ -24,10 +24,10 @@
     "eslint-symmetrys"
   ],
   "type": "module",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./src/index.js",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
