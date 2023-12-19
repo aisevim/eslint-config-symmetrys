@@ -8,6 +8,7 @@ export async function markdownConfig({ options = {} }) {
 
   return [
     {
+      name: 'setup:markdown',
       files: [GLOB_MARKDOWN],
       plugins: {
         markdown: md,
@@ -15,6 +16,7 @@ export async function markdownConfig({ options = {} }) {
       processor: md.processors.markdown,
     },
     createConfig(options, {
+      name: 'main:markdown',
       files: [GLOB_LANGS_IN_MARKDOWN],
       languageOptions: {
         parserOptions: {

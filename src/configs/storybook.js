@@ -6,17 +6,20 @@ export async function storybookConfig({ options = {} }) {
 
   return [
     {
+      name: 'setup:storybook',
       plugins: {
         storybook: pluginStorybook,
       },
     },
     {
+      name: 'main:storybook-mainfile',
       files: [GLOB_STORYBOOK_MAINFILE],
       rules: {
         'storybook/no-uninstalled-addons': 'error',
       },
     },
     createConfig(options, {
+      name: 'main:storybook-stories',
       files: GLOBS_STORIES,
       rules: {
         'import/no-anonymous-default-export': 'off',

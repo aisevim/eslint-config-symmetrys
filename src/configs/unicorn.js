@@ -4,6 +4,7 @@ import { createConfig } from '../utils.js'
 
 export async function unicornConfig({ options = {} }) {
   return createConfig(options, {
+    name: 'main:unicorn',
     plugins: {
       unicorn: pluginUnicorn,
     },

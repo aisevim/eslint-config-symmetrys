@@ -51,11 +51,13 @@ export async function typescriptConfig({ options = {}, extensions = [], settings
 
   return [
     {
+      name: 'setup:typescript',
       plugins: {
         ts: pluginTS,
       },
     },
     createConfig(options, {
+      name: 'main:typescript',
       files,
       languageOptions: {
         parser: parserTS,

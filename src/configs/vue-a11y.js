@@ -6,11 +6,13 @@ export async function vueA11yConfig({ options = {} }) {
 
   return [
     {
+      name: 'setup:vue-a11y',
       plugins: {
         'vue-a11y': pluginVueA11y,
       },
     },
     createConfig(options, {
+      name: 'main:vue-a11y',
       files: [GLOB_VUE],
       rules: {
         'vue-a11y/alt-text': 'error',

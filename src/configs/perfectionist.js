@@ -4,6 +4,7 @@ import { createConfig } from '../utils.js'
 
 export async function perfectionistConfig({ options = {} }) {
   return createConfig(options, {
+    name: 'main:perfectionist',
     plugins: {
       perfectionist: pluginPerfectionist,
     },

@@ -4,6 +4,7 @@ import { createConfig } from '../utils.js'
 
 export async function promiseConfig({ options = {} }) {
   return createConfig(options, {
+    name: 'main:promise',
     plugins: {
       promise: pluginPromise,
     },

@@ -4,6 +4,7 @@ import { createConfig } from '../utils.js'
 
 export async function javascriptConfig({ options = {} }) {
   return createConfig(options, {
+    name: 'main:javascript',
     languageOptions: {
       globals: {
         ...globals.browser,

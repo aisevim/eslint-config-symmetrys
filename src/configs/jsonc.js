@@ -9,11 +9,13 @@ export async function jsoncConfig({ options = {} }) {
 
   return [
     {
+      name: 'setup:jsonc',
       plugins: {
         jsonc: pluginJSONC,
       },
     },
     createConfig(options, {
+      name: 'main:jsonc',
       files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
       languageOptions: {
         parser: parserJSONC,

@@ -4,6 +4,7 @@ import { createConfig } from '../utils.js'
 
 export async function commentsConfig({ options = {} }) {
   return createConfig(options, {
+    name: 'main:comments',
     plugins: {
       comments: pluginComments,
     },

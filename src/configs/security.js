@@ -4,6 +4,7 @@ export async function securityConfig({ options = {} }) {
   const pluginSecurity = await interopDefault(import('eslint-plugin-security'))
 
   return createConfig(options, {
+    name: 'main:security',
     plugins: {
       security: pluginSecurity,
     },

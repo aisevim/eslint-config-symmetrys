@@ -6,11 +6,13 @@ export async function cypressConfig({ options = {} }) {
 
   return [
     {
+      name: 'setup:cypress',
       plugins: {
         cypress: pluginCypress,
       },
     },
     createConfig(options, {
+      name: 'main:cypress',
       files: [GLOB_CYPRESS],
       rules: {
         'no-undef': 'off',

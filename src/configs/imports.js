@@ -4,6 +4,7 @@ import { createConfig } from '../utils.js'
 
 export async function importsConfig({ options = {} }) {
   return createConfig(options, {
+    name: 'main:imports',
     plugins: {
       import: pluginImports,
     },

@@ -12,11 +12,13 @@ export async function vueConfig({ options = {}, ts }) {
 
   return [
     {
+      name: 'setup:vue',
       plugins: {
         vue: pluginVue,
       },
     },
     createConfig(options, {
+      name: 'main:vue',
       files: [GLOB_VUE],
       processor: pluginVue.processors['.vue'],
       languageOptions: {
