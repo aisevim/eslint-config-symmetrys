@@ -14,145 +14,30 @@
 
 ## Configurations Overview
 
-| Config name       | Auto detection | Configurable | Activable/Deactivable                    | Prefix                         |
-| ----------------- | -------------- | ------------ | ---------------------------------------- | ------------------------------ |
-| `js`              | -              | yes          | no                                       | -                              |
-| `ignore`          | -              | yes          | no                                       | -                              |
-| `node`            | -              | yes          | no                                       | `node/`                        |
-| `promise`         | -              | yes          | no                                       | `promise/`                     |
-| `perfectionist`   | -              | yes          | no                                       | `perfectionist/`               |
-| `unicorn`         | -              | yes          | no                                       | `unicorn/`                     |
-| `eslint-comments` | -              | yes          | no                                       | `eslint-comments/`             |
-| `imports`         | -              | yes          | no                                       | `import/`                      |
-| `ts`              | yes            | yes          | yes                                      | `ts/`                          |
-| `vue`             | yes            | yes          | yes                                      | `vue/`                         |
-| `vueA11y`         | yes with `vue` | yes          | yes and auto disabled<br>if `vue: false` | `vue-a11y/`                    |
-| `vitest`          | yes            | yes          | yes                                      | `vitest/`,<br>`no-only-tests/` |
-| `storybook`       | yes            | yes          | yes                                      | `storybook/`                   |
-| `cypress`         | yes            | yes          | yes                                      | `cypress/`                     |
-| `markdown`        | -              | yes          | yes                                      | `markdown/`                    |
-| `security`        | -              | yes          | yes                                      | `security/`                    |
-| `jsDoc`           | -              | yes          | yes                                      | `jsdoc/`                       |
-| `yaml`            | -              | yes          | yes                                      | `yaml/`                        |
-| `json`            | -              | yes          | yes                                      | `jsonc/`                       |
-| `stylistic`       | -              | yes          | yes                                      | `stylistic/`                   |
-| `gitignore`       | -              | no           | yes                                      | -                              |
-| `specific`        | -              | no           | yes                                      | -                              |
-
-
-
-<details>
-<summary>Configs Descriptions/Links</summary>
-
-### ****Javascript****
-[ESLint Rules](https://eslint.org/docs/rules/)
-
-ESLint configuration rules for JavaScript. Provides standard linting rules for JavaScript files, ensuring code quality and consistency.
-
-### ****Typescript****
-[TypeScript Rules](https://typescript-eslint.io/rules/)
-
-TypeScript configuration rules. Extends ESLint with TypeScript-specific rules, enhancing type safety and code standards in TypeScript projects.
-**This project currently utilizes `eslint-recommended`, `rules` and `strict-type-checked` [More information about strict type checked](#typescript-1)**
-
-### ****Vue****
-[Vue Rules](https://eslint.vuejs.org/rules/)
-
-Vue.js specific rules.
-**Automatically sets TypeScript support when enabled.**
-**This project currently utilizes `vue3-essential`, `vue3-strongly-recommended`, `vue3-recommended`**
-
-### ****Vue A11y****
-[Vue A11y Rules](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rule-overview/)
-
-An eslint plugin for checking accessibility rules from within .vue files.
-**Available only when vue is enabled**
-
-### ****Vitest****
-[Vitest Rules](https://github.com/veritem/eslint-plugin-vitest)
-[No only tests](https://github.com/levibuzolic/eslint-plugin-no-only-tests)
-
-Vitest specific rules.
-
-### ****Storybook****
-[Storybook Rules](https://github.com/storybookjs/eslint-plugin-storybook)
-
-Storybook specific rules.
-
-### ****Cypress****
-[Cypress Rules](https://github.com/cypress-io/eslint-plugin-cypress)
-
-Cypress specific rules.
-
-### ****Node****
-[Node Plugin](https://github.com/eslint-community/eslint-plugin-n)
-
-Node.js additional ESLint Rules.
-
-### ****Promise****
-[Promise Rules](https://github.com/xjamundx/eslint-plugin-promise)
-
-Promise additional ESLint Rules.
-
-### ****Perfectionist****
-[Perfectionist Rules](https://eslint-plugin-perfectionist.azat.io/rules/)
-
-Perfectionist additional ESLint Rules.
-
-### ****Unicorn****
-[Unicorn Rules](https://github.com/sindresorhus/eslint-plugin-unicorn)
-
-Unicorn rules. Implements advanced and specific coding standards to encourage the writing of clean and maintainable code.
-
-### ****ESlint Comments****
-[Eslint Comments Rules](https://mysticatea.github.io/eslint-plugin-eslint-comments/)
-
-Additional rules Eslint Comments.
-
-### ****Imports****
-[Import Rules](https://github.com/un-es/eslint-plugin-i)
-
-Additional rules for Imports.
-
-### ****Markdown****
-[Markdown Rules](https://github.com/eslint/eslint-plugin-markdown)
-
-Lint JavaScript, JSX, TypeScript, and more inside Markdown files.
-
-### ****Security****
-[Security Rules](https://github.com/eslint-community/eslint-plugin-security)
-
-Security-focused rules. Enhances the security of the code by enforcing rules that prevent common security pitfalls.
-
-### ****Js Doc****
-[JSDoc Rules](https://github.com/gajus/eslint-plugin-jsdoc)
-
-JSDoc linting rules for ESLint.
-
-### ****YAML****
-[YAML Rules](https://github.com/ota-meshi/eslint-plugin-yml)
-
-YAML configuration. Applies linting rules to YAML files, ensuring correct syntax and structure.
-
-### ****JSON****
-[JSONC Rules](https://github.com/ota-meshi/eslint-plugin-jsonc)
-
-ESLint plugin for JSON(C|5)? files
-
-### ****Stylistic Eslint****
-[ESLint Stylistic Rules](https://eslint.style/packages/default)
-
-Stylistic rules. Focuses on code styling and formatting, ensuring a consistent code appearance.
-
-### ****GitIgnore Flat****
-
-Support for .gitignore in ESLint Flat Config. [github](https://github.com/antfu/eslint-config-flat-gitignore)
-
-### ****Specific****
-
-Sort specific files: `'**/tsconfig.json', '**/tsconfig.*.json'`, `**/package.json` and `**/.release-it.json`.
-
-</details>
+| Config name       | Prefix                      | Auto detection | Deactivable | Description                                                                                                                                                                                                                                                                                                                                    |
+| ----------------- | --------------------------- | -------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `js`              | \-                          | \-             | no          | [ESLint configuration rules](https://eslint.org/docs/rules/) for JavaScript. Provides standard linting rules for JavaScript files, ensuring code quality and consistency.                                                                                                                                                                      |
+| `ignore`          | \-                          | \-             | no          | \-                                                                                                                                                                                                                                                                                                                                             |
+| `node`            | `node/`                     | \-             | no          | [Node Rules](https://github.com/eslint-community/eslint-plugin-n)                                                                                                                                                                                                                                                                              |
+| `promise`         | `promise/`                  | \-             | no          | [Promise additional Rules.](https://github.com/xjamundx/eslint-plugin-promise)                                                                                                                                                                                                                                                                 |
+| `perfectionist`   | `perfectionist/`            | \-             | no          | [Perfectionist Rules](https://eslint-plugin-perfectionist.azat.io/rules/)                                                                                                                                                                                                                                                                      |
+| `unicorn`         | `unicorn/`                  | \-             | no          | [Unicorn Rules.](https://github.com/sindresorhus/eslint-plugin-unicorn) Unicorn rules. Implements advanced and specific coding standards to encourage the writing of clean and maintainable code.                                                                                                                                              |
+| `eslint-comments` | `eslint-comments/`          | \-             | no          | [Eslint Comments Rules](https://mysticatea.github.io/eslint-plugin-eslint-comments/)                                                                                                                                                                                                                                                           |
+| `imports`         | `import/`                   | \-             | no          | [Import Rules](https://github.com/un-es/eslint-plugin-i)                                                                                                                                                                                                                                                                                       |
+| `ts`              | `ts/`                       | yes            | yes         | [TypeScript configuration rules.](https://typescript-eslint.io/rules/) Extends ESLint with TypeScript-specific rules, enhancing type safety and code standards in TypeScript projects. **This project currently utilizes `eslint-recommended`, `rules` and `strict-type-checked` [More information about strict type checked](#typescript-1)** |
+| `vue`             | `vue/`                      | yes            | yes         | [Vue.js specific rules.](https://eslint.vuejs.org/rules/) **Automatic set TypeScript support when enabled.**                                                                                                                                                                                                                                   |
+| `vueA11y`         | `vue-a11y/`                 | yes with `vue` | yes         | [Vue A11y Rules.](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rule-overview/) An eslint plugin for checking accessibility rules from within .vue files. **Available only when `vue` is enabled**                                                                                                                              |
+| `vitest`          | `vitest/`, `no-only-tests/` | yes            | yes         | [Vitest Rules](https://github.com/veritem/eslint-plugin-vitest), [No only tests Rules](https://github.com/levibuzolic/eslint-plugin-no-only-tests)                                                                                                                                                                                             |
+| `storybook`       | `storybook/`                | yes            | yes         | [Storybook Rules](https://github.com/storybookjs/eslint-plugin-storybook)                                                                                                                                                                                                                                                                      |
+| `cypress`         | `cypress/`                  | yes            | yes         | [Cypress specific rules.](https://github.com/cypress-io/eslint-plugin-cypress)                                                                                                                                                                                                                                                                 |
+| `markdown`        | `markdown/`                 | \-             | yes         | [Markdown Rules](https://github.com/eslint/eslint-plugin-markdown), Lint JavaScript, JSX, TypeScript, and more inside Markdown files.                                                                                                                                                                                                          |
+| `security`        | `security/`                 | \-             | yes         | [Security-focused rules.](https://github.com/eslint-community/eslint-plugin-security) Enhances the security of the code by enforcing rules that prevent common security pitfalls.                                                                                                                                                              |
+| `jsDoc`           | `jsdoc/`                    | \-             | yes         | [JSDoc linting rules.](https://github.com/gajus/eslint-plugin-jsdoc)                                                                                                                                                                                                                                                                           |
+| `yaml`            | `yaml/`                     | \-             | yes         | [YAML Rules.](https://github.com/ota-meshi/eslint-plugin-yml) Applies linting rules to YAML files, ensuring correct syntax and structure.                                                                                                                                                                                                      |
+| `json`            | `jsonc/`                    | \-             | yes         | [ESLint plugin for JSON, JSONC, JSON5](https://github.com/ota-meshi/eslint-plugin-jsonc)                                                                                                                                                                                                                                                       |
+| `stylistic`       | `stylistic/`                | \-             | yes         | [Stylistic Rules](https://eslint.style/packages/default), focuses on code styling and formatting, ensuring a consistent code appearance.                                                                                                                                                                                                       |
+| `gitignore`       | \-                          | \-             | yes         | Support for .gitignore in ESLint Flat Config. [See Github](https://github.com/antfu/eslint-config-flat-gitignore)                                                                                                                                                                                                                              |
+| `specific`        | \-                          | \-             | yes         | **Not Configurable!** Sort specific files: `'**/tsconfig.json', '**/tsconfig.*.json'`, `**/package.json` and `**/.release-it.json`.                                                                                                                                                                                                            |
 
 ## Setup
 
