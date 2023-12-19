@@ -1,5 +1,36 @@
 # Symmetrys Changelog
 
+## [0.8.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.7.0...v0.8.0) (2023-12-19)
+
+
+### Features
+
+* set names to configs + distrub globally plugins when enabled ([cb45967](https://github.com/aisevim/eslint-config-symmetrys/commit/cb459677190ce9c4a5d8ba00609863bdf4608eff))
+* **ts:** create configs for specfic files in typescript ([9efabef](https://github.com/aisevim/eslint-config-symmetrys/commit/9efabef13bb8758e5fe7031ad8f666e13e3bf96b))
+
+
+### Bug Fixes
+
+* **json:** update rule array-bracket-newline to consistent ([0a37e1d](https://github.com/aisevim/eslint-config-symmetrys/commit/0a37e1d19f8059057845cbeb160e1ba1e71c8406))
+* rename config comments to eslintComments ([d348733](https://github.com/aisevim/eslint-config-symmetrys/commit/d34873328e4cf64c9e28ccb951309089a13dd2af))
+* settings.tsproject rules priority ([e2156aa](https://github.com/aisevim/eslint-config-symmetrys/commit/e2156aaf564eb16e6eb69c560efa8ab53bdafecf))
+
+
+### Chore
+
+* add dependabot config to update packages ([9c888c0](https://github.com/aisevim/eslint-config-symmetrys/commit/9c888c03a792ff58325f6af6554e1309691e3a9a))
+* **deps:** bump @typescript-eslint/parser from 6.13.2 to 6.15.0 ([#3](https://github.com/aisevim/eslint-config-symmetrys/issues/3)) ([f0278ad](https://github.com/aisevim/eslint-config-symmetrys/commit/f0278adf7039e8fe08878ef824e02a5f27378087))
+* **deps:** bump eslint-plugin-i from 2.29.0 to 2.29.1 ([#6](https://github.com/aisevim/eslint-config-symmetrys/issues/6)) ([ef60932](https://github.com/aisevim/eslint-config-symmetrys/commit/ef60932726a15cb9b3918974778283474527771c))
+* **deps:** bump eslint-plugin-n from 16.3.1 to 16.4.0 ([#7](https://github.com/aisevim/eslint-config-symmetrys/issues/7)) ([1c29d43](https://github.com/aisevim/eslint-config-symmetrys/commit/1c29d43b380d8cbf4deae2b6fb2073abf1ddf011))
+* **deps:** bump eslint-plugin-yml from 1.10.0 to 1.11.0 ([#4](https://github.com/aisevim/eslint-config-symmetrys/issues/4)) ([8375d9d](https://github.com/aisevim/eslint-config-symmetrys/commit/8375d9de68ff94600e3fdb8b7309cad958ef18d2))
+* **deps:** bump vue from 3.3.11 to 3.3.12 ([#5](https://github.com/aisevim/eslint-config-symmetrys/issues/5)) ([a5767f7](https://github.com/aisevim/eslint-config-symmetrys/commit/a5767f71393dbf9a93ed4769bb7486bf86607abb))
+
+
+### Docs
+
+* better explanation for setting config typescript ([653e348](https://github.com/aisevim/eslint-config-symmetrys/commit/653e348b4ae24bcb4b765a5a71b283e0f3780a74))
+* update Configurations Overview ([ec9ad27](https://github.com/aisevim/eslint-config-symmetrys/commit/ec9ad27e7b960cca638e14228c3ee3063a435bcf))
+
 ## [0.7.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.6.1...v0.7.0) (2023-12-18)
 
 
