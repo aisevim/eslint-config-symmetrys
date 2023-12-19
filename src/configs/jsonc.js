@@ -38,7 +38,7 @@ export async function jsoncConfig({ options = {} }) {
         'jsonc/no-unicode-codepoint-escapes': 'error',
         'jsonc/valid-json-number': 'error',
         'jsonc/vue-custom-block/no-parsing-error': 'error',
-        'jsonc/array-bracket-newline': 'error',
+        'jsonc/array-bracket-newline': ['error', 'consistent'],
         'jsonc/array-bracket-spacing': ['error', 'never'],
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],

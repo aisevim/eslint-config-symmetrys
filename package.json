@@ -31,7 +31,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup src/index.js --watch --format esm,cjs",
     "build": "tsup src/index.js --format esm,cjs --minify --clean",

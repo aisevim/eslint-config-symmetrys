@@ -3,5 +3,7 @@
     "baseUrl": ".",
     "target": "es2020"
   },
-  "exclude": ["./fixtures/**/*.*"]
+  "exclude": [
+    "./fixtures/**/*.*"
+  ]
 }
