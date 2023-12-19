@@ -1,5 +1,12 @@
 # Symmetrys Changelog
 
+## [0.8.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.8.0...v0.8.1) (2023-12-19)
+
+
+### Bug Fixes
+
+* package json exports ([f7ad2ba](https://github.com/aisevim/eslint-config-symmetrys/commit/f7ad2ba3c76d7c1c1ec44f2bc331416fe505ec3f))
+
 ## [0.8.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.7.0...v0.8.0) (2023-12-19)
 
 
