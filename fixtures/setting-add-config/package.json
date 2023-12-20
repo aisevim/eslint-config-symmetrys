@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "eslint": "^8.55.0",
-    "eslint-config-symmetrys": "link:../..",
     "eslint-plugin-eslint-plugin": "5.2.1",
     "vitest": "^1.0.4"
   }

@@ -5,7 +5,7 @@ import { describe, it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-describe.concurrent('Auto Configuration of Type Information for Typescript Config, see `./ts-type-information-auto/eslint.config.js` for customisation details', () => {
+describe('Auto Configuration of Type Information for Typescript Config, see `./ts-type-information-auto/eslint.config.js` for customisation details', () => {
   it('Should generate an error when `tsconfig.json` and `eslint` not syncronised, it proove type information are configured', ({ expect }) => {
     let output
 
@@ -24,7 +24,7 @@ describe.concurrent('Auto Configuration of Type Information for Typescript Confi
       - Change that TSConfig to include this file
       - Create a new TSConfig that includes this file and include it in your parserOptions.project
       See the typescript-eslint docs for more info: https://typescript-eslint.io/linting/troubleshooting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
-  
+
       /src/ignored.ts
         0:0  error  Parsing error: ESLint was configured to run on \`<tsconfigRootDir>/src/ignored.ts\` using \`parserOptions.project\`: <tsconfigRootDir>/tsconfig.json
       However, that TSConfig does not include this file. Either:
@@ -32,13 +32,13 @@ describe.concurrent('Auto Configuration of Type Information for Typescript Confi
       - Change that TSConfig to include this file
       - Create a new TSConfig that includes this file and include it in your parserOptions.project
       See the typescript-eslint docs for more info: https://typescript-eslint.io/linting/troubleshooting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
-  
+
       /src/index.ts
         8:15  error  Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.
       If your function does not access \`this\`, you can annotate it with \`this: void\`, or consider using an arrow function instead  ts/unbound-method
-  
+
       ✖ 3 problems (3 errors, 0 warnings)
-  
+
       "
     `)
   })

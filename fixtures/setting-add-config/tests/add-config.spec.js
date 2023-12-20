@@ -5,8 +5,8 @@ import { describe, it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-describe.concurrent('Add new configs to the end of config array (higher priority), see `./setting-add-config/eslint.config.js` for customisation details', () => {
-  it.concurrent('Should add 2 configs, and generate 1 error by configs', ({ expect }) => {
+describe('Add new configs to the end of config array (higher priority), see `./setting-add-config/eslint.config.js` for customisation details', () => {
+  it('Should add 2 configs, and generate 1 error by configs', ({ expect }) => {
     let output
 
     try {

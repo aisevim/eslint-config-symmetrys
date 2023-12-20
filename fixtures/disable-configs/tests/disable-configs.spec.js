@@ -5,8 +5,8 @@ import { describe, it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-describe.concurrent('Disabled all configs which can be disabled, see `./disable-configs/eslint.config.js` for customisation details', () => {
-  it.concurrent('Should return in the output, only errors cannot be deactivated (see factory.js to know which file)', ({ expect }) => {
+describe('Disabled all configs which can be disabled, see `./disable-configs/eslint.config.js` for customisation details', () => {
+  it('Should return in the output, only errors cannot be deactivated (see factory.js to know which file)', ({ expect }) => {
     let output
 
     try {

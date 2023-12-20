@@ -139,9 +139,6 @@ importers:
       eslint:
         specifier: ^8.54.0
         version: 8.55.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
       vitest:
         specifier: ^1.0.4
         version: 1.0.4
@@ -164,9 +161,6 @@ importers:
       eslint:
         specifier: ^8.55.0
         version: 8.56.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
       vitest:
         specifier: ^1.0.4
         version: 1.0.4
@@ -176,9 +170,6 @@ importers:
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
       vitest:
         specifier: ^1.0.4
         version: 1.0.4
@@ -188,9 +179,6 @@ importers:
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
       vitest:
         specifier: ^1.0.4
         version: 1.0.4
@@ -200,9 +188,6 @@ importers:
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
       eslint-plugin-eslint-plugin:
         specifier: 5.2.1
         version: 5.2.1(eslint@8.55.0)
@@ -222,9 +207,6 @@ importers:
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
-      eslint-config-symmetrys:
-        specifier: link:../..
-        version: link:../..
       vitest:
         specifier: ^1.0.4
         version: 1.0.4

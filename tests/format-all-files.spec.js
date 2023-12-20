@@ -7,12 +7,12 @@ import { afterAll, describe, it } from 'vitest'
 
 const dirname = process.cwd()
 
-describe.concurrent('Format all files in real environnement (with package.json, install, etc...)', () => {
+describe('Format all files in real environnement (with package.json, install, etc...)', () => {
   afterAll(() => {
     rimrafSync(join(dirname, 'fixtures/**/*-tmp.*'), { glob: { dot: true } })
   })
 
-  it.concurrent('Should create temporary formatted files, these files should match with valid formatted files in outpout directory', async ({ expect }) => {
+  it('Should create temporary formatted files, these files should match with valid formatted files in outpout directory', async ({ expect }) => {
     const dir = join(dirname, 'fixtures/format-all-files')
     const config = join(dir, 'eslint.config.js')
 

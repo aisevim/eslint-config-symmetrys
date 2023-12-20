@@ -9,18 +9,16 @@ export default defineWorkspace([
     },
   },
   {
-    root: './fixutres/auto-detect-packages',
+    root: './fixtures/auto-detect-packages',
     test: {
       name: 'Packages Auto Detected',
-      include: ['fixtures/auto-detect-packages/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },
   {
-    root: './fixutres/ts-type-information-auto',
+    root: './fixtures/ts-type-information-auto',
     test: {
       name: 'Typescript type information auto activated',
-      include: ['fixtures/ts-type-information-auto/**/*.{test,spec}.{ts,js,tsx}'],
       environment: 'node',
     },
   },

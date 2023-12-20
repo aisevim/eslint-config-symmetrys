@@ -5,8 +5,8 @@ import { describe, it } from 'vitest'
 
 const dirname = process.cwd()
 
-describe.concurrent('Lint all files in real environnement (with package.json, install, etc...)', () => {
-  it.concurrent('Should return ESLint errors in output, need to have 1 or more errors per configs (except Vite)', ({ expect }) => {
+describe('Lint all files in real environnement (with package.json, install, etc...)', () => {
+  it('Should return ESLint errors in output, need to have 1 or more errors per configs (except Vite)', ({ expect }) => {
     const target = join(dirname, 'fixtures/output-all-files')
     const config = join(dirname, 'fixtures/output-all-files/eslint.config.js')
     let output

@@ -1,3 +1,3 @@
-import symmertry from 'eslint-config-symmetrys'
+import symmertry from '../../src/index.js'
 
 export default symmertry()

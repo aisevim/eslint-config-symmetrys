@@ -20,9 +20,10 @@ jobs:
           version: 8.10.x
 
       - name: Install dependencies & build
-        run: pnpm install:ci
+        run: pnpm install --frozen-lockfile
 
       - name: Run tests
         run: |
           pnpm lint
+          pnpm build
           pnpm test:ci

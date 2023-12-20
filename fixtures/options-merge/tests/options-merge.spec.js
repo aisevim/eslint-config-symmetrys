@@ -5,8 +5,8 @@ import { describe, it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-describe.concurrent('Merge Configs, see `./options-merge/eslint.config.js` for customisation details', () => {
-  it.concurrent('Should not catch file `security-rules-not.js`, when the errors in these files are replaced in merge', ({ expect }) => {
+describe('Merge Configs, see `./options-merge/eslint.config.js` for customisation details', () => {
+  it('Should not catch file `security-rules-not.js`, when the errors in these files are replaced in merge', ({ expect }) => {
     let output
 
     try {
@@ -26,7 +26,7 @@ describe.concurrent('Merge Configs, see `./options-merge/eslint.config.js` for c
     `)
   })
 
-  it.concurrent('Should catch files `**/*.fake-yyy` with YAML rules', ({ expect }) => {
+  it('Should catch files `**/*.fake-yyy` with YAML rules', ({ expect }) => {
     let output
 
     try {

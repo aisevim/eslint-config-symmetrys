@@ -5,8 +5,8 @@ import { describe, it } from 'vitest'
 
 const dir = resolve(dirname(new URL(import.meta.url).pathname), '..')
 
-describe.concurrent('Erase part of the default config, see `./options-erase/eslint.config.js` for customisation details', () => {
-  it.concurrent('Should erase security config rules, added 1 rules who need to be catched in output', ({ expect }) => {
+describe('Erase part of the default config, see `./options-erase/eslint.config.js` for customisation details', () => {
+  it('Should erase security config rules, added 1 rules who need to be catched in output', ({ expect }) => {
     let output
 
     try {
@@ -26,7 +26,7 @@ describe.concurrent('Erase part of the default config, see `./options-erase/esli
     `)
   })
 
-  it.concurrent('Should erase yaml config files, catch yaml errors in another type of file', ({ expect }) => {
+  it('Should erase yaml config files, catch yaml errors in another type of file', ({ expect }) => {
     let output
 
     try {

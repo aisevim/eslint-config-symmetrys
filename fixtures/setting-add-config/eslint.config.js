@@ -1,5 +1,6 @@
-import symmertry from 'eslint-config-symmetrys'
 import eslintPluginRecommended from 'eslint-plugin-eslint-plugin/configs/recommended'
+
+import symmertry from '../../src/index.js'
 
 export default symmertry({
   settings: {

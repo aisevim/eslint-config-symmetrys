@@ -40,11 +40,10 @@
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint . --ignore-pattern 'fixtures/' --rule 'security/detect-bidi-characters: off'",
     "lint:fix": "pnpm run lint --fix",
     "test": "vitest",
-    "test:ci": "pnpm run build ; pnpm i ; vitest run",
+    "test:ci": "vitest run",
     "release": "release-it",
     "release:ci": "release-it --ci",
-    "release:ci:test": "release-it --ci --dry-run",
-    "install:ci": "pnpm i ; pnpm run build ; pnpm i"
+    "release:ci:test": "release-it --ci --dry-run"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.5.0",
