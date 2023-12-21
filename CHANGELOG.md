@@ -1,5 +1,12 @@
 # Symmetrys Changelog
 
+## [0.9.2](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.1...v0.9.2) (2023-12-21)
+
+
+### Bug Fixes
+
+* **ts:** add adapted ts rules ([863991c](https://github.com/aisevim/eslint-config-symmetrys/commit/863991cede7862ff73101d4aca6a1805eb2d1b48))
+
 ## [0.9.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.0...v0.9.1) (2023-12-21)
 
 
