@@ -1,6 +1,5 @@
 packages:
   - "fixtures/auto-detect-packages/"
-  - "fixtures/ts-type-information-auto/"
   - "fixtures/setting-add-config/"
   - "fixtures/disable-configs/"
   - "fixtures/options-merge/"

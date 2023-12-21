@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "strict": true,
-    "module": "ESNext",
-    "moduleResolution": "node"
-  },
-  "include": ["src/**/*"],
-  "exclude": ["./src/ignored.ts", "./src/App-ts.vue"]
-}

@@ -24,7 +24,7 @@
 | `unicorn`         | `unicorn/`                  | \-             | no          | [Unicorn Rules.](https://github.com/sindresorhus/eslint-plugin-unicorn) Implements advanced and specific coding standards to encourage the writing of clean and maintainable code.                                                                                                                                              |
 | `eslint-comments` | `eslint-comments/`          | \-             | no          | [Eslint Comments Rules](https://mysticatea.github.io/eslint-plugin-eslint-comments/)                                                                                                                                                                                                                                                           |
 | `imports`         | `import/`                   | \-             | no          | [Import Rules](https://github.com/un-es/eslint-plugin-i)                                                                                                                                                                                                                                                                                       |
-| `ts`              | `ts/`                       | yes            | yes         | [TypeScript configuration rules.](https://typescript-eslint.io/rules/) Extends ESLint with TypeScript-specific rules, enhancing type safety and code standards in TypeScript projects. **This project currently utilizes `eslint-recommended`, `rules` and `strict-type-checked` [More information about strict type checked](#typescript-1)** |
+| `ts`              | `ts/`                       | yes            | yes         | [TypeScript configuration rules.](https://typescript-eslint.io/rules/) Extends ESLint with TypeScript-specific rules, enhancing type safety and code standards in TypeScript projects. |
 | `vue`             | `vue/`                      | yes            | yes         | [Vue.js specific rules.](https://eslint.vuejs.org/rules/) **Automatic set TypeScript support when enabled.**                                                                                                                                                                                                                                   |
 | `vueA11y`         | `vue-a11y/`                 | yes with `vue` | yes         | [Vue A11y Rules.](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rule-overview/) An eslint plugin for checking accessibility rules from within .vue files. **Available only when `vue` is enabled**                                                                                                                              |
 | `vitest`          | `vitest/`, `no-only-tests/` | yes            | yes         | [Vitest Rules](https://github.com/veritem/eslint-plugin-vitest), [No only tests Rules](https://github.com/levibuzolic/eslint-plugin-no-only-tests)                                                                                                                                                                                             |
@@ -197,43 +197,6 @@ export default symmetrys({
 ```
 
 ### Setting Config
-
-#### Typescript
-
-`strict-type-checking` rules are automatically set if `tsconfig.json` or `tsconfig.*.json` are found in racine of the project. The `tsconfig.json` file can be specified in the settings. [Typescript ESlint docs](https://typescript-eslint.io/linting/typed-linting#specifying-tsconfigs)
-
-```js
-// eslint.config.js
-import symmetrys from 'eslint-config-symmetrys'
-
-export default symmetrys({
-  settings: {
-    tsproject: './tsconfig.json',
-  },
-})
-```
-
-Override the automatic rule assignment.
-
-```js
-// eslint.config.js
-import symmetrys from 'eslint-config-symmetrys'
-
-export default symmetrys({
-  ts: {
-    merge: { // or erase
-      languageOptions: {
-        parserOptions: {
-          project: true,
-        },
-      },
-      rules: {
-        // default strict type-checking rules are not applied
-      },
-    },
-  },
-})
-```
 
 #### Add Config
 
