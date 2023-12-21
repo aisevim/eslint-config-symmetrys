@@ -1,7 +1,39 @@
-import { GLOB_TSX, GLOB_TS } from '../globs.js'
+import { globSync } from 'glob'
+
+import { GLOBS_DEFAULT_IGNORES, GLOBS_TS_CONFIGS_ROOT, GLOB_TSX, GLOB_TS } from '../globs.js'
 import { renameRules, createConfig, getGlobFromExtension, interopDefault } from '../utils.js'
 
-export async function typescriptConfig({ options = {}, extensions = [] }) {
+function getRenamedRules(rules) {
+  return renameRules(rules, '@typescript-eslint/', 'ts/')
+}
+
+function checkTsConfigPresence() {
+  return !!globSync(GLOBS_TS_CONFIGS_ROOT, { ignore: GLOBS_DEFAULT_IGNORES, dot: true })?.length
+}
+
+export function getParserOptionsConfig(options, settings, pluginTS) {
+  if (
+    options?.merge?.languageOptions?.parserOptions?.project ||
+    options?.erase?.languageOptions?.parserOptions?.project
+  ) {
+    return null
+  }
+
+  const dirname = process.cwd()
+  const project = settings?.tsproject ?? checkTsConfigPresence()
+
+  return project ?
+    {
+      parserOptions: {
+        project,
+        tsConfigRootDir: dirname,
+      },
+      rules: getRenamedRules(pluginTS.configs['strict-type-checked'].rules),
+    } :
+    null
+}
+
+export async function typescriptConfig({ options = {}, extensions = [], settings = {} }) {
   const files = [
     GLOB_TS,
     GLOB_TSX,
@@ -14,6 +46,7 @@ export async function typescriptConfig({ options = {}, extensions = [] }) {
     interopDefault(import('@typescript-eslint/eslint-plugin')),
     interopDefault(import('@typescript-eslint/parser')),
   ])
+  const parserOptionsConfig = getParserOptionsConfig(options, settings, pluginTS)
 
   return [
     {
@@ -34,11 +67,13 @@ export async function typescriptConfig({ options = {}, extensions = [] }) {
             jsx: true,
           },
           ecmaVersion: 'latest',
+          ...parserOptionsConfig?.parserOptions,
         },
       },
       rules: {
-        ...renameRules(pluginTS.configs['eslint-recommended'].overrides[0].rules, '@typescript-eslint/', 'ts/'),
-        ...renameRules(pluginTS.configs.strict.rules, '@typescript-eslint/', 'ts/'),
+        ...getRenamedRules(pluginTS.configs['eslint-recommended'].overrides[0].rules),
+        ...getRenamedRules(pluginTS.configs.strict.rules),
+        ...parserOptionsConfig?.rules,
       },
     }),
     {

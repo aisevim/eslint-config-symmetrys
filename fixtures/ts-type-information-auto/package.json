@@ -1,0 +1,18 @@
+{
+  "name": "ts-type-information-auto",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "typescript": "^5.3.3",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "vitest": "^1.0.4"
+  }
+}
