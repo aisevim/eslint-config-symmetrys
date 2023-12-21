@@ -1,5 +1,24 @@
 # Symmetrys Changelog
 
+## [0.9.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.8.1...v0.9.0) (2023-12-21)
+
+
+### Features
+
+* **ts:** delete auto support of type info ([41283aa](https://github.com/aisevim/eslint-config-symmetrys/commit/41283aaa39f98e98a222c0de8b8b16d699d122d3))
+
+
+### Bug Fixes
+
+* ci format ([26022e6](https://github.com/aisevim/eslint-config-symmetrys/commit/26022e662d1d9e65426182c62ae664a6acdf2038))
+
+
+### Chore
+
+* **ci:** add cache for pnpm ([d9d2418](https://github.com/aisevim/eslint-config-symmetrys/commit/d9d241858d97f5a51b6c220281af37e2bd25d637))
+* **ci:** bump version of commit-harmonizer-action ([4bdfea5](https://github.com/aisevim/eslint-config-symmetrys/commit/4bdfea50ad3c0deaafe49bcc1a05a15cf24cc623))
+* **ci:** create new structure ([#8](https://github.com/aisevim/eslint-config-symmetrys/issues/8)) ([eeb8a77](https://github.com/aisevim/eslint-config-symmetrys/commit/eeb8a77e191d11a95257b58dcc7462a3c109348d))
+
 ## [0.8.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.8.0...v0.8.1) (2023-12-19)
 
 
