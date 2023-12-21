@@ -16,13 +16,6 @@ export default defineWorkspace([
     },
   },
   {
-    root: './fixtures/ts-type-information-auto',
-    test: {
-      name: 'Typescript type information auto activated',
-      environment: 'node',
-    },
-  },
-  {
     root: `./fixtures/setting-add-config`,
     test: {
       name: 'Setting addConfig',
