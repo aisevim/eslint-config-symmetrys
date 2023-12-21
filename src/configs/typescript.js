@@ -1,15 +1,5 @@
-import { globSync } from 'glob'
-
-import { GLOBS_DEFAULT_IGNORES, GLOBS_TS_CONFIGS_ROOT, GLOB_TSX, GLOB_TS } from '../globs.js'
+import { GLOB_TSX, GLOB_TS } from '../globs.js'
 import { renameRules, createConfig, getGlobFromExtension, interopDefault } from '../utils.js'
-
-function getRenamedRules(rules) {
-  return renameRules(rules, '@typescript-eslint/', 'ts/')
-}
-
-function checkTsConfigPresence() {
-  return !!globSync(GLOBS_TS_CONFIGS_ROOT, { ignore: GLOBS_DEFAULT_IGNORES, dot: true })?.length
-}
 
 export function getParserOptionsConfig(options, settings, pluginTS) {
   if (
@@ -20,7 +10,7 @@ export function getParserOptionsConfig(options, settings, pluginTS) {
   }
 
   const dirname = process.cwd()
-  const project = settings?.tsproject ?? checkTsConfigPresence()
+  const project = settings?.tsproject
 
   return project ?
     {
@@ -28,7 +18,7 @@ export function getParserOptionsConfig(options, settings, pluginTS) {
         project,
         tsConfigRootDir: dirname,
       },
-      rules: getRenamedRules(pluginTS.configs['strict-type-checked'].rules),
+      rules: renameRules(pluginTS.configs['strict-type-checked'].rules, '@typescript-eslint/', 'ts/'),
     } :
     null
 }
@@ -71,8 +61,8 @@ export async function typescriptConfig({ options = {}, extensions = [], settings
         },
       },
       rules: {
-        ...getRenamedRules(pluginTS.configs['eslint-recommended'].overrides[0].rules),
-        ...getRenamedRules(pluginTS.configs.strict.rules),
+        ...renameRules(pluginTS.configs['eslint-recommended'].overrides[0].rules, '@typescript-eslint/', 'ts/'),
+        ...renameRules(pluginTS.configs.strict.rules, '@typescript-eslint/', 'ts/'),
         ...parserOptionsConfig?.rules,
       },
     }),
@@ -82,7 +72,6 @@ export async function typescriptConfig({ options = {}, extensions = [], settings
         'eslint-comments/no-unlimited-disable': 'off',
         'import/no-duplicates': 'off',
         'no-restricted-syntax': 'off',
-        'unused-imports/no-unused-vars': 'off',
       },
     },
     {

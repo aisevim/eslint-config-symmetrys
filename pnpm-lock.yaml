@@ -102,9 +102,6 @@ importers:
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
-      glob:
-        specifier: ^10.3.10
-        version: 10.3.10
       release-it:
         specifier: ^17.0.1
         version: 17.0.1(typescript@5.3.3)
@@ -191,22 +188,6 @@ importers:
       eslint-plugin-eslint-plugin:
         specifier: 5.2.1
         version: 5.2.1(eslint@8.55.0)
-      vitest:
-        specifier: ^1.0.4
-        version: 1.0.4
-
-  fixtures/ts-type-information-auto:
-    dependencies:
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-      vue:
-        specifier: ^3.3.11
-        version: 3.3.11(typescript@5.3.3)
-    devDependencies:
-      eslint:
-        specifier: ^8.55.0
-        version: 8.55.0
       vitest:
         specifier: ^1.0.4
         version: 1.0.4
