@@ -7,6 +7,11 @@ inputs:
     default: "20.10.x"
     required: false
 
+  npm-token:
+    description: "The NPM token to use"
+    default: ""
+    required: false
+
 runs:
   using: "composite"
   steps:
@@ -28,6 +33,7 @@ runs:
         cache: "pnpm"
 
     - name: Init Npm config
+      if: inputs.npm-token
       run: npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
