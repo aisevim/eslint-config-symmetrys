@@ -1,5 +1,12 @@
 # Symmetrys Changelog
 
+## [0.9.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.0...v0.9.1) (2023-12-21)
+
+
+### Bug Fixes
+
+* delete auto set type info ([c8bd681](https://github.com/aisevim/eslint-config-symmetrys/commit/c8bd681ba7ff525ccf5797cb7f9a640030bf98f0))
+
 ## [0.9.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.8.1...v0.9.0) (2023-12-21)
 
 
