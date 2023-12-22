@@ -18,25 +18,25 @@
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
-      "header": "# Symmetrys Changelog",
+      "header": "# 💫 Symmetrys Changelog",
       "preset": {
         "name": "conventionalcommits",
         "types": [
           {
             "type": "feat",
-            "section": "Features"
+            "section": "✨ Features"
           },
           {
             "type": "fix",
-            "section": "Bug Fixes"
+            "section": "🩹 Bug Fixes"
           },
           {
             "type": "chore",
-            "section": "Chore"
+            "section": "🏗️ Chore"
           },
           {
             "type": "docs",
-            "section": "Docs"
+            "section": "📝 Docs"
           },
           {
             "type": "style",

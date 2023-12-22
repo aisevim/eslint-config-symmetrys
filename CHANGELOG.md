@@ -1,33 +1,33 @@
-# Symmetrys Changelog
+# 💫 Symmetrys Changelog
 
 ## [0.9.2](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.1...v0.9.2) (2023-12-21)
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * **ts:** add adapted ts rules ([863991c](https://github.com/aisevim/eslint-config-symmetrys/commit/863991cede7862ff73101d4aca6a1805eb2d1b48))
 
 ## [0.9.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.0...v0.9.1) (2023-12-21)
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * delete auto set type info ([c8bd681](https://github.com/aisevim/eslint-config-symmetrys/commit/c8bd681ba7ff525ccf5797cb7f9a640030bf98f0))
 
 ## [0.9.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.8.1...v0.9.0) (2023-12-21)
 
 
-### Features
+### ✨ Features
 
 * **ts:** delete auto support of type info ([41283aa](https://github.com/aisevim/eslint-config-symmetrys/commit/41283aaa39f98e98a222c0de8b8b16d699d122d3))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * ci format ([26022e6](https://github.com/aisevim/eslint-config-symmetrys/commit/26022e662d1d9e65426182c62ae664a6acdf2038))
 
 
-### Chore
+### 🏗️ Chore
 
 * **ci:** add cache for pnpm ([d9d2418](https://github.com/aisevim/eslint-config-symmetrys/commit/d9d241858d97f5a51b6c220281af37e2bd25d637))
 * **ci:** bump version of commit-harmonizer-action ([4bdfea5](https://github.com/aisevim/eslint-config-symmetrys/commit/4bdfea50ad3c0deaafe49bcc1a05a15cf24cc623))
@@ -36,27 +36,27 @@
 ## [0.8.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.8.0...v0.8.1) (2023-12-19)
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * package json exports ([f7ad2ba](https://github.com/aisevim/eslint-config-symmetrys/commit/f7ad2ba3c76d7c1c1ec44f2bc331416fe505ec3f))
 
 ## [0.8.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.7.0...v0.8.0) (2023-12-19)
 
 
-### Features
+### ✨ Features
 
 * set names to configs + distrub globally plugins when enabled ([cb45967](https://github.com/aisevim/eslint-config-symmetrys/commit/cb459677190ce9c4a5d8ba00609863bdf4608eff))
 * **ts:** create configs for specfic files in typescript ([9efabef](https://github.com/aisevim/eslint-config-symmetrys/commit/9efabef13bb8758e5fe7031ad8f666e13e3bf96b))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * **json:** update rule array-bracket-newline to consistent ([0a37e1d](https://github.com/aisevim/eslint-config-symmetrys/commit/0a37e1d19f8059057845cbeb160e1ba1e71c8406))
 * rename config comments to eslintComments ([d348733](https://github.com/aisevim/eslint-config-symmetrys/commit/d34873328e4cf64c9e28ccb951309089a13dd2af))
 * settings.tsproject rules priority ([e2156aa](https://github.com/aisevim/eslint-config-symmetrys/commit/e2156aaf564eb16e6eb69c560efa8ab53bdafecf))
 
 
-### Chore
+### 🏗️ Chore
 
 * add dependabot config to update packages ([9c888c0](https://github.com/aisevim/eslint-config-symmetrys/commit/9c888c03a792ff58325f6af6554e1309691e3a9a))
 * **deps:** bump @typescript-eslint/parser from 6.13.2 to 6.15.0 ([#3](https://github.com/aisevim/eslint-config-symmetrys/issues/3)) ([f0278ad](https://github.com/aisevim/eslint-config-symmetrys/commit/f0278adf7039e8fe08878ef824e02a5f27378087))
@@ -66,7 +66,7 @@
 * **deps:** bump vue from 3.3.11 to 3.3.12 ([#5](https://github.com/aisevim/eslint-config-symmetrys/issues/5)) ([a5767f7](https://github.com/aisevim/eslint-config-symmetrys/commit/a5767f71393dbf9a93ed4769bb7486bf86607abb))
 
 
-### Docs
+### 📝 Docs
 
 * better explanation for setting config typescript ([653e348](https://github.com/aisevim/eslint-config-symmetrys/commit/653e348b4ae24bcb4b765a5a71b283e0f3780a74))
 * update Configurations Overview ([ec9ad27](https://github.com/aisevim/eslint-config-symmetrys/commit/ec9ad27e7b960cca638e14228c3ee3063a435bcf))
@@ -74,7 +74,7 @@
 ## [0.7.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.6.1...v0.7.0) (2023-12-18)
 
 
-### Features
+### ✨ Features
 
 * **config:** create confg vueA11y ([63fd1c4](https://github.com/aisevim/eslint-config-symmetrys/commit/63fd1c4fad5ed2a4949f7729ed8f530fef38dbf1))
 * **config:** create config cypress ([78987b0](https://github.com/aisevim/eslint-config-symmetrys/commit/78987b00b5381b0c03aee943b263580a9bf863b0))
@@ -82,7 +82,7 @@
 * **settings:** create addConfig setting ([b89fd56](https://github.com/aisevim/eslint-config-symmetrys/commit/b89fd5655c0396c3b293f6aa22db032c173e58f5))
 
 
-### Docs
+### 📝 Docs
 
 * delete customise config section in Readme ([4ba1fcb](https://github.com/aisevim/eslint-config-symmetrys/commit/4ba1fcb273e5c2172b493a5df2dc403e95d4b2e0))
 * readme, delete name in table ([585b331](https://github.com/aisevim/eslint-config-symmetrys/commit/585b3315a6c79d7b71adefc23fb4bdb70a78ed4d))
@@ -91,43 +91,43 @@
 ## [0.6.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.6.0...v0.6.1) (2023-12-17)
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * delete source-map in dist ([e1fa537](https://github.com/aisevim/eslint-config-symmetrys/commit/e1fa537421ee1eaa2136b6bacbb89ca4d12245c7))
 
 ## [0.6.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.5.0...v0.6.0) (2023-12-17)
 
 
-### Features
+### ✨ Features
 
 * import module a la carte ([645fab0](https://github.com/aisevim/eslint-config-symmetrys/commit/645fab0a34710448705cdd1888dfb4380b3299da))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * **specific:** add jsoncParser to specific configs ([ef1e229](https://github.com/aisevim/eslint-config-symmetrys/commit/ef1e2299fd0ff7f6eeecae4939286325cdad3dc1))
 
 
-### Chore
+### 🏗️ Chore
 
 * add "eslint-symmetrys" keywords ([129da37](https://github.com/aisevim/eslint-config-symmetrys/commit/129da37b35f232cad37f1e2d001416c0c2397692))
 
 
-### Docs
+### 📝 Docs
 
 * update badge links ([338946d](https://github.com/aisevim/eslint-config-symmetrys/commit/338946d75c6de8e464e2dc843d5c11e12befbef6))
 
 ## [0.5.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.4.0...v0.5.0) (2023-12-17)
 
 
-### Features
+### ✨ Features
 
 * **configs:** change api, add merge and erase options to configs ([05e077d](https://github.com/aisevim/eslint-config-symmetrys/commit/05e077d57a9bb4569ba0b858c623bae838b77159))
 * enable per config with tests ([9e35596](https://github.com/aisevim/eslint-config-symmetrys/commit/9e355960189edd9d3be0da2700281a6b1d24672d))
 * export utils, config and default factory ([1f75e04](https://github.com/aisevim/eslint-config-symmetrys/commit/1f75e048f3ecab25f4dec0f1565515daf9ea453a))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * **gitignore:** resend gitignore to configs after ([23660ba](https://github.com/aisevim/eslint-config-symmetrys/commit/23660ba231ddd7e3e66d1a8da6641f8552f87d19))
 * **md:** rename plugin rule style to stylistic ([c22b725](https://github.com/aisevim/eslint-config-symmetrys/commit/c22b72543b1a48c509e13170fa539a68b76ed93b))
@@ -138,7 +138,7 @@
 * **vue:** set specific parser per files ([223a8ef](https://github.com/aisevim/eslint-config-symmetrys/commit/223a8efc2e6b6139d0a8b8865e1dce2bc0f6bee7))
 
 
-### Docs
+### 📝 Docs
 
 * add badges ([cb6b042](https://github.com/aisevim/eslint-config-symmetrys/commit/cb6b042c93ebc6224925f2e05d9cd22ce6ef6888))
 * update readme ([6df212d](https://github.com/aisevim/eslint-config-symmetrys/commit/6df212d3f7c4d7dab602b909d99986a0e4ea9d34))
@@ -146,7 +146,7 @@
 ## [0.4.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.3.0...v0.4.0) (2023-12-15)
 
 
-### Features
+### ✨ Features
 
 * **md:** create markdown config ([0346e84](https://github.com/aisevim/eslint-config-symmetrys/commit/0346e849cb1400c9015bd051073aa01e5c7e3978))
 * **ts:** add jsx support to files ([b7e5e63](https://github.com/aisevim/eslint-config-symmetrys/commit/b7e5e63ebe7b8aab7d23434626e7fa331882b39f))
@@ -154,7 +154,7 @@
 * **vue:** export vue plugin for all configs ([eeaf92b](https://github.com/aisevim/eslint-config-symmetrys/commit/eeaf92b75663437a8934d1734db3d4892d3b4e54))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * big change, delete files path for many configs ([06a9e0f](https://github.com/aisevim/eslint-config-symmetrys/commit/06a9e0fe6aaa436ee951425009de507ed5cf747a))
 * big changes on test, support vue and ts for md config ([98988ed](https://github.com/aisevim/eslint-config-symmetrys/commit/98988ed4ad47da471a7967d85c048ca4e70969cf))
@@ -163,7 +163,7 @@
 ## [0.3.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.2.0...v0.3.0) (2023-12-14)
 
 
-### Features
+### ✨ Features
 
 * **config:** create ignore config ([d5ff6a1](https://github.com/aisevim/eslint-config-symmetrys/commit/d5ff6a12865e268506ccd941c8ccf47d50b6f377))
 * **config:** create security config ([075e4c8](https://github.com/aisevim/eslint-config-symmetrys/commit/075e4c829f82dc9d0fdd13bd0ed9e70a63459392))
@@ -171,7 +171,7 @@
 * **vitest:** add eslint-plugin-no-only-tests to vitest config ([a44e38c](https://github.com/aisevim/eslint-config-symmetrys/commit/a44e38c05af34e975b0f5ee120a730a6f20c8ed6))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * delete ts-support on vue file (mistake) ([9451868](https://github.com/aisevim/eslint-config-symmetrys/commit/94518688f764356b67ece7b5c7734d39780bc04f))
 * **vue:** delete ts in vue config when not used ([8cfa9ef](https://github.com/aisevim/eslint-config-symmetrys/commit/8cfa9ef6eceff2490e16db2a057c56f97de0ced2))
@@ -179,21 +179,21 @@
 ## [0.2.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.1.0...v0.2.0) (2023-12-12)
 
 
-### Features
+### ✨ Features
 
 * **import:** add rule no-unresolved with ts support ([eb4ae29](https://github.com/aisevim/eslint-config-symmetrys/commit/eb4ae2942a1db9b0b9874017cd03c564cb89bc48))
 * **ts:** add ts-type support for vue file ([452b3c2](https://github.com/aisevim/eslint-config-symmetrys/commit/452b3c2b40f433f90b1ed6dc836c497360695091))
 * **ts:** support ts type infomration rules ([a6bf51c](https://github.com/aisevim/eslint-config-symmetrys/commit/a6bf51ca4319315f5e32103dc84c700a43e2b631))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * use differnt package for detect module exist ([33967ba](https://github.com/aisevim/eslint-config-symmetrys/commit/33967ba98f2dd349b068e3da5419c219e81fb7e4))
 
 ## 0.1.0 (2023-12-08)
 
 
-### Features
+### ✨ Features
 
 * auto detect mocules (ts, vite, vue...) ([6a1381f](https://github.com/aisevim/eslint-config-symmetrys/commit/6a1381f5c83c2c2a8a834522aca4af0145c4ff2c))
 * **config:** create comments config ([8ab2b17](https://github.com/aisevim/eslint-config-symmetrys/commit/8ab2b172636db70a94aea223a3beebadb8d7a047))
@@ -220,7 +220,7 @@
 * **yaml:** delete indent rules ([b94149b](https://github.com/aisevim/eslint-config-symmetrys/commit/b94149b86f5e26951bd6ef3b020ed13321c8abcc))
 
 
-### Bug Fixes
+### 🩹 Bug Fixes
 
 * add forgetted import config ([62616b5](https://github.com/aisevim/eslint-config-symmetrys/commit/62616b549c337c26a995ad03b964d417b1b70fd7))
 * all eslint configuration ([2234ac1](https://github.com/aisevim/eslint-config-symmetrys/commit/2234ac1398dbe7f87cfe57eb94ef7b7c67a4abfb))
@@ -235,7 +235,7 @@
 * **unicorn:** support for ts files ([951d61f](https://github.com/aisevim/eslint-config-symmetrys/commit/951d61f65128aec7c0defd51e274d21082cdab3f))
 
 
-### Chore
+### 🏗️ Chore
 
 * add eslint as a peer dependency ([2316214](https://github.com/aisevim/eslint-config-symmetrys/commit/231621441a1f8be6ff725e3c0899e625427b3c8a))
 * **build:** add eslint-config-symmetry to keywords ([22eb4dd](https://github.com/aisevim/eslint-config-symmetrys/commit/22eb4dd62920aa171133e1bbde31a7c6b411286b))
@@ -262,7 +262,7 @@
 * **typescript:** temporarly change to JS ([af3dc7b](https://github.com/aisevim/eslint-config-symmetrys/commit/af3dc7bdaf4f522c2771c863c8f23284373ec074))
 
 
-### Docs
+### 📝 Docs
 
 * add fields bugs, repository ([1210a2d](https://github.com/aisevim/eslint-config-symmetrys/commit/1210a2d27b36d6db6957ce6f00459f455b0310b1))
 * advert to in working progress ([e5fdf23](https://github.com/aisevim/eslint-config-symmetrys/commit/e5fdf231d0c0d26ea9d76aa09cf95a909371e641))
