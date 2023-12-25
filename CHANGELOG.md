@@ -1,5 +1,25 @@
 # 💫 Symmetrys Changelog
 
+## [0.9.3](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.2...v0.9.3) (2023-12-25)
+
+
+### 🩹 Bug Fixes
+
+* quality badge not sync with master ([847b945](https://github.com/aisevim/eslint-config-symmetrys/commit/847b945747b19587cbae273955323afbb5b60a73))
+* **vitest:** delete deprecated rule no-done-callback ([ddd4ebd](https://github.com/aisevim/eslint-config-symmetrys/commit/ddd4ebdc7efb8c0d3e1fe315fae7d54c8ef052d9))
+
+
+### 🏗️ Chore
+
+* **changelog:** add emoji ([ca88f37](https://github.com/aisevim/eslint-config-symmetrys/commit/ca88f37ca6c2b70e3eaab1f4311e488de5df7b34))
+* **ci:** bump commit-harmonizer-action ([0878cf3](https://github.com/aisevim/eslint-config-symmetrys/commit/0878cf3bcdd579736003dc5bc7eb12c1ff853625))
+* **deps-dev:** bump vitest from 1.0.4 to 1.1.0 ([fff93ab](https://github.com/aisevim/eslint-config-symmetrys/commit/fff93ab4ddd533ce5edce45184f889b304386966))
+* **deps:** bump @typescript-eslint/eslint-plugin from 6.13.2 to 6.15.0 ([8252fc6](https://github.com/aisevim/eslint-config-symmetrys/commit/8252fc6472efda6b2981718b15c5bf76a0c8779b))
+* **deps:** bump eslint-plugin-security from 2.0.0 to 2.1.0 ([9372ab0](https://github.com/aisevim/eslint-config-symmetrys/commit/9372ab0360418bde0e13bc0b11421402bc0e6488))
+* **deps:** bump eslint-plugin-vitest from 0.3.15 to 0.3.20 ([e9fe11e](https://github.com/aisevim/eslint-config-symmetrys/commit/e9fe11ea0835c45538cfd7309f06af5cc5c7e16d))
+* **deps:** bump storybook from 7.6.5 to 7.6.6 ([c9c3c32](https://github.com/aisevim/eslint-config-symmetrys/commit/c9c3c32138b2651bc4b3c15b2648efa428fe0729))
+* sync all vitest package with ovveride ([2317182](https://github.com/aisevim/eslint-config-symmetrys/commit/2317182627080e0865ed5592ddc2d8e67bfbbeaa))
+
 ## [0.9.2](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.1...v0.9.2) (2023-12-21)
 
 
