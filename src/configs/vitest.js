@@ -26,7 +26,6 @@ export async function vitestConfig({ options = {} }) {
       rules: {
         ...pluginVitest.configs.recommended.rules,
         'vitest/consistent-test-it': 'error',
-        'vitest/no-done-callback': 'error',
         'vitest/no-duplicate-hooks': 'error',
         'vitest/no-standalone-expect': {
           additionalTestBlockFunctions: ['test'],
