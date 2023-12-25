@@ -52,7 +52,7 @@ importers:
         version: 6.1.1(eslint@8.55.0)
       eslint-plugin-security:
         specifier: ^2.0.0
-        version: 2.0.0
+        version: 2.1.0
       eslint-plugin-storybook:
         specifier: ^0.6.15
         version: 0.6.15(eslint@8.55.0)(typescript@5.3.3)
@@ -4872,8 +4872,8 @@ packages:
       eslint: 8.55.0
     dev: false
 
-  /eslint-plugin-security@2.0.0:
-    resolution: {integrity: sha512-2vJLgIm33tisno85/20c8g8t8hGx4/JSNCtmoaqRHfDximblVzMM9jbCrvNkPlCjyLLCfWaXGgWO0tW2NpnnjQ==}
+  /eslint-plugin-security@2.1.0:
+    resolution: {integrity: sha512-ywxclP954bf8d3gr6KOQ/AFc+PRvWuhOxtPOEtiHmVYiZr/mcgQtmSJq6+hTEXC5ylTjHnPPG+PEnzlDiWMXbQ==}
     dependencies:
       safe-regex: 2.1.1
     dev: false
