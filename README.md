@@ -1,5 +1,5 @@
 # Symmetrys
-[![Quality-Check](https://github.com/aisevim/eslint-config-symmetrys/workflows/Quality-Check/badge.svg)](https://github.com/aisevim/eslint-config-symmetrys)
+[![Quality-Check](https://github.com/aisevim/eslint-config-symmetrys/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/aisevim/eslint-config-symmetrys)
 [![NPM Badge](https://img.shields.io/npm/v/eslint-config-symmetrys?logo=npm)](https://www.npmjs.com/package/eslint-config-symmetrys)
 [![Downloads](https://img.shields.io/npm/dm/eslint-config-symmetrys)](https://github.com/aisevim/eslint-config-symmetrys)
 
