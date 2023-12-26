@@ -261,6 +261,30 @@ export default symmertry({
 })
 ```
 
+#### Strict Formatting
+
+`symmetrys` is a permissive formatter by default, but it also offers strict formatting options, ideal for data files or other specific cases.  
+Use the `strictFormat` setting to apply strict formatting rules to targeted files.
+
+```js
+// eslint.config.js
+import symmertry from 'eslint-config-symmetrys'
+
+export default symmertry({
+  settings: {
+    strictFormat: {
+      scriptFiles: ['./fixtures/data.js', './fixtures/data.ts'],
+
+      jsonFiles: ['./fixtures/data.json'],
+    },
+  },
+})
+```
+
+> [!WARNING]
+> The configs `json` and/or `stylistic` need to be enabled.
+
+
 ## Acknowledgements
 
 This project is inspired by [@antfu/eslint-config](https://github.com/antfu/eslint-config)

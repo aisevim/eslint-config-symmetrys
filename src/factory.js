@@ -22,6 +22,7 @@ import {
   storybookConfig,
   vueA11yConfig,
   cypressConfig,
+  strictFormatConfig,
 } from './configs/index.js'
 import { configIsEnabled, moduleExists, toFlatConfigs } from './utils.js'
 
@@ -123,6 +124,10 @@ function config(options = {}) {
 
   if (configIsEnabled(cypress)) {
     configs.push(cypressConfig({ options: cypress }))
+  }
+
+  if (configIsEnabled(settings?.strictFormat)) {
+    configs.push(strictFormatConfig({ options: settings.strictFormat }))
   }
 
   return toFlatConfigs(...configs, ...settings?.addConfigs ?? [])
