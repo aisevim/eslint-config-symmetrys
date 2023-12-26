@@ -1,5 +1,17 @@
 # 💫 Symmetrys Changelog
 
+## [0.10.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.3...v0.10.0) (2023-12-26)
+
+
+### ✨ Features
+
+* **settings:** create setting strictFormat ([158ee1f](https://github.com/aisevim/eslint-config-symmetrys/commit/158ee1ff8f1d89a80fde87de4a05ec407ed5fca2))
+
+
+### 📝 Docs
+
+* wording on readme ([6aa9d58](https://github.com/aisevim/eslint-config-symmetrys/commit/6aa9d5896cc50fdebebc36a3c9b2f34a87ecf31c))
+
 ## [0.9.3](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.2...v0.9.3) (2023-12-25)
 
 
