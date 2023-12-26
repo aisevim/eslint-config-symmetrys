@@ -282,7 +282,7 @@ export default symmertry({
 ```
 
 > [!WARNING]
-> The configs `json` and/or `stylistic` need to be enabled.
+> The `json` and/or `stylistic` configs need to be enabled.
 
 
 ## Acknowledgements
