@@ -3,27 +3,24 @@
 // Perfectionist Plugin
 // TS Plugin
 
-import fs from 'node:fs'
-
-import dotenv from 'dotenv'
 import express from 'express'
-import defaultsDeep from 'lodash/defaultsDeep'
 import fromPairs from 'lodash/fromPairs'
-import map from 'lodash/map'
-import Default from 'mod'
-
-import config from './config.js'
-import configs from './config.js'
-import { conf } from './config.js'
+import dotenv from 'dotenv'
 
 import styles from './index.module.css'
-
-import './set-production-env.js'
+import config from './config.js'
+import map from 'lodash/map'
+import configs from './config.js'
 import './styles.scss'
+import './set-production-env.js'
+import {conf} from './config.js'
+import defaultsDeep from 'lodash/defaultsDeep'
+import fs from 'fs'
+import Default, {} from 'mod'
 
 // JSdoc Plugin
 /**
- * @private
+ * @private {someType}
  */
 export const foo = () => {
   return 0
