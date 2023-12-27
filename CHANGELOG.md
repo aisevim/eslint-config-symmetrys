@@ -1,5 +1,17 @@
 # 💫 Symmetrys Changelog
 
+## [0.10.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.0...v0.10.1) (2023-12-27)
+
+
+### 🩹 Bug Fixes
+
+* **settings:** empty array on strict format ([939beb3](https://github.com/aisevim/eslint-config-symmetrys/commit/939beb323c47135895bfa0eb81fe68dc21001d49))
+
+
+### 📝 Docs
+
+* delete item from eslint.validate ([18d5d65](https://github.com/aisevim/eslint-config-symmetrys/commit/18d5d65f02046e686b92bcb902794c77cdd0ca38))
+
 ## [0.10.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.9.3...v0.10.0) (2023-12-26)
 
 
