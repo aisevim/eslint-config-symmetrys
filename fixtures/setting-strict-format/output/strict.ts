@@ -1,4 +1,5 @@
 export default {
+  empty: [],
   foo: [
     {
       sha: 'b47615b96f65a283826287b0728568c3354fd878',
@@ -71,13 +72,11 @@ export default {
         type: 'User',
         site_admin: false,
       },
-      parents: [
-        {
-          sha: '0a0f750d6bf7b557847b60895016dce6c832a33f',
-          url: 'https://api.github.com/repos/vueuse/vueuse/commits/0a0f750d6bf7b557847b60895016dce6c832a33f',
-          html_url: 'https://github.com/vueuse/vueuse/commit/0a0f750d6bf7b557847b60895016dce6c832a33f',
-        },
-      ],
+      parents: [{
+        sha: '0a0f750d6bf7b557847b60895016dce6c832a33f',
+        url: 'https://api.github.com/repos/vueuse/vueuse/commits/0a0f750d6bf7b557847b60895016dce6c832a33f',
+        html_url: 'https://github.com/vueuse/vueuse/commit/0a0f750d6bf7b557847b60895016dce6c832a33f',
+      }],
     },
     {
       sha: '0a0f750d6bf7b557847b60895016dce6c832a33f',
@@ -150,13 +149,11 @@ export default {
         type: 'User',
         site_admin: false,
       },
-      parents: [
-        {
-          sha: 'e6def5a0f1ae9e2b8d70eca838560a665799aedd',
-          url: 'https://api.github.com/repos/vueuse/vueuse/commits/e6def5a0f1ae9e2b8d70eca838560a665799aedd',
-          html_url: 'https://github.com/vueuse/vueuse/commit/e6def5a0f1ae9e2b8d70eca838560a665799aedd',
-        },
-      ],
+      parents: [{
+        sha: 'e6def5a0f1ae9e2b8d70eca838560a665799aedd',
+        url: 'https://api.github.com/repos/vueuse/vueuse/commits/e6def5a0f1ae9e2b8d70eca838560a665799aedd',
+        html_url: 'https://github.com/vueuse/vueuse/commit/e6def5a0f1ae9e2b8d70eca838560a665799aedd',
+      }],
     },
     {
       sha: 'e6def5a0f1ae9e2b8d70eca838560a665799aedd',
@@ -229,13 +226,11 @@ export default {
         type: 'User',
         site_admin: false,
       },
-      parents: [
-        {
-          sha: 'a32d4f36d1b291c8fd25b5936271308c44129fd7',
-          url: 'https://api.github.com/repos/vueuse/vueuse/commits/a32d4f36d1b291c8fd25b5936271308c44129fd7',
-          html_url: 'https://github.com/vueuse/vueuse/commit/a32d4f36d1b291c8fd25b5936271308c44129fd7',
-        },
-      ],
+      parents: [{
+        sha: 'a32d4f36d1b291c8fd25b5936271308c44129fd7',
+        url: 'https://api.github.com/repos/vueuse/vueuse/commits/a32d4f36d1b291c8fd25b5936271308c44129fd7',
+        html_url: 'https://github.com/vueuse/vueuse/commit/a32d4f36d1b291c8fd25b5936271308c44129fd7',
+      }],
     },
   ],
 }
