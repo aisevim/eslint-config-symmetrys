@@ -96,7 +96,6 @@ export default symmetrys()
     "vue",
     "markdown",
     "json",
-    "jsonc",
     "yaml"
   ]
 }
