@@ -1,5 +1,12 @@
 # 💫 Symmetrys Changelog
 
+## [0.10.2](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.1...v0.10.2) (2023-12-28)
+
+
+### 🩹 Bug Fixes
+
+* **stylistic:** delete new-parens rule ([457c2a9](https://github.com/aisevim/eslint-config-symmetrys/commit/457c2a9946b05adce2f9d48c9204a8733316e4cc))
+
 ## [0.10.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.0...v0.10.1) (2023-12-27)
 
 
