@@ -97,7 +97,6 @@ export async function stylisticConfig({ options = {} }) {
         'stylistic/lines-between-class-members': ['error', 'always'],
         'stylistic/max-statements-per-line': ['error', { max: 1 }],
         'stylistic/multiline-ternary': ['error', 'always-multiline'],
-        'stylistic/new-parens': ['error', 'never'],
         'stylistic/newline-per-chained-call': [
           'error',
           {
