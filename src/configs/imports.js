@@ -10,7 +10,6 @@ export async function importsConfig({ options = {} }) {
     },
     rules: {
       'import/no-empty-named-blocks': 'error',
-      'import/no-extraneous-dependencies': 'error',
       'import/no-mutable-exports': 'error',
       'import/no-self-import': 'error',
       'import/no-useless-path-segments': [
