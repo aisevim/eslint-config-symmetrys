@@ -1,5 +1,20 @@
 # 💫 Symmetrys Changelog
 
+## [0.10.3](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.2...v0.10.3) (2024-01-02)
+
+
+### 🩹 Bug Fixes
+
+* **import:** delete rule import/no-extraneous-dependencies ([b5b92dd](https://github.com/aisevim/eslint-config-symmetrys/commit/b5b92dd85114519dacc1a79a1f5acc3fdb97d14a))
+
+
+### 🏗️ Chore
+
+* **deps-dev:** bump vitest from 1.1.0 to 1.1.1 ([#15](https://github.com/aisevim/eslint-config-symmetrys/issues/15)) ([9225a54](https://github.com/aisevim/eslint-config-symmetrys/commit/9225a54d100c935e80d1062b77b988209645e4de))
+* **deps:** bump @stylistic/eslint-plugin from 1.5.0 to 1.5.1 ([b840aba](https://github.com/aisevim/eslint-config-symmetrys/commit/b840abacaaffd046340f1d1de08b7d46c0c3e63f))
+* **deps:** bump @typescript-eslint/parser from 6.15.0 to 6.16.0 ([55eb53a](https://github.com/aisevim/eslint-config-symmetrys/commit/55eb53a4bdbacb16570442659a96f01391f28b1e))
+* **deps:** bump eslint-plugin-n from 16.4.0 to 16.6.0 ([d061d2f](https://github.com/aisevim/eslint-config-symmetrys/commit/d061d2f06e532f6acc249c17aa38f08afa34ec03))
+
 ## [0.10.2](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.1...v0.10.2) (2023-12-28)
 
 
