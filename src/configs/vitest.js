@@ -25,8 +25,12 @@ export async function vitestConfig({ options = {} }) {
       },
       rules: {
         ...pluginVitest.configs.recommended.rules,
+        'vitest/expect-expect': 'error',
         'vitest/consistent-test-it': 'error',
+        'vitest/no-commented-out-tests': 'error',
         'vitest/no-duplicate-hooks': 'error',
+        'vitest/no-identical-title': 'error',
+        'vitest/no-import-node-test': 'error',
         'vitest/no-standalone-expect': {
           additionalTestBlockFunctions: ['test'],
         },
@@ -40,6 +44,7 @@ export async function vitestConfig({ options = {} }) {
         'vitest/prefer-to-be-truthy': 'error',
         'vitest/prefer-to-contain': 'error',
         'vitest/prefer-to-have-length': 'error',
+        'vitest/require-local-test-context-for-concurrent-snapshots': 'error',
         'vitest/valid-describe-callback': 'error',
 
         'no-only-tests/no-only-tests': 'error',
