@@ -96,7 +96,8 @@ export default symmetrys()
     "vue",
     "markdown",
     "json",
-    "yaml"
+    "yaml",
+    "github-actions-workflow"
   ]
 }
 ```
