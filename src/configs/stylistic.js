@@ -189,6 +189,9 @@ export async function stylisticConfig({ options = {} }) {
             },
           },
         ],
+        'stylistic/type-named-tuple-spacing': 'error',
+        'stylistic/type-generic-spacing': 'error',
+        'stylistic/indent-binary-ops': 'error',
       },
     }),
   ]
