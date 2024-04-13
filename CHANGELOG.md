@@ -1,5 +1,38 @@
 # 💫 Symmetrys Changelog
 
+## [0.11.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.3...v0.11.0) (2024-04-13)
+
+
+### ✨ Features
+
+* **stylistic:** add additional rules ([610c494](https://github.com/aisevim/eslint-config-symmetrys/commit/610c4943fbae43e0b3c7f124488abcfe2fdfe7cf))
+* **vitest:** add new rules ([7099881](https://github.com/aisevim/eslint-config-symmetrys/commit/7099881e8aea1b6c0d3e19dd45aa9f18df2ee3cc))
+
+
+### 🩹 Bug Fixes
+
+* packages updates ([4265672](https://github.com/aisevim/eslint-config-symmetrys/commit/42656728a132775f77592bad967dbad104ae9d29))
+
+
+### 🏗️ Chore
+
+* **deps-dev:** bump eslint and @types/eslint ([8057598](https://github.com/aisevim/eslint-config-symmetrys/commit/80575987375b5f16ba1548191dd0baf4c38dca88))
+* **deps-dev:** bump ip from 1.1.8 to 1.1.9 ([2d899bc](https://github.com/aisevim/eslint-config-symmetrys/commit/2d899bcd4fb342fd489d75a755d6b2a9179860bc))
+* **deps-dev:** bump vitest from 1.1.1 to 1.5.0 ([c8f6d73](https://github.com/aisevim/eslint-config-symmetrys/commit/c8f6d73820af00b8c9ee7b1f5141a54242788125))
+* **deps:** bump @stylistic/eslint-plugin from 1.5.1 to 1.5.3 ([e6a61b5](https://github.com/aisevim/eslint-config-symmetrys/commit/e6a61b57729146c6bc84bbfd1b1a157c624b5f22))
+* **deps:** bump @typescript-eslint/parser from 6.16.0 to 6.18.0 ([84fa8ec](https://github.com/aisevim/eslint-config-symmetrys/commit/84fa8ecb186ece0afd6577830ffda1a3684ab852))
+* **deps:** bump @typescript-eslint/parser from 6.18.0 to 6.21.0 ([00c66e6](https://github.com/aisevim/eslint-config-symmetrys/commit/00c66e6e82e0b5a76b7d4f5b8cb8a6650e90a829))
+* **deps:** bump eslint-plugin-jsonc from 2.10.0 to 2.11.2 ([5977a12](https://github.com/aisevim/eslint-config-symmetrys/commit/5977a12ad252ee5b1d2dbe483600f21fea9cbd25))
+* **deps:** bump eslint-plugin-n from 16.6.0 to 16.6.1 ([cae186d](https://github.com/aisevim/eslint-config-symmetrys/commit/cae186dc3e76978b56825c35bd5f0ecbd98dd450))
+* **deps:** bump storybook from 7.6.5 to 8.0.6 ([4a628d3](https://github.com/aisevim/eslint-config-symmetrys/commit/4a628d363666d2ade60dde65c00c1d5bc8bdd8f3))
+* **deps:** bump vite from 5.0.7 to 5.2.8 ([fd06db0](https://github.com/aisevim/eslint-config-symmetrys/commit/fd06db00d7609b62485d89ed3183ad92fc2c6d89))
+* **deps:** bump vue-eslint-parser from 9.3.2 to 9.4.2 ([eedad5f](https://github.com/aisevim/eslint-config-symmetrys/commit/eedad5f2ed0cc8140e3395a6efb3c4ae1a8eaeb2))
+
+
+### 📝 Docs
+
+* add github action yaml to eslint config ([95e4837](https://github.com/aisevim/eslint-config-symmetrys/commit/95e4837962933ebcb12ec4aaa238dcf192e4eb6e))
+
 ## [0.10.3](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.2...v0.10.3) (2024-01-02)
 
 
