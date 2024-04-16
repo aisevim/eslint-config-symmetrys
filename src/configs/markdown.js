@@ -26,7 +26,6 @@ export async function markdownConfig({ options = {} }) {
         },
       },
       rules: {
-        ...md.configs.recommended.overrides[1].rules,
         ...renameRules(pluginTS.configs['disable-type-checked'].rules, '@typescript-eslint/', 'ts/'),
 
         'ts/comma-dangle': 'off',
