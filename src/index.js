@@ -1,5 +1,4 @@
-export { default } from './factory.js'
-
 export * from './configs/index.js'
-export * from './utils.js'
+export { default } from './factory.js'
 export * from './globs.js'
+export * from './utils.js'
