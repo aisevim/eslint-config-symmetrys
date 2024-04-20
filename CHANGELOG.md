@@ -1,5 +1,22 @@
 # 💫 Symmetrys Changelog
 
+## [0.11.1](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.11.0...v0.11.1) (2024-04-20)
+
+
+### 🩹 Bug Fixes
+
+* lint ([33390d8](https://github.com/aisevim/eslint-config-symmetrys/commit/33390d8d0d19a2193ccbf56b5892e2fad7dc71f1))
+* **markdown:** delete deprecated ovverides ([9a8e908](https://github.com/aisevim/eslint-config-symmetrys/commit/9a8e908db18ab7d36d948ba9c53db74633809656))
+
+
+### 🏗️ Chore
+
+* **deps-dev:** bump eslint from 8.56.0 to 8.57.0 ([16d0156](https://github.com/aisevim/eslint-config-symmetrys/commit/16d01560cd4108bcb53dcdebccc479695748a25d))
+* **deps-dev:** bump eslint-plugin-eslint-plugin from 5.2.1 to 6.0.0 ([8d7e7e3](https://github.com/aisevim/eslint-config-symmetrys/commit/8d7e7e38a47f38e512cb1a9ae8c193360a6db951))
+* **deps:** bump eslint-config-flat-gitignore from 0.1.2 to 0.1.5 ([a1ebfc5](https://github.com/aisevim/eslint-config-symmetrys/commit/a1ebfc5d6ccb77ccbf8f667f7ebf3df6489684a6))
+* **deps:** bump eslint-plugin-markdown from 3.0.1 to 4.0.1 ([c1bce1a](https://github.com/aisevim/eslint-config-symmetrys/commit/c1bce1a9b6a5fc257dd0a7fe9b45c1959c883c5e))
+* **deps:** bump eslint-plugin-perfectionist from 2.5.0 to 2.9.0 ([b29131b](https://github.com/aisevim/eslint-config-symmetrys/commit/b29131bb19aa4308bbbad1448776b3e13ed68335))
+
 ## [0.11.0](https://github.com/aisevim/eslint-config-symmetrys/compare/v0.10.3...v0.11.0) (2024-04-13)
 
 
