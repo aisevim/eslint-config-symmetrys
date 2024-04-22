@@ -73,7 +73,7 @@ importers:
         version: 2.2.0(eslint@8.57.0)
       eslint-plugin-yml:
         specifier: ^1.10.0
-        version: 1.11.0(eslint@8.57.0)
+        version: 1.14.0(eslint@8.57.0)
       globals:
         specifier: ^13.24.0
         version: 13.24.0
@@ -3204,7 +3204,7 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.5.4
+      semver: 7.6.0
       ts-api-utils: 1.0.3(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -3244,7 +3244,7 @@ packages:
       '@typescript-eslint/types': 6.15.0
       '@typescript-eslint/typescript-estree': 6.15.0(typescript@5.3.3)
       eslint: 8.57.0
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4871,6 +4871,16 @@ packages:
       eslint: 8.57.0
     dev: false
 
+  /eslint-compat-utils@0.5.0(eslint@8.57.0):
+    resolution: {integrity: sha512-dc6Y8tzEcSYZMHa+CMPLi/hyo1FzNeonbhJL7Ol0ccuKQkwopJcJBA9YL/xmMTLU1eKigXo9vj9nALElWYSowg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      eslint: 8.57.0
+      semver: 7.6.0
+    dev: false
+
   /eslint-config-flat-gitignore@0.1.5:
     resolution: {integrity: sha512-hEZLwuZjDBGDERA49c2q7vxc8sCGv8EdBp6PQYzGOMcHIgrfG9YOM6s/4jx24zhD+wnK9AI8mgN5RxSss5nClQ==}
     dependencies:
@@ -5190,15 +5200,15 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-yml@1.11.0(eslint@8.57.0):
-    resolution: {integrity: sha512-NBZP1NDGy0u38pY5ieix75jxS9GNOJy9xd4gQa0rU4gWbfEsVhKDwuFaQ6RJpDbv6Lq5TtcAZS/YnAc0oeRw0w==}
+  /eslint-plugin-yml@1.14.0(eslint@8.57.0):
+    resolution: {integrity: sha512-ESUpgYPOcAYQO9czugcX5OqRvn/ydDVwGCPXY4YjPqc09rHaUVUA6IE6HLQys4rXk/S+qx3EwTd1wHCwam/OWQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
       debug: 4.3.4
       eslint: 8.57.0
-      eslint-compat-utils: 0.1.2(eslint@8.57.0)
+      eslint-compat-utils: 0.5.0(eslint@8.57.0)
       lodash: 4.17.21
       natural-compare: 1.4.0
       yaml-eslint-parser: 1.2.2
@@ -9138,7 +9148,7 @@ packages:
       is-npm: 6.0.0
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.5.4
+      semver: 7.6.0
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
     dev: true
